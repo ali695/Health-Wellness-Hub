@@ -31,7 +31,7 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 /robots.txt              - Robots file
 /css/style.css           - Shared styles
 /js/main.js              - Shared JavaScript
-/calculators/            - 51 calculator HTML pages (with SVG hero illustrations)
+/calculators/            - 51 calculator HTML pages (with SVG hero illustrations) + index.html (browse/filter page)
 /blog/                   - 99 blog post HTML pages (with Unsplash hero images)
 /server.js               - Express static server
 /generate.js             - Page generator script
@@ -49,6 +49,8 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 - Blog search and category filtering
 - Responsive design (CSS Grid + Flexbox)
 - SEO: unique meta tags, canonical URLs, Open Graph, Schema.org JSON-LD
+- **Mega dropdown navigation** for Calculators (6-column categorized layout, hover on desktop, click on mobile)
+- **Calculators index page** (/calculators/) with search bar, category filter buttons, 4-column card grid
 - Breadcrumb navigation with BreadcrumbList schema
 - Fade-in animations via IntersectionObserver
 - Animated stats counter on homepage

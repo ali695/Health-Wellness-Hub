@@ -20,6 +20,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  var ddWrap = document.querySelector('.nav-dropdown-wrap');
+  var ddTrigger = document.querySelector('.nav-dropdown-trigger');
+  if (ddWrap && ddTrigger) {
+    var isMobile = function() { return window.innerWidth <= 768; };
+    ddTrigger.addEventListener('click', function(e) {
+      if (isMobile()) {
+        e.preventDefault();
+        ddWrap.classList.toggle('open');
+      }
+    });
+    document.addEventListener('click', function(e) {
+      if (!ddWrap.contains(e.target)) {
+        ddWrap.classList.remove('open');
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') ddWrap.classList.remove('open');
+    });
+    if (window.location.pathname.indexOf('/calculators/') !== -1) {
+      ddTrigger.classList.add('active');
+    }
+  }
+
   window.addEventListener('scroll', function() {
     if (navbar) {
       navbar.classList.toggle('scrolled', window.scrollY > 50);

@@ -22,7 +22,95 @@ const NAV = `${TOPBAR}<nav class="navbar">
 ${SITE_NAME}</a>
 <ul class="nav-links">
 <li><a href="/">Home</a></li>
-<li><a href="/calculators/bmi-calculator.html">Calculators</a></li>
+<li class="nav-dropdown-wrap"><a href="/calculators/" class="nav-dropdown-trigger">Calculators <svg class="dd-arrow" viewBox="0 0 12 12" width="10" height="10" fill="none"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<div class="mega-dropdown">
+<div class="mega-dropdown-inner">
+<div class="mega-col">
+<h4>Weight &amp; Body</h4>
+<ul>
+<li><a href="/calculators/bmi-calculator.html">BMI Calculator</a></li>
+<li><a href="/calculators/ideal-weight-calculator.html">Ideal Weight Calculator</a></li>
+<li><a href="/calculators/body-fat-calculator.html">Body Fat Calculator</a></li>
+<li><a href="/calculators/lean-body-mass-calculator.html">Lean Body Mass</a></li>
+<li><a href="/calculators/waist-to-hip-ratio.html">Waist-to-Hip Ratio</a></li>
+<li><a href="/calculators/waist-to-height-ratio.html">Waist-to-Height Ratio</a></li>
+<li><a href="/calculators/body-surface-area-calculator.html">Body Surface Area</a></li>
+<li><a href="/calculators/child-bmi-calculator.html">Child BMI Calculator</a></li>
+</ul>
+</div>
+<div class="mega-col">
+<h4>Nutrition &amp; Diet</h4>
+<ul>
+<li><a href="/calculators/calorie-calculator.html">Calorie Calculator</a></li>
+<li><a href="/calculators/macro-calculator.html">Macro Calculator</a></li>
+<li><a href="/calculators/tdee-calculator.html">TDEE Calculator</a></li>
+<li><a href="/calculators/bmr-calculator.html">BMR Calculator</a></li>
+<li><a href="/calculators/protein-intake-calculator.html">Protein Intake Calculator</a></li>
+<li><a href="/calculators/carb-calculator.html">Carb Calculator</a></li>
+<li><a href="/calculators/fat-intake-calculator.html">Fat Intake Calculator</a></li>
+<li><a href="/calculators/fiber-intake-calculator.html">Fiber Intake Calculator</a></li>
+<li><a href="/calculators/water-intake-calculator.html">Water Intake Calculator</a></li>
+<li><a href="/calculators/keto-calculator.html">Keto Calculator</a></li>
+</ul>
+</div>
+<div class="mega-col">
+<h4>Heart &amp; Vitals</h4>
+<ul>
+<li><a href="/calculators/heart-rate-calculator.html">Heart Rate Calculator</a></li>
+<li><a href="/calculators/blood-pressure-checker.html">Blood Pressure Checker</a></li>
+<li><a href="/calculators/cholesterol-risk-calculator.html">Cholesterol Risk</a></li>
+<li><a href="/calculators/stroke-risk-calculator.html">Stroke Risk Calculator</a></li>
+<li><a href="/calculators/bac-calculator.html">BAC Calculator</a></li>
+<li><a href="/calculators/life-expectancy-calculator.html">Life Expectancy</a></li>
+<li><a href="/calculators/biological-age-calculator.html">Biological Age</a></li>
+</ul>
+</div>
+<div class="mega-col">
+<h4>Women&#39;s Health</h4>
+<ul>
+<li><a href="/calculators/pregnancy-due-date-calculator.html">Pregnancy Due Date</a></li>
+<li><a href="/calculators/ovulation-calculator.html">Ovulation Calculator</a></li>
+<li><a href="/calculators/menstrual-cycle-calculator.html">Menstrual Cycle Calculator</a></li>
+<li><a href="/calculators/fertility-calculator.html">Fertility Calculator</a></li>
+<li><a href="/calculators/baby-weight-calculator.html">Baby Weight Calculator</a></li>
+</ul>
+</div>
+<div class="mega-col">
+<h4>Fitness &amp; Exercise</h4>
+<ul>
+<li><a href="/calculators/one-rep-max-calculator.html">One Rep Max Calculator</a></li>
+<li><a href="/calculators/vo2-max-calculator.html">VO2 Max Calculator</a></li>
+<li><a href="/calculators/running-pace-calculator.html">Running Pace Calculator</a></li>
+<li><a href="/calculators/steps-to-calories-calculator.html">Steps to Calories</a></li>
+<li><a href="/calculators/cycling-calories-calculator.html">Cycling Calories</a></li>
+<li><a href="/calculators/swimming-calories-calculator.html">Swimming Calories</a></li>
+<li><a href="/calculators/yoga-calories-calculator.html">Yoga Calories</a></li>
+<li><a href="/calculators/sleep-calculator.html">Sleep Calculator</a></li>
+<li><a href="/calculators/sleep-debt-calculator.html">Sleep Debt Calculator</a></li>
+</ul>
+</div>
+<div class="mega-col">
+<h4>Health &amp; Disease Risk</h4>
+<ul>
+<li><a href="/calculators/diabetes-risk-calculator.html">Diabetes Risk Calculator</a></li>
+<li><a href="/calculators/stress-level-calculator.html">Stress Level Calculator</a></li>
+<li><a href="/calculators/anxiety-score-calculator.html">Anxiety Score Calculator</a></li>
+<li><a href="/calculators/depression-screening-calculator.html">Depression Screening</a></li>
+<li><a href="/calculators/caffeine-intake-calculator.html">Caffeine Intake</a></li>
+<li><a href="/calculators/alcohol-unit-calculator.html">Alcohol Unit Calculator</a></li>
+<li><a href="/calculators/smoking-cost-calculator.html">Smoking Cost Calculator</a></li>
+<li><a href="/calculators/medication-dosage-calculator.html">Medication Dosage</a></li>
+<li><a href="/calculators/vitamin-d-calculator.html">Vitamin D Calculator</a></li>
+<li><a href="/calculators/intermittent-fasting-calculator.html">Intermittent Fasting</a></li>
+</ul>
+</div>
+</div>
+<div class="mega-dropdown-bottom">
+<span>Can&#39;t find what you need?</span>
+<a href="/calculators/" class="btn btn-primary btn-sm">View All 50+ Calculators &rarr;</a>
+</div>
+</div>
+</li>
 <li><a href="/blog.html">Blog</a></li>
 <li><a href="/about.html">About</a></li>
 <li><a href="/contact.html">Contact</a></li>
@@ -871,6 +959,68 @@ calculators.forEach(calc => {
   fs.writeFileSync(`calculators/${calc.slug}.html`, generateCalculatorPage(calc));
 });
 console.log(`Generated ${calculators.length} calculator pages`);
+
+// CALCULATORS INDEX PAGE
+const calcCategories = {
+  'Weight & Body': calculators.filter(c => ['bmi-calculator','ideal-weight-calculator','body-fat-calculator','lean-body-mass-calculator','waist-to-hip-ratio','waist-to-height-ratio','body-surface-area-calculator','child-bmi-calculator'].includes(c.slug)),
+  'Nutrition & Diet': calculators.filter(c => ['calorie-calculator','macro-calculator','tdee-calculator','bmr-calculator','protein-intake-calculator','carb-calculator','fat-intake-calculator','fiber-intake-calculator','water-intake-calculator','keto-calculator'].includes(c.slug)),
+  'Heart & Vitals': calculators.filter(c => ['heart-rate-calculator','blood-pressure-checker','cholesterol-risk-calculator','stroke-risk-calculator','bac-calculator','life-expectancy-calculator','biological-age-calculator'].includes(c.slug)),
+  "Women's Health": calculators.filter(c => ['pregnancy-due-date-calculator','ovulation-calculator','menstrual-cycle-calculator','fertility-calculator','baby-weight-calculator'].includes(c.slug)),
+  'Fitness & Exercise': calculators.filter(c => ['one-rep-max-calculator','vo2-max-calculator','running-pace-calculator','steps-to-calories-calculator','cycling-calories-calculator','swimming-calories-calculator','yoga-calories-calculator','sleep-calculator','sleep-debt-calculator'].includes(c.slug)),
+  'Health & Disease Risk': calculators.filter(c => ['diabetes-risk-calculator','stress-level-calculator','anxiety-score-calculator','depression-screening-calculator','caffeine-intake-calculator','alcohol-unit-calculator','smoking-cost-calculator','medication-dosage-calculator','vitamin-d-calculator','intermittent-fasting-calculator','calorie-deficit'].includes(c.slug)),
+};
+const catNames = Object.keys(calcCategories);
+
+fs.writeFileSync('calculators/index.html', `${head('50+ Free Health Calculators | '+SITE_NAME, 'Browse all free health calculators including BMI, calorie, macro, heart rate, pregnancy, and 50+ more science-backed tools at '+SITE_NAME+'.', '/calculators/')}
+<body>
+${NAV}
+${breadcrumb([{name:'Home',url:'/'},{name:'All Calculators',url:'/calculators/'}]).html}
+${breadcrumb([{name:'Home',url:'/'},{name:'All Calculators',url:'/calculators/'}]).schema}
+<section class="content-page">
+<div class="container">
+<h1 class="fade-in" style="text-align:center;">Free Health Calculators</h1>
+<p class="fade-in" style="text-align:center;max-width:600px;margin:0 auto 30px;color:var(--gray-500);">Browse our collection of 50+ free, science-backed health calculators. No registration needed.</p>
+<div class="search-bar fade-in">
+<svg viewBox="0 0 20 20" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+<input type="text" id="calcSearch" placeholder="Search calculators..." oninput="filterCalcs()">
+</div>
+<div class="filter-buttons fade-in" id="calcFilterBtns">
+<button class="filter-btn active" onclick="filterCat('all',this)">All</button>
+${catNames.map(c=>`<button class="filter-btn" onclick="filterCat('${c}',this)">${c}</button>`).join('')}
+</div>
+<div class="grid-4" id="calcGrid">
+${calculators.map(c => {
+  let cat = 'Other';
+  for (const [k,v] of Object.entries(calcCategories)) { if (v.find(x=>x.slug===c.slug)) { cat = k; break; } }
+  return `<a href="/calculators/${c.slug}.html" class="card fade-in" data-category="${cat}" data-title="${c.name.toLowerCase()}"><div class="card-icon">${calcSvg(c.icon)}</div><h3>${c.name}</h3><p>${c.desc}</p><span class="read-more">Calculate Now &rarr;</span></a>`;
+}).join('')}
+</div>
+</div>
+</section>
+${FOOTER}
+${BTT}
+<script src="/js/main.js"></script>
+<script>
+var currentCalcCat='all';
+function filterCalcs(){
+  var q=document.getElementById('calcSearch').value.toLowerCase();
+  document.querySelectorAll('#calcGrid .card').forEach(function(card){
+    var title=card.getAttribute('data-title');
+    var cat=card.getAttribute('data-category');
+    var matchQ=!q||title.indexOf(q)!==-1;
+    var matchC=currentCalcCat==='all'||cat===currentCalcCat;
+    card.style.display=(matchQ&&matchC)?'':'none';
+  });
+}
+function filterCat(cat,btn){
+  currentCalcCat=cat;
+  document.querySelectorAll('#calcFilterBtns .filter-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  filterCalcs();
+}
+</script>
+</body></html>`);
+console.log('Generated calculators/index.html');
 
 console.log('Generating blog posts...');
 ensureDir('blog');

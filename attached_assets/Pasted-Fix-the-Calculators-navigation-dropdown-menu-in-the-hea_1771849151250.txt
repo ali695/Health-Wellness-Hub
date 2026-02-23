@@ -1,0 +1,148 @@
+Fix the Calculators navigation dropdown menu in the header.
+Currently clicking "Calculators" shows nothing. 
+
+Update the navbar in ALL HTML files to replace the plain 
+"Calculators" link with a full mega dropdown menu showing 
+all calculators organized by category.
+
+─────────────────────────────────────────
+DROPDOWN STRUCTURE
+─────────────────────────────────────────
+Trigger: "Calculators" nav item
+Behavior: 
+  - Hover on desktop → dropdown appears
+  - Click on mobile → dropdown toggles
+  - Click outside → dropdown closes
+  - Smooth fadeIn + slideDown animation
+
+DROPDOWN STYLE:
+  Full-width mega menu (100% of navbar width)
+  White background with subtle green top border (3px #2d6a4f)
+  Box shadow: 0 8px 32px rgba(0,0,0,0.12)
+  6 columns of categories
+  Padding: 32px
+  Z-index: 9999
+
+─────────────────────────────────────────
+CATEGORY 1 — ⚖️ Weight & Body
+─────────────────────────────────────────
+  → BMI Calculator              /calculators/bmi-calculator.html
+  → Ideal Weight Calculator     /calculators/ideal-weight-calculator.html
+  → Body Fat Calculator         /calculators/body-fat-calculator.html
+  → Lean Body Mass              /calculators/lean-body-mass-calculator.html
+  → Waist-to-Hip Ratio          /calculators/waist-to-hip-ratio.html
+  → Waist-to-Height Ratio       /calculators/waist-to-height-ratio.html
+  → Body Surface Area           /calculators/body-surface-area-calculator.html
+  → Child BMI Calculator        /calculators/child-bmi-calculator.html
+
+─────────────────────────────────────────
+CATEGORY 2 — 🍎 Nutrition & Diet
+─────────────────────────────────────────
+  → Calorie Calculator          /calculators/calorie-calculator.html
+  → Macro Calculator            /calculators/macro-calculator.html
+  → TDEE Calculator             /calculators/tdee-calculator.html
+  → BMR Calculator              /calculators/bmr-calculator.html
+  → Protein Intake Calculator   /calculators/protein-intake-calculator.html
+  → Carb Calculator             /calculators/carb-calculator.html
+  → Fat Intake Calculator       /calculators/fat-intake-calculator.html
+  → Fiber Intake Calculator     /calculators/fiber-intake-calculator.html
+  → Water Intake Calculator     /calculators/water-intake-calculator.html
+  → Keto Calculator             /calculators/keto-calculator.html
+
+─────────────────────────────────────────
+CATEGORY 3 — ❤️ Heart & Vitals
+─────────────────────────────────────────
+  → Heart Rate Calculator       /calculators/heart-rate-calculator.html
+  → Blood Pressure Checker      /calculators/blood-pressure-checker.html
+  → Cholesterol Risk            /calculators/cholesterol-risk-calculator.html
+  → Stroke Risk Calculator      /calculators/stroke-risk-calculator.html
+  → BAC Calculator              /calculators/bac-calculator.html
+  → Life Expectancy             /calculators/life-expectancy-calculator.html
+  → Biological Age              /calculators/biological-age-calculator.html
+
+─────────────────────────────────────────
+CATEGORY 4 — 👩 Women's Health
+─────────────────────────────────────────
+  → Pregnancy Due Date          /calculators/pregnancy-due-date-calculator.html
+  → Ovulation Calculator        /calculators/ovulation-calculator.html
+  → Menstrual Cycle Calculator  /calculators/menstrual-cycle-calculator.html
+  → Fertility Calculator        /calculators/fertility-calculator.html
+  → Baby Weight Calculator      /calculators/baby-weight-calculator.html
+
+─────────────────────────────────────────
+CATEGORY 5 — 🏋️ Fitness & Exercise
+─────────────────────────────────────────
+  → One Rep Max Calculator      /calculators/one-rep-max-calculator.html
+  → VO2 Max Calculator          /calculators/vo2-max-calculator.html
+  → Running Pace Calculator     /calculators/running-pace-calculator.html
+  → Steps to Calories           /calculators/steps-to-calories-calculator.html
+  → Cycling Calories            /calculators/cycling-calories-calculator.html
+  → Swimming Calories           /calculators/swimming-calories-calculator.html
+  → Yoga Calories               /calculators/yoga-calories-calculator.html
+  → Sleep Calculator            /calculators/sleep-calculator.html
+  → Sleep Debt Calculator       /calculators/sleep-debt-calculator.html
+
+─────────────────────────────────────────
+CATEGORY 6 — 🧠 Health & Disease Risk
+─────────────────────────────────────────
+  → Diabetes Risk Calculator    /calculators/diabetes-risk-calculator.html
+  → Stress Level Calculator     /calculators/stress-level-calculator.html
+  → Anxiety Score Calculator    /calculators/anxiety-score-calculator.html
+  → Depression Screening        /calculators/depression-screening-calculator.html
+  → Caffeine Intake             /calculators/caffeine-intake-calculator.html
+  → Alcohol Unit Calculator     /calculators/alcohol-unit-calculator.html
+  → Smoking Cost Calculator     /calculators/smoking-cost-calculator.html
+  → Medication Dosage           /calculators/medication-dosage-calculator.html
+  → Vitamin D Calculator        /calculators/vitamin-d-calculator.html
+  → Intermittent Fasting        /calculators/intermittent-fasting-calculator.html
+
+─────────────────────────────────────────
+DROPDOWN BOTTOM BAR
+─────────────────────────────────────────
+Full-width bar at bottom of dropdown:
+  Background: #f0faf2
+  Left text: "🔍 Can't find what you need?"
+  Right: Button "View All 50+ Calculators →" 
+         linking to a calculators index page
+
+─────────────────────────────────────────
+CREATE: calculators/index.html
+─────────────────────────────────────────
+A dedicated "All Calculators" page showing:
+  Hero: "Free Health Calculators" headline
+  Search bar: live JS filter by calculator name
+  Category filter buttons (all 6 categories)
+  Grid of ALL 50 calculator cards, each showing:
+    - Relevant SVG icon
+    - Calculator name
+    - One-line description
+    - "Calculate Now →" button
+  Fully filterable by category with JS
+  SEO meta:
+    Title: "50+ Free Health Calculators — VitalHealth Hub"
+    Description: "Browse all free health calculators including 
+    BMI, calorie, macro, heart rate, pregnancy, and 50+ more 
+    science-backed tools at VitalHealth Hub."
+
+─────────────────────────────────────────
+JAVASCRIPT FOR DROPDOWN (update js/main.js)
+─────────────────────────────────────────
+// Desktop: show on hover with delay
+// Mobile: show on click/tap
+// Close on outside click
+// Close on Escape key
+// Add active class to Calculators link when on any 
+   /calculators/ page
+// Dropdown arrow rotates 180deg when open
+// Smooth animation: opacity 0→1, translateY(-8px)→(0)
+// Prevent dropdown closing when clicking inside it
+
+─────────────────────────────────────────
+APPLY TO ALL FILES
+─────────────────────────────────────────
+Update this dropdown in every single HTML file on the site.
+The dropdown HTML and CSS must be identical across all pages.
+Put dropdown CSS in css/style.css under a 
+/* MEGA DROPDOWN */ comment section.
+Do not break existing mobile hamburger menu behavior.
+Test that dropdown works correctly on both desktop and mobile.
