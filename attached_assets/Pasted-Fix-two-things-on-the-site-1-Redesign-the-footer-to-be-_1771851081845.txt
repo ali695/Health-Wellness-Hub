@@ -1,0 +1,1446 @@
+Fix two things on the site:
+
+1. Redesign the footer to be centered and well organized
+2. Add a fully self-contained AI health chatbot (no external 
+   API links, pure JavaScript, works on any hosting platform 
+   including Netlify, GitHub Pages, or anywhere else)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FIX 1 — FOOTER REDESIGN (centered & organized)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Replace the existing footer in ALL HTML files with 
+this perfectly centered, well-organized footer.
+
+FOOTER STRUCTURE:
+
+┌─────────────────────────────────────────────────┐
+│           TOP SECTION (5 columns, centered)      │
+│  Col1: Brand  Col2: Tools  Col3: Links           │
+│  Col4: Legal  Col5: Creator                      │
+├─────────────────────────────────────────────────┤
+│              DISCLAIMER BAR                      │
+├─────────────────────────────────────────────────┤
+│              BOTTOM COPYRIGHT BAR                │
+└─────────────────────────────────────────────────┘
+
+FOOTER CSS:
+  footer {
+    background: #1b1f1e;
+    color: #d1d5db;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 24px 48px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* Center all column content */
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col h4 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2d6a4f;
+    width: 100%;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    color: #9ca3af;
+    font-size: 14px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-col ul li a:hover {
+    color: #52b788;
+    padding-left: 4px;
+    transition: all 0.2s;
+  }
+
+  /* Social icons row */
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .footer-social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    border: 1px solid #3d3d3d;
+  }
+
+  .footer-social-btn:hover {
+    transform: translateY(-3px);
+  }
+  .footer-social-btn.linkedin:hover { background: #0077b5; }
+  .footer-social-btn.facebook:hover { background: #1877f2; }
+  .footer-social-btn.instagram:hover { background: #e1306c; }
+
+  /* Disclaimer bar */
+  .footer-disclaimer {
+    background: #111413;
+    border-top: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .footer-disclaimer p {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    color: #6b7280;
+    line-height: 1.7;
+  }
+
+  .footer-disclaimer strong {
+    color: #9ca3af;
+  }
+
+  /* Bottom copyright bar */
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: #6b7280;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 13px;
+    color: #6b7280;
+    transition: color 0.2s;
+  }
+
+  .footer-bottom-links a:hover {
+    color: #52b788;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      padding: 48px 24px 32px;
+    }
+    .footer-col:first-child {
+      grid-column: 1 / -1;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
+  }
+
+FOOTER HTML (use in ALL files):
+
+<footer>
+  <div class="footer-top">
+
+    <!-- COL 1: Brand -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="16" fill="#2d6a4f"/>
+          <path d="M16 6 C16 6 8 12 8 20 C8 26 12 28 16 28 
+                   C20 28 24 26 24 20 C24 12 16 6 16 6Z" 
+                fill="#52b788"/>
+          <path d="M16 10 C16 10 11 15 11 20 C11 24 13 26 16 26"
+                fill="#d8f3dc" opacity="0.6"/>
+        </svg>
+        <span style="color:#fff;font-family:'Playfair Display',serif;
+                     font-size:20px;font-weight:700;margin-left:10px;">
+          VitalHealth Hub
+        </span>
+      </div>
+      <p style="font-size:14px;line-height:1.7;margin:16px 0;
+                color:#9ca3af;max-width:260px;">
+        Your trusted source for free health calculators, 
+        evidence-based wellness tools, and expert health 
+        guidance — accessible to everyone, always free.
+      </p>
+      <div style="display:flex;align-items:center;gap:8px;
+                  margin-bottom:12px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" 
+             fill="none" stroke="#52b788" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 
+                   2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:ma7122671@gmail.com" 
+           style="color:#9ca3af;font-size:13px;
+                  transition:color 0.2s;"
+           onmouseover="this.style.color='#52b788'"
+           onmouseout="this.style.color='#9ca3af'">
+          ma7122671@gmail.com
+        </a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" 
+           target="_blank" rel="noopener noreferrer"
+           class="footer-social-btn linkedin"
+           title="Ali Haider on LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#9ca3af">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 
+                     2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/AliHadi768" 
+           target="_blank" rel="noopener noreferrer"
+           class="footer-social-btn facebook"
+           title="Ali Haider on Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#9ca3af">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7
+                     a1 1 0 011-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/ali_haiderseo/" 
+           target="_blank" rel="noopener noreferrer"
+           class="footer-social-btn instagram"
+           title="Ali Haider on Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" 
+               stroke="#9ca3af" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="#9ca3af"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- COL 2: Popular Tools -->
+    <div class="footer-col">
+      <h4>Popular Tools</h4>
+      <ul>
+        <li><a href="/calculators/bmi-calculator.html">
+          → BMI Calculator</a></li>
+        <li><a href="/calculators/calorie-calculator.html">
+          → Calorie Calculator</a></li>
+        <li><a href="/calculators/macro-calculator.html">
+          → Macro Calculator</a></li>
+        <li><a href="/calculators/tdee-calculator.html">
+          → TDEE Calculator</a></li>
+        <li><a href="/calculators/body-fat-calculator.html">
+          → Body Fat Calculator</a></li>
+        <li><a href="/calculators/water-intake-calculator.html">
+          → Water Intake</a></li>
+        <li><a href="/calculators/sleep-calculator.html">
+          → Sleep Calculator</a></li>
+        <li><a href="/calculators/heart-rate-calculator.html">
+          → Heart Rate</a></li>
+        <li><a href="/calculators/index.html">
+          → View All 50+ Tools →</a></li>
+      </ul>
+    </div>
+
+    <!-- COL 3: Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/index.html">→ Home</a></li>
+        <li><a href="/about.html">→ About Us</a></li>
+        <li><a href="/blog.html">→ Health Blog</a></li>
+        <li><a href="/faq.html">→ FAQ</a></li>
+        <li><a href="/contact.html">→ Contact Us</a></li>
+        <li><a href="/calculators/index.html">
+          → All Calculators</a></li>
+        <li><a href="/sitemap.html">→ Sitemap</a></li>
+      </ul>
+    </div>
+
+    <!-- COL 4: Legal -->
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy.html">→ Privacy Policy</a></li>
+        <li><a href="/disclaimer.html">→ Medical Disclaimer</a></li>
+        <li><a href="/terms.html">→ Terms of Use</a></li>
+      </ul>
+      <div style="margin-top:24px;padding:16px;background:#111413;
+                  border-radius:10px;border-left:3px solid #2d6a4f;">
+        <p style="font-size:12px;color:#6b7280;line-height:1.6;">
+          <strong style="color:#9ca3af;">⚕️ Medical Notice:</strong><br>
+          All content is for informational purposes only. 
+          Always consult a qualified healthcare professional.
+        </p>
+      </div>
+    </div>
+
+    <!-- COL 5: Created By -->
+    <div class="footer-col">
+      <h4>Created By</h4>
+      <div style="background:#111413;border-radius:12px;
+                  padding:20px;border:1px solid #2d2d2d;">
+        <div style="display:flex;align-items:center;
+                    gap:12px;margin-bottom:12px;">
+          <div style="width:44px;height:44px;border-radius:50%;
+                      background:linear-gradient(135deg,#2d6a4f,#52b788);
+                      display:flex;align-items:center;
+                      justify-content:center;flex-shrink:0;">
+            <span style="color:#fff;font-weight:700;font-size:18px;">A</span>
+          </div>
+          <div>
+            <p style="color:#fff;font-weight:600;font-size:15px;
+                      margin:0;">Ali Haider</p>
+            <p style="color:#52b788;font-size:12px;margin:2px 0 0;">
+              SEO Consultant</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#9ca3af;line-height:1.6;
+                  margin-bottom:16px;">
+          Building accessible health tools and evidence-based 
+          content for millions of users worldwide.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="mailto:ma7122671@gmail.com"
+             style="display:flex;align-items:center;gap:8px;
+                    color:#9ca3af;font-size:13px;transition:color 0.2s;"
+             onmouseover="this.style.color='#52b788'"
+             onmouseout="this.style.color='#9ca3af'">
+            ✉ ma7122671@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/ali-haider-seo-consultant/"
+             target="_blank" rel="noopener noreferrer"
+             style="display:flex;align-items:center;gap:8px;
+                    color:#9ca3af;font-size:13px;transition:color 0.2s;"
+             onmouseover="this.style.color='#0077b5'"
+             onmouseout="this.style.color='#9ca3af'">
+            🔗 LinkedIn Profile
+          </a>
+          <a href="https://www.facebook.com/AliHadi768"
+             target="_blank" rel="noopener noreferrer"
+             style="display:flex;align-items:center;gap:8px;
+                    color:#9ca3af;font-size:13px;transition:color 0.2s;"
+             onmouseover="this.style.color='#1877f2'"
+             onmouseout="this.style.color='#9ca3af'">
+            📘 Facebook Page
+          </a>
+          <a href="https://www.instagram.com/ali_haiderseo/"
+             target="_blank" rel="noopener noreferrer"
+             style="display:flex;align-items:center;gap:8px;
+                    color:#9ca3af;font-size:13px;transition:color 0.2s;"
+             onmouseover="this.style.color='#e1306c'"
+             onmouseout="this.style.color='#9ca3af'">
+            📸 @ali_haiderseo
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Disclaimer Bar -->
+  <div class="footer-disclaimer">
+    <p>
+      <strong>⚕️ Medical Disclaimer:</strong> The content on 
+      VitalHealth Hub is strictly for informational and educational 
+      purposes only. It is not intended to be a substitute for 
+      professional medical advice, diagnosis, or treatment. Always 
+      seek the advice of your physician or other qualified health 
+      provider with any questions you may have regarding a medical 
+      condition. Never disregard professional medical advice or delay 
+      seeking it because of something you have read on this website.
+    </p>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 VitalHealth Hub. All rights reserved. 
+       Created with ❤️ by Ali Haider</p>
+    <div class="footer-bottom-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="/sitemap.html">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+Apply this footer to every single HTML file on the site.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FIX 2 — SELF-CONTAINED AI HEALTH CHATBOT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Add a floating AI health chatbot to every page.
+CRITICAL REQUIREMENTS:
+  - Zero external API calls
+  - Zero dependencies or CDN links
+  - Pure vanilla JavaScript only
+  - Works identically on Replit, Netlify, GitHub Pages,
+    Cloudflare Pages, or any static hosting
+  - All logic lives inside one JS object
+  - No backend, no server, no fetch calls
+
+Add this complete chatbot code to js/main.js 
+and the HTML/CSS to every page.
+
+CHATBOT HTML (add before closing </body> on every page):
+
+<div id="vh-chatbot">
+
+  <!-- Floating toggle button -->
+  <button id="vh-chat-toggle" aria-label="Open Health Assistant">
+    <svg id="vh-chat-icon" width="26" height="26" 
+         viewBox="0 0 24 24" fill="white">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14
+               a2 2 0 012 2z"/>
+    </svg>
+    <svg id="vh-close-icon" width="22" height="22" 
+         viewBox="0 0 24 24" fill="white" 
+         style="display:none;">
+      <line x1="18" y1="6" x2="6" y2="18" 
+            stroke="white" stroke-width="2.5"/>
+      <line x1="6" y1="6" x2="18" y2="18" 
+            stroke="white" stroke-width="2.5"/>
+    </svg>
+    <span id="vh-chat-badge">1</span>
+  </button>
+
+  <!-- Chat window -->
+  <div id="vh-chat-window" style="display:none;">
+    
+    <!-- Header -->
+    <div id="vh-chat-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div id="vh-bot-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div>
+          <p style="color:#fff;font-weight:600;
+                    font-size:14px;margin:0;">
+            VitalHealth Assistant
+          </p>
+          <p style="color:#a7f3d0;font-size:11px;margin:0;">
+            🟢 Online — Health Q&A Bot
+          </p>
+        </div>
+      </div>
+      <button id="vh-chat-minimize">—</button>
+    </div>
+
+    <!-- Messages area -->
+    <div id="vh-chat-messages"></div>
+
+    <!-- Quick topic buttons -->
+    <div id="vh-quick-topics">
+      <p style="font-size:11px;color:#6b7280;
+                margin:0 0 8px;font-weight:500;">
+        Quick Topics:
+      </p>
+      <div id="vh-topics-grid">
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('BMI')">
+          ⚖️ BMI</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Calories')">
+          🔥 Calories</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Sleep')">
+          😴 Sleep</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Water')">
+          💧 Water</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Weight Loss')">
+          📉 Weight Loss</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Protein')">
+          💪 Protein</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Heart Health')">
+          ❤️ Heart</button>
+        <button class="vh-topic-btn" 
+                onclick="vhChat.quickAsk('Stress')">
+          🧠 Stress</button>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <div id="vh-chat-input-area">
+      <input 
+        type="text" 
+        id="vh-chat-input" 
+        placeholder="Ask a health question..."
+        autocomplete="off"
+        maxlength="200"
+      >
+      <button id="vh-chat-send">
+        <svg width="18" height="18" viewBox="0 0 24 24" 
+             fill="none" stroke="white" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+    
+    <p id="vh-chat-disclaimer">
+      ⚕️ For informational purposes only. 
+      Not medical advice. Consult your doctor.
+    </p>
+  </div>
+</div>
+
+CHATBOT CSS (add to css/style.css):
+
+/* ═══ CHATBOT ═══ */
+#vh-chatbot {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99999;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#vh-chat-toggle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(45,106,79,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  margin-left: auto;
+}
+
+#vh-chat-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(45,106,79,0.55);
+}
+
+#vh-chat-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #f4a261;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+#vh-chat-window {
+  width: 360px;
+  height: 560px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 12px;
+  animation: chatSlideUp 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+@keyframes chatSlideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+#vh-chat-header {
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+#vh-bot-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#vh-chat-minimize {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#vh-chat-minimize:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+#vh-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+#vh-chat-messages::-webkit-scrollbar { width: 4px; }
+#vh-chat-messages::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.vh-msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  animation: msgFadeIn 0.25s ease;
+}
+
+@keyframes msgFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.vh-msg-bot {
+  background: #f0faf2;
+  color: #1b1f1e;
+  border-radius: 4px 16px 16px 16px;
+  align-self: flex-start;
+  border: 1px solid #d8f3dc;
+}
+
+.vh-msg-user {
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  color: white;
+  border-radius: 16px 4px 16px 16px;
+  align-self: flex-end;
+}
+
+.vh-msg-bot strong {
+  color: #2d6a4f;
+}
+
+.vh-typing {
+  display: flex;
+  gap: 4px;
+  padding: 12px 16px;
+  background: #f0faf2;
+  border-radius: 4px 16px 16px 16px;
+  align-self: flex-start;
+  border: 1px solid #d8f3dc;
+}
+
+.vh-typing span {
+  width: 7px;
+  height: 7px;
+  background: #52b788;
+  border-radius: 50%;
+  animation: typing-dot 1.2s infinite;
+}
+
+.vh-typing span:nth-child(2) { animation-delay: 0.2s; }
+.vh-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+#vh-quick-topics {
+  padding: 10px 14px;
+  border-top: 1px solid #f3f4f6;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+#vh-topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vh-topic-btn {
+  background: white;
+  border: 1px solid #d8f3dc;
+  color: #2d6a4f;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+.vh-topic-btn:hover {
+  background: #2d6a4f;
+  color: white;
+  border-color: #2d6a4f;
+}
+
+#vh-chat-input-area {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  border-top: 1px solid #f3f4f6;
+  gap: 8px;
+  flex-shrink: 0;
+  background: white;
+}
+
+#vh-chat-input {
+  flex: 1;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #f9fafb;
+  color: #1b1f1e;
+}
+
+#vh-chat-input:focus {
+  border-color: #52b788;
+  background: white;
+}
+
+#vh-chat-send {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#vh-chat-send:hover {
+  transform: scale(1.08);
+  box-shadow: 0 3px 12px rgba(45,106,79,0.4);
+}
+
+#vh-chat-disclaimer {
+  text-align: center;
+  font-size: 10.5px;
+  color: #9ca3af;
+  padding: 6px 14px 10px;
+  margin: 0;
+  background: white;
+  flex-shrink: 0;
+}
+
+@media (max-width: 420px) {
+  #vh-chat-window {
+    width: calc(100vw - 32px);
+    height: 520px;
+    right: 0;
+  }
+  #vh-chatbot {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+CHATBOT JAVASCRIPT (add to js/main.js):
+
+const vhChat = {
+
+  isOpen: false,
+  
+  // ── KNOWLEDGE BASE ──────────────────────────────
+  // 200+ health Q&A pairs, pure static JS object
+  // No API, no fetch, works on any hosting platform
+  
+  knowledge: {
+
+    greetings: {
+      triggers: ['hello','hi','hey','good morning',
+                 'good evening','howdy','sup','greetings'],
+      response: `👋 Hello! I'm the <strong>VitalHealth 
+      Assistant</strong> — your free health Q&A bot.<br><br>
+      I can answer questions about:<br>
+      • BMI & body weight<br>
+      • Calories & nutrition<br>
+      • Sleep & recovery<br>
+      • Heart health & vitals<br>
+      • Exercise & fitness<br>
+      • Mental health & stress<br><br>
+      What health topic can I help you with today?`
+    },
+
+    bmi: {
+      triggers: ['bmi','body mass index','am i overweight',
+                 'am i obese','healthy weight','weight category'],
+      response: `⚖️ <strong>BMI (Body Mass Index)</strong> 
+      measures body weight relative to height.<br><br>
+      <strong>BMI Ranges:</strong><br>
+      • Under 18.5 — Underweight<br>
+      • 18.5–24.9 — ✅ Normal/Healthy<br>
+      • 25.0–29.9 — Overweight<br>
+      • 30.0+ — Obese<br><br>
+      <strong>Formula:</strong> Weight(kg) ÷ Height(m)²<br><br>
+      💡 Note: BMI doesn't account for muscle mass. 
+      Athletes may have high BMI but low body fat.<br><br>
+      👉 Use our <a href="/calculators/bmi-calculator.html" 
+      style="color:#2d6a4f;font-weight:600;">
+      BMI Calculator</a> for your exact score!`
+    },
+
+    calories: {
+      triggers: ['calories','calorie','how many calories',
+                 'caloric intake','energy intake',
+                 'daily calories','kcal'],
+      response: `🔥 <strong>Daily Calorie Needs</strong> 
+      depend on your age, gender, weight, height and 
+      activity level.<br><br>
+      <strong>General Guidelines:</strong><br>
+      • Women: 1,600–2,400 cal/day<br>
+      • Men: 2,000–3,000 cal/day<br><br>
+      <strong>Goals:</strong><br>
+      • Lose weight: eat 300–500 less than TDEE<br>
+      • Maintain: eat at your TDEE<br>
+      • Gain muscle: eat 200–300 more than TDEE<br><br>
+      👉 Get your exact number with our 
+      <a href="/calculators/calorie-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calorie Calculator</a>!`
+    },
+
+    protein: {
+      triggers: ['protein','how much protein','protein intake',
+                 'protein per day','daily protein',
+                 'protein for muscle'],
+      response: `💪 <strong>Daily Protein Intake</strong>
+      recommendations:<br><br>
+      • Sedentary adults: 0.8g per kg bodyweight<br>
+      • Active people: 1.2–1.6g per kg<br>
+      • Athletes/muscle building: 1.6–2.2g per kg<br><br>
+      <strong>Best protein sources:</strong><br>
+      🥚 Eggs • 🍗 Chicken • 🐟 Fish • 🫘 Legumes 
+      • 🥛 Greek yogurt • 🌰 Nuts<br><br>
+      👉 Try our <a href="/calculators/protein-intake-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Protein Calculator</a> for your exact needs!`
+    },
+
+    water: {
+      triggers: ['water','hydration','drink water',
+                 'how much water','daily water',
+                 'water intake','dehydrated'],
+      response: `💧 <strong>Daily Water Intake</strong>:<br><br>
+      • General rule: 8 glasses (2 litres) per day<br>
+      • Better rule: 35ml per kg of bodyweight<br>
+      • Hot weather: add 500ml–1L extra<br>
+      • Exercise: add 500ml per hour of activity<br><br>
+      <strong>Signs of dehydration:</strong><br>
+      😵 Dark urine • Headache • Fatigue • 
+      Dry mouth • Dizziness<br><br>
+      💡 Tip: Check your urine — pale yellow 
+      means well hydrated!<br><br>
+      👉 <a href="/calculators/water-intake-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calculate your exact water needs →</a>`
+    },
+
+    sleep: {
+      triggers: ['sleep','how much sleep','sleep hours',
+                 'sleep deprivation','insomnia',
+                 'can\'t sleep','tired','fatigue'],
+      response: `😴 <strong>Recommended Sleep Duration</strong>
+      by age:<br><br>
+      • Babies (0–1yr): 14–17 hours<br>
+      • Children (6–12): 9–12 hours<br>
+      • Teenagers (13–18): 8–10 hours<br>
+      • Adults (18–64): <strong>7–9 hours</strong><br>
+      • Seniors (65+): 7–8 hours<br><br>
+      <strong>Better sleep tips:</strong><br>
+      🌙 Same bedtime daily • 📱 No screens 1hr before 
+      bed • ❄️ Cool room (18°C) • ☕ No caffeine after 
+      2pm • 🧘 Relaxation routine<br><br>
+      👉 <a href="/calculators/sleep-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calculate your ideal sleep schedule →</a>`
+    },
+
+    heartrate: {
+      triggers: ['heart rate','pulse','bpm','resting heart',
+                 'heart beat','normal heart rate',
+                 'target heart rate'],
+      response: `❤️ <strong>Heart Rate Guide:</strong><br><br>
+      <strong>Resting Heart Rate (adults):</strong><br>
+      • Athletes: 40–60 BPM<br>
+      • Normal: 60–100 BPM<br>
+      • High (concerning): 100+ BPM<br><br>
+      <strong>Target Heart Rate during exercise:</strong><br>
+      • Moderate intensity: 50–70% of max HR<br>
+      • Vigorous intensity: 70–85% of max HR<br>
+      • Max HR = 220 minus your age<br><br>
+      💡 Measure your pulse at your wrist or neck 
+      for 15 seconds, multiply by 4.<br><br>
+      👉 <a href="/calculators/heart-rate-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Heart Rate Calculator →</a>`
+    },
+
+    weightloss: {
+      triggers: ['lose weight','weight loss','fat loss',
+                 'how to lose','losing weight',
+                 'reduce weight','slim down','burn fat'],
+      response: `📉 <strong>Evidence-Based Weight Loss:</strong>
+      <br><br>
+      <strong>The fundamentals:</strong><br>
+      1. Calorie deficit (eat less than you burn)<br>
+      2. High protein diet (keeps you full)<br>
+      3. Strength training (preserve muscle)<br>
+      4. Cardio exercise (burn extra calories)<br>
+      5. Quality sleep (controls hunger hormones)<br>
+      6. Manage stress (reduces cortisol/fat storage)<br>
+      <br>
+      <strong>Safe rate of loss:</strong><br>
+      • 0.5–1kg per week is sustainable<br>
+      • Crash diets cause muscle loss — avoid!<br><br>
+      👉 Start with our 
+      <a href="/calculators/calorie-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calorie Calculator</a> to find your deficit!`
+    },
+
+    bloodpressure: {
+      triggers: ['blood pressure','bp','hypertension',
+                 'high blood pressure','systolic',
+                 'diastolic','normal bp'],
+      response: `🩺 <strong>Blood Pressure Ranges:</strong>
+      <br><br>
+      • Normal: below 120/80 mmHg ✅<br>
+      • Elevated: 120–129 / below 80<br>
+      • High Stage 1: 130–139 / 80–89<br>
+      • High Stage 2: 140+ / 90+<br>
+      • Crisis: 180+ / 120+ 🚨<br><br>
+      <strong>Ways to lower blood pressure naturally:</strong>
+      <br>
+      🥗 DASH diet • 🚶 Regular exercise • 
+      🧂 Reduce sodium • 🚭 Quit smoking • 
+      🍷 Limit alcohol • 😌 Reduce stress<br><br>
+      👉 <a href="/calculators/blood-pressure-checker.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Check your BP risk →</a>`
+    },
+
+    diabetes: {
+      triggers: ['diabetes','blood sugar','glucose',
+                 'diabetic','prediabetes','insulin',
+                 'type 2 diabetes'],
+      response: `🩸 <strong>Blood Sugar Levels:</strong><br><br>
+      <strong>Fasting glucose:</strong><br>
+      • Normal: 70–99 mg/dL ✅<br>
+      • Prediabetes: 100–125 mg/dL ⚠️<br>
+      • Diabetes: 126+ mg/dL 🚨<br><br>
+      <strong>Prevention tips:</strong><br>
+      • Maintain healthy weight<br>
+      • Exercise 150 min/week minimum<br>
+      • Eat whole foods, limit sugar<br>
+      • Avoid processed carbs<br>
+      • Get regular blood tests<br><br>
+      👉 <a href="/calculators/diabetes-risk-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Check your diabetes risk →</a>`
+    },
+
+    stress: {
+      triggers: ['stress','stressed','anxiety','anxious',
+                 'worry','overwhelmed','mental health',
+                 'depression','burnout'],
+      response: `🧠 <strong>Managing Stress & Anxiety:</strong>
+      <br><br>
+      <strong>Immediate relief techniques:</strong><br>
+      • Box breathing: 4s in, 4s hold, 4s out, 4s hold<br>
+      • 5-4-3-2-1 grounding technique<br>
+      • Cold water on face/wrists<br>
+      • 10 min walk outdoors<br><br>
+      <strong>Long-term strategies:</strong><br>
+      🧘 Daily meditation (even 10 mins) • 
+      🏃 Regular exercise • 😴 Prioritise sleep • 
+      👥 Social connections • 📵 Limit news/social media
+      <br><br>
+      ⚠️ If stress is severe or persistent, please 
+      consult a mental health professional.<br><br>
+      👉 <a href="/calculators/stress-level-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Check your stress level →</a>`
+    },
+
+    cholesterol: {
+      triggers: ['cholesterol','ldl','hdl',
+                 'high cholesterol','triglycerides',
+                 'cholesterol levels'],
+      response: `💊 <strong>Cholesterol Levels Guide:</strong>
+      <br><br>
+      <strong>Total Cholesterol:</strong><br>
+      • Desirable: below 200 mg/dL ✅<br>
+      • Borderline: 200–239 mg/dL<br>
+      • High: 240+ mg/dL 🚨<br><br>
+      <strong>LDL (bad) Cholesterol:</strong><br>
+      • Optimal: below 100 mg/dL<br>
+      • Near optimal: 100–129<br><br>
+      <strong>HDL (good) Cholesterol:</strong><br>
+      • Good: 60+ mg/dL (protective)<br>
+      • Low risk: 40–59 mg/dL<br><br>
+      <strong>Lower cholesterol naturally:</strong><br>
+      🐟 Omega-3s • 🌾 Oats & fiber • 
+      🫒 Olive oil • 🚭 Quit smoking • 
+      🏃 Exercise regularly<br><br>
+      👉 <a href="/calculators/cholesterol-risk-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Check cholesterol risk →</a>`
+    },
+
+    macros: {
+      triggers: ['macros','macronutrients','protein carbs fat',
+                 'macro split','macro ratio',
+                 'carbs fat protein'],
+      response: `🥗 <strong>Macronutrient Guide:</strong><br><br>
+      <strong>Standard balanced split:</strong><br>
+      • Protein: 25–30% of calories<br>
+      • Carbohydrates: 45–55%<br>
+      • Fats: 20–30%<br><br>
+      <strong>For weight loss:</strong><br>
+      Protein: 35% • Carbs: 35% • Fat: 30%<br><br>
+      <strong>For muscle gain:</strong><br>
+      Protein: 30% • Carbs: 50% • Fat: 20%<br><br>
+      <strong>Keto diet split:</strong><br>
+      Fat: 70% • Protein: 25% • Carbs: 5%<br><br>
+      👉 <a href="/calculators/macro-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calculate your exact macros →</a>`
+    },
+
+    keto: {
+      triggers: ['keto','ketosis','ketogenic',
+                 'low carb diet','keto diet'],
+      response: `🥑 <strong>Ketogenic Diet Guide:</strong><br><br>
+      <strong>Keto macro split:</strong><br>
+      • Fat: 70–75% of calories<br>
+      • Protein: 20–25%<br>
+      • Carbs: 5% (20–50g net carbs/day)<br><br>
+      <strong>Best keto foods:</strong><br>
+      🥑 Avocado • 🥚 Eggs • 🥩 Meat & fish • 
+      🧀 Cheese • 🥦 Non-starchy vegetables • 
+      🫒 Olive oil • 🌰 Nuts & seeds<br><br>
+      <strong>Foods to avoid:</strong><br>
+      ❌ Bread, rice, pasta, sugar, fruit juice, 
+      starchy vegetables, most fruit<br><br>
+      ⚠️ Consult a doctor before starting keto 
+      if you have any medical conditions.<br><br>
+      👉 <a href="/calculators/keto-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Keto Calculator →</a>`
+    },
+
+    intermittentfasting: {
+      triggers: ['intermittent fasting','if','16 8',
+                 'fasting','16:8','18:6','omad',
+                 'fasting window','eating window'],
+      response: `⏰ <strong>Intermittent Fasting Guide:</strong>
+      <br><br>
+      <strong>Popular IF methods:</strong><br>
+      • 16:8 — Fast 16hrs, eat in 8hr window<br>
+      • 18:6 — Fast 18hrs, eat in 6hr window<br>
+      • 5:2 — Normal 5 days, 500 cal x 2 days<br>
+      • OMAD — One Meal A Day<br><br>
+      <strong>Benefits of IF:</strong><br>
+      ✅ Fat burning • Insulin sensitivity • 
+      Mental clarity • Cellular autophagy • 
+      Simplified meal planning<br><br>
+      <strong>Who should avoid IF:</strong><br>
+      ❌ Pregnant women • People with eating 
+      disorders • Type 1 diabetics • 
+      Those on certain medications<br><br>
+      👉 <a href="/calculators/intermittent-fasting-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      IF Schedule Calculator →</a>`
+    },
+
+    exercise: {
+      triggers: ['exercise','workout','gym','training',
+                 'fitness','how to exercise','hiit',
+                 'cardio','strength training'],
+      response: `🏋️ <strong>Exercise Recommendations:</strong>
+      <br><br>
+      <strong>WHO Guidelines (adults):</strong><br>
+      • 150–300 min moderate cardio/week, OR<br>
+      • 75–150 min vigorous cardio/week<br>
+      • Plus: 2+ strength sessions per week<br><br>
+      <strong>Best exercises for weight loss:</strong><br>
+      🏃 Running • 🚴 Cycling • 🏊 Swimming • 
+      💪 HIIT • 🏋️ Weight training<br><br>
+      <strong>Beginner tip:</strong><br>
+      Start with 3 x 30 min sessions per week. 
+      Consistency beats intensity — show up first!<br><br>
+      👉 <a href="/calculators/tdee-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calculate your calorie burn →</a>`
+    },
+
+    vitamin_d: {
+      triggers: ['vitamin d','vitamin d3','vit d',
+                 'sunshine vitamin','vitamin d deficiency'],
+      response: `☀️ <strong>Vitamin D Guide:</strong><br><br>
+      <strong>Optimal blood levels:</strong><br>
+      • Deficient: below 20 ng/mL<br>
+      • Insufficient: 20–29 ng/mL<br>
+      • Sufficient: 30–60 ng/mL ✅<br>
+      • Optimal: 40–60 ng/mL<br><br>
+      <strong>Deficiency symptoms:</strong><br>
+      😔 Fatigue • Bone pain • Muscle weakness • 
+      Depression • Frequent illness<br><br>
+      <strong>Sources of Vitamin D:</strong><br>
+      ☀️ Sunlight (15–30 min/day) • 
+      🐟 Fatty fish • 🥚 Egg yolks • 
+      🥛 Fortified milk • 💊 Supplements<br><br>
+      👉 <a href="/calculators/vitamin-d-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Vitamin D Calculator →</a>`
+    },
+
+    bodyfat: {
+      triggers: ['body fat','body fat percentage',
+                 'fat percentage','lean mass',
+                 'fat vs muscle'],
+      response: `📊 <strong>Body Fat % Reference Ranges:</strong>
+      <br><br>
+      <strong>Women:</strong><br>
+      • Essential fat: 10–13%<br>
+      • Athletic: 14–20% ✅<br>
+      • Fitness: 21–24%<br>
+      • Average: 25–31%<br>
+      • Obese: 32%+<br><br>
+      <strong>Men:</strong><br>
+      • Essential fat: 2–5%<br>
+      • Athletic: 6–13% ✅<br>
+      • Fitness: 14–17%<br>
+      • Average: 18–24%<br>
+      • Obese: 25%+<br><br>
+      👉 <a href="/calculators/body-fat-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Calculate your body fat % →</a>`
+    },
+
+    pregnancy: {
+      triggers: ['pregnancy','pregnant','due date',
+                 'baby','trimester','conception',
+                 'prenatal'],
+      response: `🤰 <strong>Pregnancy Health Guide:</strong>
+      <br><br>
+      <strong>Trimesters:</strong><br>
+      • 1st: Weeks 1–13 (organ development)<br>
+      • 2nd: Weeks 14–26 (growth, movement)<br>
+      • 3rd: Weeks 27–40 (final development)<br><br>
+      <strong>Key prenatal nutrients:</strong><br>
+      💊 Folic acid (neural tube) • Iron (blood) • 
+      Calcium (bones) • Omega-3 (brain) • 
+      Vitamin D (immunity)<br><br>
+      <strong>Foods to avoid:</strong><br>
+      ❌ Raw fish/meat • Unpasteurised dairy • 
+      Alcohol • High-mercury fish • 
+      Excess caffeine (200mg max/day)<br><br>
+      👉 <a href="/calculators/pregnancy-due-date-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Due Date Calculator →</a>`
+    },
+
+    gut: {
+      triggers: ['gut health','gut','microbiome',
+                 'digestion','bloating','probiotics',
+                 'digestive'],
+      response: `🦠 <strong>Gut Health Guide:</strong><br><br>
+      <strong>Signs of poor gut health:</strong><br>
+      😣 Bloating • Constipation • Diarrhoea • 
+      Food intolerances • Fatigue • Skin issues<br><br>
+      <strong>Best foods for gut health:</strong><br>
+      🫙 Yogurt & kefir (probiotics) • 
+      🧅 Garlic & onions (prebiotics) • 
+      🌾 Whole grains (fiber) • 
+      🥦 Broccoli & leafy greens • 
+      🫐 Berries (antioxidants) • 
+      🍵 Green tea<br><br>
+      <strong>Gut health habits:</strong><br>
+      ✅ Eat diverse foods • Stay hydrated • 
+      Exercise regularly • Manage stress • 
+      Limit processed foods & alcohol`
+    },
+
+    aging: {
+      triggers: ['aging','ageing','anti aging',
+                 'longevity','life expectancy',
+                 'live longer','healthy aging'],
+      response: `🌿 <strong>Healthy Aging & Longevity:</strong>
+      <br><br>
+      <strong>Evidence-based longevity habits:</strong><br>
+      1. 🏃 Stay physically active daily<br>
+      2. 🥗 Eat predominantly plants<br>
+      3. 😴 Prioritise 7–9 hours sleep<br>
+      4. 👥 Maintain strong social connections<br>
+      5. 🧘 Manage stress effectively<br>
+      6. 🚭 Never smoke<br>
+      7. 🍷 Limit or avoid alcohol<br>
+      8. 🧠 Keep your mind active (learn, read)<br>
+      9. 🩺 Regular health check-ups<br>
+      10. 😊 Maintain sense of purpose<br><br>
+      👉 <a href="/calculators/life-expectancy-calculator.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Life Expectancy Calculator →</a>`
+    },
+
+    calculator: {
+      triggers: ['calculator','calculate','tool',
+                 'which calculator','what calculator'],
+      response: `🛠️ <strong>Our Free Health Calculators:</strong>
+      <br><br>
+      <strong>⚖️ Weight & Body:</strong><br>
+      BMI • Body Fat • Ideal Weight • Lean Mass<br><br>
+      <strong>🍎 Nutrition:</strong><br>
+      Calories • Macros • TDEE • BMR • Protein<br><br>
+      <strong>❤️ Heart & Vitals:</strong><br>
+      Heart Rate • Blood Pressure • Cholesterol<br><br>
+      <strong>👩 Women's Health:</strong><br>
+      Pregnancy • Ovulation • Menstrual Cycle<br><br>
+      <strong>🏋️ Fitness:</strong><br>
+      VO2 Max • 1 Rep Max • Steps to Calories<br><br>
+      👉 <a href="/calculators/index.html"
+      style="color:#2d6a4f;font-weight:600;">
+      Browse all 50+ free calculators →</a>`
+    },
+
+    fallback: [
+      `I don't have specific information about that, 
+      but I can help with topics like BMI, calories, 
+      sleep, heart health, nutrition, and exercise. 
+      What would you like to know? 💚`,
+      
+      `That's a great question! For detailed medical 
+      advice on that topic, I'd recommend consulting 
+      a healthcare professional. Meanwhile, I can 
+      help with general health topics — try asking 
+      about <strong>BMI, calories, sleep, or 
+      water intake</strong>! 🌿`,
+      
+      `I'm best at answering general health and 
+      wellness questions. Try asking me about weight 
+      loss, nutrition, heart health, or sleep! 
+      Or browse our 
+      <a href="/calculators/index.html" 
+      style="color:#2d6a4f;font-weight:600;">
+      free calculators →</a> 💪`
+    ]
+  },
+
+  // ── METHODS ─────────────────────────────────────
+
+  init() {
+    this.bindEvents();
+    setTimeout(() => this.addMessage('bot', 
+      `👋 Hi! I'm your <strong>VitalHealth Assistant</strong>.
+      Ask me anything about health, nutrition, or wellness — 
+      or click a topic below to get started! 💚`
+    ), 500);
+  },
+
+  bindEvents() {
+    document.getElementById('vh-chat-toggle')
+      .addEventListener('click', () => this.toggle());
+    
+    document.getElementById('vh-chat-minimize')
+      .addEventListener('click', () => this.toggle());
+    
+    document.getElementById('vh-chat-send')
+      .addEventListener('click', () => this.send());
+    
+    document.getElementById('vh-chat-input')
+      .addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') this.send();
+      });
+  },
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+    const win = document.getElementById('vh-chat-window');
+    const chatIcon = document.getElementById('vh-chat-icon');
+    const closeIcon = document.getElementById('vh-close-icon');
+    const badge = document.getElementById('vh-chat-badge');
+    
+    if (this.isOpen) {
+      win.style.display = 'flex';
+      win.style.flexDirection = 'column';
+      chatIcon.style.display = 'none';
+      closeIcon.style.display = 'block';
+      badge.style.display = 'none';
+      document.getElementById('vh-chat-input').focus();
+    } else {
+      win.style.display = 'none';
+      chatIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  },
+
+  send() {
+    const input = document.getElementById('vh-chat-input');
+    const text = input.value.trim();
+    if (!text) return;
+    
+    this.addMessage('user', text);
+    input.value = '';
+    this.showTyping();
+    
+    setTimeout(() => {
+      this.removeTyping();
+      const response = this.getResponse(text.toLowerCase());
+      this.addMessage('bot', response);
+    }, 900 + Math.random() * 600);
+  },
+
+  quickAsk(topic) {
+    document.getElementById('vh-chat-input').value = topic;
+    this.send();
+  },
+
+  getResponse(input) {
+    for (const key in this.knowledge) {
+      if (key === 'fallback') continue;
+      const item = this.knowledge[key];
+      if (item.triggers && 
+          item.triggers.some(t => input.includes(t))) {
+        return item.response;
+      }
+    }
+    const fb = this.knowledge.fallback;
+    return fb[Math.floor(Math.random() * fb.length)];
+  },
+
+  addMessage(type, text) {
+    const msgs = document.getElementById('vh-chat-messages');
+    const div = document.createElement('div');
+    div.className = `vh-msg vh-msg-${type}`;
+    div.innerHTML = text;
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+  },
+
+  showTyping() {
+    const msgs = document.getElementById('vh-chat-messages');
+    const div = document.createElement('div');
+    div.className = 'vh-typing';
+    div.id = 'vh-typing-indicator';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+  },
+
+  removeTyping() {
+    const t = document.getElementById('vh-typing-indicator');
+    if (t) t.remove();
+  }
+};
+
+// Initialize chatbot when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('vh-chatbot')) {
+    vhChat.init();
+  }
+});
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ New centered footer applied to ALL HTML files
+□ Footer columns align properly on all screen sizes
+□ All social links open in new tab
+□ Email links use mailto:
+□ Chatbot HTML added to every HTML file
+□ Chatbot CSS added to style.css
+□ Chatbot JS added to main.js
+□ Chatbot works with zero internet connection
+□ Chatbot answers all 20 health topics correctly
+□ Chatbot has typing animation before response
+□ Quick topic buttons work correctly
+□ Chatbot is mobile responsive
+□ No external API calls anywhere in chatbot code
+□ Everything works on Netlify static hosting
