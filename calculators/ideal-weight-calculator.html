@@ -131,7 +131,65 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="100" r="50" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><circle cx="160" cy="80" r="16" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><rect x="148" y="96" width="24" height="34" rx="4" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="148" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="172" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="148" y1="104" x2="135" y2="118" stroke="#2d6a4f" stroke-width="2"/><line x1="172" y1="104" x2="185" y2="118" stroke="#2d6a4f" stroke-width="2"/><rect x="260" y="50" width="180" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#2d6a4f" font-weight="700">BMI Result</text><rect x="280" y="95" width="140" height="12" rx="6" fill="#b7e4c7"/><rect x="280" y="95" width="80" height="12" rx="6" fill="#52b788"/><text x="350" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788" font-weight="600">Normal Weight</text></svg>
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="iw-title" class="calc-hero-svg">
+    <title id="iw-title">Ideal Weight Calculator</title>
+    <defs>
+      <linearGradient id="iw-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f0faf2"/>
+        <stop offset="100%" stop-color="#d8f3dc"/>
+      </linearGradient>
+      <linearGradient id="iw-base" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2d6a4f"/>
+        <stop offset="100%" stop-color="#1b4332"/>
+      </linearGradient>
+      <linearGradient id="iw-pan" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ffd166"/>
+        <stop offset="100%" stop-color="#f4a261"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#iw-bg)"/>
+    <circle cx="300" cy="170" r="130" fill="#d8f3dc" opacity="0.4"/>
+    <rect x="270" y="260" width="60" height="15" rx="4" fill="url(#iw-base)"/>
+    <rect x="285" y="200" width="30" height="65" rx="3" fill="#2d6a4f"/>
+    <circle cx="300" cy="195" r="12" fill="#2d6a4f"/>
+    <line x1="300" y1="195" x2="185" y2="170" stroke="#2d6a4f" stroke-width="4" stroke-linecap="round"/>
+    <line x1="300" y1="195" x2="415" y2="170" stroke="#2d6a4f" stroke-width="4" stroke-linecap="round"/>
+    <line x1="185" y1="170" x2="155" y2="200" stroke="#6c757d" stroke-width="1.5"/>
+    <line x1="185" y1="170" x2="215" y2="200" stroke="#6c757d" stroke-width="1.5"/>
+    <line x1="155" y1="200" x2="215" y2="200" stroke="#6c757d" stroke-width="1.5"/>
+    <path d="M150,200 Q185,215 220,200" fill="url(#iw-pan)" stroke="#e9ecef" stroke-width="1"/>
+    <line x1="415" y1="170" x2="385" y2="200" stroke="#6c757d" stroke-width="1.5"/>
+    <line x1="415" y1="170" x2="445" y2="200" stroke="#6c757d" stroke-width="1.5"/>
+    <line x1="385" y1="200" x2="445" y2="200" stroke="#6c757d" stroke-width="1.5"/>
+    <path d="M380,200 Q415,215 450,200" fill="url(#iw-pan)" stroke="#e9ecef" stroke-width="1"/>
+    <ellipse cx="185" cy="190" rx="15" ry="20" fill="#52b788" opacity="0.5"/>
+    <text x="185" y="230" text-anchor="middle" font-size="10" fill="#1b1f1e">You: 75kg</text>
+    <circle cx="415" cy="185" r="12" fill="#52b788"/>
+    <path d="M409,185 L413,190 L423,178" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M410,188 L415,193 Q418,190 420,188" fill="none" stroke="#e76f51" stroke-width="1.5"/>
+    <text x="415" y="230" text-anchor="middle" font-size="10" fill="#1b1f1e">Ideal: 70-80kg</text>
+    <rect x="55" y="60" width="16" height="200" rx="3" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+    <line x1="55" y1="80" x2="71" y2="80" stroke="#adb5bd" stroke-width="0.5"/>
+    <line x1="55" y1="120" x2="71" y2="120" stroke="#adb5bd" stroke-width="0.5"/>
+    <line x1="55" y1="160" x2="71" y2="160" stroke="#adb5bd" stroke-width="0.5"/>
+    <line x1="55" y1="200" x2="71" y2="200" stroke="#adb5bd" stroke-width="0.5"/>
+    <polygon points="73,160 80,155 80,165" fill="#e76f51"/>
+    <text x="84" y="164" font-size="9" fill="#1b1f1e">175cm</text>
+    <rect x="490" y="80" width="90" height="100" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1"/>
+    <rect x="495" y="90" width="80" height="16" rx="3" fill="#90e0ef" opacity="0.5"/>
+    <text x="535" y="102" text-anchor="middle" font-size="8" fill="#1b1f1e">&lt;18.5 Under</text>
+    <rect x="495" y="110" width="80" height="16" rx="3" fill="#52b788" opacity="0.4"/>
+    <text x="535" y="122" text-anchor="middle" font-size="8" font-weight="bold" fill="#2d6a4f">18.5-24.9 ✓</text>
+    <rect x="495" y="130" width="80" height="16" rx="3" fill="#ffd166" opacity="0.4"/>
+    <text x="535" y="142" text-anchor="middle" font-size="8" fill="#1b1f1e">25-29.9 Over</text>
+    <rect x="495" y="150" width="80" height="16" rx="3" fill="#e76f51" opacity="0.3"/>
+    <text x="535" y="162" text-anchor="middle" font-size="8" fill="#1b1f1e">30+ Obese</text>
+    <path d="M425,155 L430,148 L432,152" fill="none" stroke="#ffd166" stroke-width="1.5"/>
+    <path d="M440,145 L445,138 L447,142" fill="none" stroke="#ffd166" stroke-width="1.5"/>
+    <path d="M420,140 L425,133 L427,137" fill="none" stroke="#ffd166" stroke-width="1.5"/>
+    <circle cx="150" cy="40" r="3" fill="#52b788" opacity="0.3"/>
+    <circle cx="500" cy="290" r="4" fill="#f4a261" opacity="0.25"/>
+  </svg>
 <h1 class="fade-in">Ideal Weight Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Find your ideal weight range based on height and frame size.</p>
 <div class="calc-form fade-in">

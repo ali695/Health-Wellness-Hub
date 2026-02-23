@@ -131,7 +131,70 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><path d="M160 30c0 0-50 58-50 90a50 50 0 0 0 100 0c0-32-50-90-50-90z" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><path d="M130 120c0-13 13-24 26-24" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Daily Water Goal</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="24" fill="#2d6a4f" font-weight="800">2.5L</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">Stay Hydrated!</text></svg>
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="water-title" class="calc-hero-svg">
+    <title id="water-title">Daily Water Intake Calculator</title>
+    <defs>
+      <linearGradient id="water-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e0f7fa"/>
+        <stop offset="100%" stop-color="#f0faf2"/>
+      </linearGradient>
+      <linearGradient id="water-fill" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#0077b6"/>
+        <stop offset="100%" stop-color="#90e0ef"/>
+      </linearGradient>
+      <radialGradient id="water-drop" cx="40%" cy="30%" r="60%">
+        <stop offset="0%" stop-color="#90e0ef"/>
+        <stop offset="100%" stop-color="#0077b6"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#water-bg)"/>
+    <rect x="230" y="50" width="100" height="240" rx="12" fill="#ffffff" stroke="#90e0ef" stroke-width="2.5"/>
+    <rect x="250" y="55" width="60" height="10" rx="5" fill="#90e0ef" opacity="0.5"/>
+    <rect x="235" y="110" width="90" height="175" rx="8" fill="url(#water-fill)" opacity="0.85"/>
+    <path d="M235,110 Q260,100 280,110 Q300,118 325,110" fill="#90e0ef" opacity="0.5"/>
+    <circle cx="260" cy="180" r="4" fill="#ffffff" opacity="0.4"/>
+    <circle cx="280" cy="200" r="3" fill="#ffffff" opacity="0.35"/>
+    <circle cx="255" cy="220" r="3.5" fill="#ffffff" opacity="0.3"/>
+    <circle cx="290" cy="160" r="2.5" fill="#ffffff" opacity="0.4"/>
+    <circle cx="270" cy="240" r="3" fill="#ffffff" opacity="0.25"/>
+    <circle cx="250" cy="150" r="2" fill="#ffffff" opacity="0.35"/>
+    <circle cx="300" cy="230" r="2.5" fill="#ffffff" opacity="0.3"/>
+    <line x1="230" y1="110" x2="222" y2="110" stroke="#adb5bd" stroke-width="1"/>
+    <text x="215" y="114" text-anchor="end" font-size="8" fill="#6c757d">75%</text>
+    <line x1="230" y1="170" x2="222" y2="170" stroke="#adb5bd" stroke-width="1"/>
+    <text x="215" y="174" text-anchor="end" font-size="8" fill="#6c757d">50%</text>
+    <line x1="230" y1="230" x2="222" y2="230" stroke="#adb5bd" stroke-width="1"/>
+    <text x="215" y="234" text-anchor="end" font-size="8" fill="#6c757d">25%</text>
+    <g transform="translate(55, 80)">
+      <path d="M15,0 Q20,10 15,20 Q10,10 15,0 Z" fill="#0077b6"/>
+      <path d="M40,0 Q45,10 40,20 Q35,10 40,0 Z" fill="#0077b6"/>
+      <path d="M15,30 Q20,40 15,50 Q10,40 15,30 Z" fill="#0077b6"/>
+      <path d="M40,30 Q45,40 40,50 Q35,40 40,30 Z" fill="#0077b6"/>
+      <path d="M15,60 Q20,70 15,80 Q10,70 15,60 Z" fill="#0077b6"/>
+      <path d="M40,60 Q45,70 40,80 Q35,70 40,60 Z" fill="#0077b6"/>
+      <path d="M15,90 Q20,100 15,110 Q10,100 15,90 Z" fill="#90e0ef" opacity="0.4" stroke="#90e0ef" stroke-width="1"/>
+      <path d="M40,90 Q45,100 40,110 Q35,100 40,90 Z" fill="#90e0ef" opacity="0.4" stroke="#90e0ef" stroke-width="1"/>
+    </g>
+    <text x="82" y="210" text-anchor="middle" font-size="11" fill="#0077b6" font-weight="bold">6 / 8</text>
+    <text x="82" y="225" text-anchor="middle" font-size="10" fill="#6c757d">glasses</text>
+    <rect x="400" y="80" width="160" height="120" rx="14" fill="#ffffff" stroke="#90e0ef" stroke-width="1.5"/>
+    <path d="M480,95 Q488,75 496,95 Q488,120 480,95 Z" fill="url(#water-drop)"/>
+    <text x="488" y="145" text-anchor="middle" font-size="32" font-weight="bold" fill="#0077b6">2.7L</text>
+    <text x="488" y="165" text-anchor="middle" font-size="12" fill="#6c757d">Daily Goal</text>
+    <text x="488" y="185" text-anchor="middle" font-size="10" fill="#90e0ef">Body is 60% water</text>
+    <rect x="380" y="260" width="50" height="40" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1"/>
+    <path d="M400,268 L405,263 L407,268" fill="none" stroke="#ffd166" stroke-width="1.5"/>
+    <text x="405" y="290" text-anchor="middle" font-size="7" fill="#6c757d">Energy</text>
+    <rect x="440" y="260" width="50" height="40" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1"/>
+    <circle cx="465" cy="272" r="6" fill="none" stroke="#52b788" stroke-width="1"/>
+    <text x="465" y="290" text-anchor="middle" font-size="7" fill="#6c757d">Skin</text>
+    <rect x="500" y="260" width="50" height="40" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="1"/>
+    <circle cx="525" cy="272" r="5" fill="none" stroke="#c77dff" stroke-width="1"/>
+    <text x="525" y="290" text-anchor="middle" font-size="7" fill="#6c757d">Digest</text>
+    <path d="M170,45 Q175,35 180,45 Q175,55 170,45 Z" fill="#90e0ef" opacity="0.3"/>
+    <path d="M400,40 Q405,30 410,40 Q405,50 400,40 Z" fill="#90e0ef" opacity="0.25"/>
+    <circle cx="550" cy="50" r="3" fill="#0077b6" opacity="0.2"/>
+  </svg>
 <h1 class="fade-in">Water Intake Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Find out how much water you should drink daily.</p>
 <div class="calc-form fade-in">

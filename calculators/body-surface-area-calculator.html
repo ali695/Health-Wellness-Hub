@@ -131,7 +131,49 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="100" r="50" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><circle cx="160" cy="80" r="16" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><rect x="148" y="96" width="24" height="34" rx="4" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="148" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="172" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="148" y1="104" x2="135" y2="118" stroke="#2d6a4f" stroke-width="2"/><line x1="172" y1="104" x2="185" y2="118" stroke="#2d6a4f" stroke-width="2"/><rect x="260" y="50" width="180" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#2d6a4f" font-weight="700">BMI Result</text><rect x="280" y="95" width="140" height="12" rx="6" fill="#b7e4c7"/><rect x="280" y="95" width="80" height="12" rx="6" fill="#52b788"/><text x="350" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788" font-weight="600">Normal Weight</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bsa-title">
+    <title id="bsa-title">Body Surface Area Calculator</title>
+    <defs>
+      <linearGradient id="bsa-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#d8f3dc"/>
+        <stop offset="100%" stop-color="#f8f9fa"/>
+      </linearGradient>
+      <linearGradient id="bsa-body" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#52b788"/>
+        <stop offset="100%" stop-color="#2d6a4f"/>
+      </linearGradient>
+      <radialGradient id="bsa-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#90e0ef" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#90e0ef" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#bsa-bg)"/>
+    <circle cx="200" cy="170" r="130" fill="url(#bsa-glow)"/>
+    <path d="M200,50 C215,50 225,60 225,75 C225,90 215,100 200,100 C185,100 175,90 175,75 C175,60 185,50 200,50 Z" fill="url(#bsa-body)" opacity="0.9"/>
+    <path d="M200,100 L200,200 M200,130 L155,160 M200,130 L245,160 M200,200 L165,270 M200,200 L235,270" stroke="url(#bsa-body)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <line x1="140" y1="50" x2="140" y2="270" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="135" y1="50" x2="145" y2="50" stroke="#2d6a4f" stroke-width="2"/>
+    <line x1="135" y1="270" x2="145" y2="270" stroke="#2d6a4f" stroke-width="2"/>
+    <text x="130" y="165" font-size="11" fill="#2d6a4f" text-anchor="end" font-family="Arial">175 cm</text>
+    <line x1="165" y1="285" x2="235" y2="285" stroke="#f4a261" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="200" y="300" font-size="11" fill="#f4a261" text-anchor="middle" font-family="Arial">75 kg</text>
+    <rect x="350" y="60" width="200" height="120" rx="16" fill="#ffffff" stroke="#d8f3dc" stroke-width="2"/>
+    <text x="450" y="95" font-size="14" fill="#1b1f1e" text-anchor="middle" font-family="Arial" font-weight="bold">Body Surface Area</text>
+    <text x="450" y="135" font-size="38" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">1.91</text>
+    <text x="450" y="160" font-size="16" fill="#52b788" text-anchor="middle" font-family="Arial">m²</text>
+    <rect x="370" y="200" width="160" height="40" rx="10" fill="#d8f3dc"/>
+    <text x="450" y="225" font-size="13" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">DuBois Formula</text>
+    <rect x="370" y="250" width="75" height="50" rx="8" fill="#ffffff" stroke="#52b788" stroke-width="1"/>
+    <text x="407" y="272" font-size="11" fill="#1b1f1e" text-anchor="middle" font-family="Arial">Height</text>
+    <text x="407" y="290" font-size="13" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">175cm</text>
+    <rect x="455" y="250" width="75" height="50" rx="8" fill="#ffffff" stroke="#f4a261" stroke-width="1"/>
+    <text x="492" y="272" font-size="11" fill="#1b1f1e" text-anchor="middle" font-family="Arial">Weight</text>
+    <text x="492" y="290" font-size="13" fill="#f4a261" text-anchor="middle" font-family="Arial" font-weight="bold">75kg</text>
+    <circle cx="80" cy="60" r="6" fill="#90e0ef" opacity="0.5"/>
+    <circle cx="530" cy="40" r="4" fill="#c77dff" opacity="0.4"/>
+    <circle cx="320" cy="310" r="5" fill="#ffd166" opacity="0.5"/>
+    <rect x="60" y="300" width="30" height="4" rx="2" fill="#52b788" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Body Surface Area Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate your body surface area using the Du Bois formula.</p>
 <div class="calc-form fade-in">

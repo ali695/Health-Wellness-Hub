@@ -131,7 +131,52 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="100" y="90" width="120" height="12" rx="4" fill="#2d6a4f"/><rect x="80" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="220" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="60" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="240" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="300" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="380" y="78" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Fitness Score</text><text x="380" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#52b788" font-weight="800">85</text><text x="380" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Excellent Shape</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="steps-title">
+    <title id="steps-title">Steps to Calories Calculator</title>
+    <defs>
+      <linearGradient id="steps-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#d8f3dc"/>
+        <stop offset="100%" stop-color="#f8f9fa"/>
+      </linearGradient>
+      <linearGradient id="steps-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#52b788"/>
+        <stop offset="100%" stop-color="#2d6a4f"/>
+      </linearGradient>
+      <linearGradient id="steps-fire" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#e76f51"/>
+        <stop offset="50%" stop-color="#f4a261"/>
+        <stop offset="100%" stop-color="#ffd166"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#steps-bg)"/>
+    <circle cx="180" cy="170" r="100" fill="none" stroke="#d8f3dc" stroke-width="14"/>
+    <circle cx="180" cy="170" r="100" fill="none" stroke="url(#steps-ring)" stroke-width="14" stroke-dasharray="471" stroke-dashoffset="118" stroke-linecap="round" transform="rotate(-90 180 170)"/>
+    <text x="180" y="155" font-size="32" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">7,500</text>
+    <text x="180" y="178" font-size="14" fill="#52b788" text-anchor="middle" font-family="Arial">steps</text>
+    <text x="180" y="198" font-size="11" fill="#1b1f1e" text-anchor="middle" font-family="Arial" opacity="0.6">of 10,000 goal</text>
+    <path d="M115,285 L120,270 L130,275 L135,260 L145,265 L150,250 L155,255" stroke="#52b788" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M195,285 L200,270 L210,275 L215,260 L225,265 L230,250 L235,255" stroke="#52b788" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <rect x="370" y="60" width="190" height="90" rx="14" fill="#ffffff" stroke="#f4a261" stroke-width="2"/>
+    <path d="M405,100 C405,85 415,78 420,78 C425,78 430,85 430,92 C430,100 420,112 417,115 C415,112 405,100 405,100 Z" fill="url(#steps-fire)"/>
+    <text x="480" y="98" font-size="28" fill="#e76f51" text-anchor="middle" font-family="Arial" font-weight="bold">320</text>
+    <text x="480" y="118" font-size="13" fill="#f4a261" text-anchor="middle" font-family="Arial">kcal burned</text>
+    <text x="370" y="185" font-size="12" fill="#1b1f1e" font-family="Arial" font-weight="bold">Daily Progress</text>
+    <rect x="370" y="195" width="190" height="12" rx="6" fill="#f8f9fa"/>
+    <rect x="370" y="195" width="142" height="12" rx="6" fill="#52b788"/>
+    <text x="565" y="205" font-size="10" fill="#2d6a4f" font-family="Arial">75%</text>
+    <rect x="370" y="225" width="58" height="65" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="399" y="260" font-size="16" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">5.2</text>
+    <text x="399" y="278" font-size="10" fill="#52b788" text-anchor="middle" font-family="Arial">km</text>
+    <rect x="436" y="225" width="58" height="65" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="465" y="260" font-size="16" fill="#f4a261" text-anchor="middle" font-family="Arial" font-weight="bold">62</text>
+    <text x="465" y="278" font-size="10" fill="#f4a261" text-anchor="middle" font-family="Arial">min</text>
+    <rect x="502" y="225" width="58" height="65" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="531" y="260" font-size="16" fill="#e76f51" text-anchor="middle" font-family="Arial" font-weight="bold">320</text>
+    <text x="531" y="278" font-size="10" fill="#e76f51" text-anchor="middle" font-family="Arial">cal</text>
+    <circle cx="60" cy="40" r="5" fill="#ffd166" opacity="0.5"/>
+    <circle cx="540" cy="30" r="4" fill="#c77dff" opacity="0.4"/>
+    <circle cx="330" cy="310" r="3" fill="#90e0ef" opacity="0.5"/>
+  </svg>
 <h1 class="fade-in">Steps to Calories Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Convert your daily steps into estimated calories burned.</p>
 <div class="calc-form fade-in">

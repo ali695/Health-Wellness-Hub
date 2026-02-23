@@ -131,7 +131,57 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><path d="M160 150s-55-33-55-70c0-22 18-40 40-40 14 0 26 8 32 16a44 44 0 0 1 32-16c22 0 40 18 40 40 0 37-55 70-55 70z" fill="#f8d7da" stroke="#e76f51" stroke-width="2"/><polyline points="100,110 130,110 145,80 160,130 175,100 190,110 220,110" stroke="#2d6a4f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Heart Rate</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#e76f51" font-weight="800">72</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">BPM - Normal</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bp-title">
+    <title id="bp-title">Blood Pressure Calculator</title>
+    <defs>
+      <linearGradient id="bp-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f0faf2"/>
+        <stop offset="100%" stop-color="#d8f3dc"/>
+      </linearGradient>
+      <linearGradient id="bp-cuff" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2d6a4f"/>
+        <stop offset="100%" stop-color="#1b4332"/>
+      </linearGradient>
+      <radialGradient id="bp-gauge-bg" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="100%" stop-color="#f8f9fa"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#bp-bg)"/>
+    <rect x="30" y="60" width="140" height="220" rx="15" fill="url(#bp-cuff)" opacity="0.9"/>
+    <rect x="50" y="90" width="100" height="60" rx="8" fill="#1b4332"/>
+    <text x="100" y="125" text-anchor="middle" fill="#52b788" font-size="14" font-weight="bold">CUFF</text>
+    <rect x="55" y="160" width="90" height="8" rx="4" fill="#52b788" opacity="0.5"/>
+    <rect x="55" y="175" width="90" height="8" rx="4" fill="#52b788" opacity="0.3"/>
+    <ellipse cx="100" cy="230" rx="20" ry="20" fill="#1b4332"/>
+    <ellipse cx="100" cy="230" rx="14" ry="14" fill="#2d6a4f"/>
+    <line x1="100" y1="195" x2="100" y2="210" stroke="#52b788" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="320" cy="160" r="110" fill="url(#bp-gauge-bg)" stroke="#e0e0e0" stroke-width="3"/>
+    <path d="M230 160 A90 90 0 0 1 320 70" fill="none" stroke="#52b788" stroke-width="14" stroke-linecap="round"/>
+    <path d="M320 70 A90 90 0 0 1 395 110" fill="none" stroke="#ffd166" stroke-width="14" stroke-linecap="round"/>
+    <path d="M395 110 A90 90 0 0 1 410 160" fill="none" stroke="#f4a261" stroke-width="14" stroke-linecap="round"/>
+    <path d="M410 160 A90 90 0 0 1 380 220" fill="none" stroke="#e76f51" stroke-width="14" stroke-linecap="round"/>
+    <line x1="320" y1="160" x2="270" y2="120" stroke="#1b1f1e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="320" cy="160" r="6" fill="#1b1f1e"/>
+    <text x="320" y="195" text-anchor="middle" fill="#1b1f1e" font-size="28" font-weight="bold">120/80</text>
+    <text x="320" y="215" text-anchor="middle" fill="#52b788" font-size="12">mmHg</text>
+    <rect x="470" y="60" width="110" height="30" rx="6" fill="#52b788" opacity="0.15"/>
+    <circle cx="485" cy="75" r="5" fill="#52b788"/>
+    <text x="500" y="80" fill="#2d6a4f" font-size="11" font-weight="bold">Normal</text>
+    <rect x="470" y="98" width="110" height="30" rx="6" fill="#ffd166" opacity="0.15"/>
+    <circle cx="485" cy="113" r="5" fill="#ffd166"/>
+    <text x="500" y="118" fill="#856404" font-size="11">Elevated</text>
+    <rect x="470" y="136" width="110" height="30" rx="6" fill="#f4a261" opacity="0.15"/>
+    <circle cx="485" cy="151" r="5" fill="#f4a261"/>
+    <text x="500" y="156" fill="#e76f51" font-size="11">High S1</text>
+    <rect x="470" y="174" width="110" height="30" rx="6" fill="#e76f51" opacity="0.15"/>
+    <circle cx="485" cy="189" r="5" fill="#e76f51"/>
+    <text x="500" y="194" fill="#c1121f" font-size="11">High S2</text>
+    <path d="M490 240 C490 225, 510 225, 510 240 C510 255, 500 265, 500 265 C500 265, 490 255, 490 240Z" fill="#e76f51" opacity="0.6"/>
+    <circle cx="50" cy="40" r="4" fill="#52b788" opacity="0.3"/>
+    <circle cx="560" cy="300" r="6" fill="#52b788" opacity="0.2"/>
+    <circle cx="540" cy="280" r="3" fill="#f4a261" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Blood Pressure Checker</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Check if your blood pressure reading is in a healthy range.</p>
 <div class="calc-form fade-in">

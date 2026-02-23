@@ -131,7 +131,57 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="140" cy="110" r="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><ellipse cx="140" cy="100" rx="40" ry="12" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="125" cy="85" r="8" fill="#f4a261"/><circle cx="150" cy="82" r="6" fill="#52b788"/><circle cx="138" cy="74" r="5" fill="#e76f51"/><rect x="260" y="40" width="180" height="120" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Nutritional Breakdown</text><rect x="280" y="82" width="100" height="10" rx="5" fill="#52b788"/><text x="395" y="91" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Protein</text><rect x="280" y="100" width="120" height="10" rx="5" fill="#f4a261"/><text x="415" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Carbs</text><rect x="280" y="118" width="70" height="10" rx="5" fill="#e76f51"/><text x="365" y="127" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Fat</text><text x="350" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="700">2,100 kcal</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="caffTitle">
+    <title id="caffTitle">Caffeine Intake Calculator</title>
+    <defs>
+      <linearGradient id="caffBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f5e6d3"/>
+        <stop offset="100%" stop-color="#fdf6ee"/>
+      </linearGradient>
+      <linearGradient id="coffeeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#8B4513"/>
+        <stop offset="100%" stop-color="#5C3317"/>
+      </linearGradient>
+      <radialGradient id="caffGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#f4a261" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#f4a261" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#caffBg)"/>
+    <circle cx="130" cy="160" r="100" fill="url(#caffGlow)"/>
+    <rect x="85" y="110" width="90" height="100" rx="8" fill="#ffffff" stroke="#d4a574" stroke-width="3"/>
+    <rect x="175" y="140" width="25" height="40" rx="12" fill="none" stroke="#d4a574" stroke-width="3"/>
+    <rect x="95" y="125" width="70" height="60" rx="4" fill="url(#coffeeGrad)" opacity="0.8"/>
+    <path d="M100 125 Q115 115 130 125 Q145 115 160 125" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <path d="M115 100 Q118 85 115 75" fill="none" stroke="#c9b99a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M130 95 Q133 78 130 65" fill="none" stroke="#c9b99a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M145 100 Q148 85 145 75" fill="none" stroke="#c9b99a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <text x="130" y="245" text-anchor="middle" font-size="12" fill="#5C3317" font-weight="bold">Coffee</text>
+    <rect x="250" y="45" width="160" height="250" rx="16" fill="#ffffff" stroke="#d4a574" stroke-width="2"/>
+    <text x="330" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b1f1e">Daily Caffeine</text>
+    <path d="M330 105 L290 200 L370 200 Z" fill="none" stroke="#e9ecef" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="295" y="160" width="70" height="40" fill="#f4a261" opacity="0.7" rx="4"/>
+    <text x="330" y="145" text-anchor="middle" font-size="9" fill="#52b788">Safe</text>
+    <text x="330" y="210" text-anchor="middle" font-size="9" fill="#e76f51">Over</text>
+    <text x="330" y="240" text-anchor="middle" font-size="24" font-weight="bold" fill="#5C3317">240mg</text>
+    <text x="330" y="260" text-anchor="middle" font-size="11" fill="#1b1f1e">of 400mg limit</text>
+    <rect x="280" y="270" width="100" height="20" rx="10" fill="#d8f3dc"/>
+    <text x="330" y="284" text-anchor="middle" font-size="10" font-weight="bold" fill="#2d6a4f">✓ Within Safe Range</text>
+    <rect x="440" y="55" width="130" height="50" rx="10" fill="#ffffff" stroke="#d4a574" stroke-width="1"/>
+    <text x="505" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#5C3317">☕ Coffee</text>
+    <text x="505" y="93" text-anchor="middle" font-size="10" fill="#f4a261">95mg / cup</text>
+    <rect x="440" y="115" width="130" height="50" rx="10" fill="#ffffff" stroke="#52b788" stroke-width="1"/>
+    <text x="505" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d6a4f">🍵 Green Tea</text>
+    <text x="505" y="153" text-anchor="middle" font-size="10" fill="#52b788">28mg / cup</text>
+    <rect x="440" y="175" width="130" height="50" rx="10" fill="#ffffff" stroke="#e76f51" stroke-width="1"/>
+    <text x="505" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#e76f51">⚡ Energy Drink</text>
+    <text x="505" y="213" text-anchor="middle" font-size="10" fill="#e76f51">160mg / can</text>
+    <rect x="440" y="235" width="130" height="50" rx="10" fill="#ffffff" stroke="#1b1f1e" stroke-width="1"/>
+    <text x="505" y="255" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b1f1e">🍫 Dark Choc</text>
+    <text x="505" y="273" text-anchor="middle" font-size="10" fill="#1b1f1e">12mg / oz</text>
+    <circle cx="50" cy="310" r="4" fill="#d4a574" opacity="0.4"/>
+    <circle cx="560" cy="30" r="5" fill="#f4a261" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Caffeine Intake Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Track your daily caffeine consumption.</p>
 <div class="calc-form fade-in">

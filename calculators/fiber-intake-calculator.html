@@ -131,7 +131,54 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="140" cy="110" r="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><ellipse cx="140" cy="100" rx="40" ry="12" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="125" cy="85" r="8" fill="#f4a261"/><circle cx="150" cy="82" r="6" fill="#52b788"/><circle cx="138" cy="74" r="5" fill="#e76f51"/><rect x="260" y="40" width="180" height="120" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Nutritional Breakdown</text><rect x="280" y="82" width="100" height="10" rx="5" fill="#52b788"/><text x="395" y="91" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Protein</text><rect x="280" y="100" width="120" height="10" rx="5" fill="#f4a261"/><text x="415" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Carbs</text><rect x="280" y="118" width="70" height="10" rx="5" fill="#e76f51"/><text x="365" y="127" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Fat</text><text x="350" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="700">2,100 kcal</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fiberTitle">
+    <title id="fiberTitle">Fiber Intake Calculator</title>
+    <defs>
+      <linearGradient id="fiberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#d8f3dc"/>
+        <stop offset="100%" stop-color="#f0faf2"/>
+      </linearGradient>
+      <linearGradient id="fiberBar" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#2d6a4f"/>
+        <stop offset="100%" stop-color="#52b788"/>
+      </linearGradient>
+      <radialGradient id="fiberGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#52b788" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#52b788" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#fiberBg)"/>
+    <circle cx="130" cy="160" r="110" fill="url(#fiberGlow)"/>
+    <path d="M110 200 Q100 150 120 120 Q130 100 140 120 Q150 90 160 120 Q170 100 170 130 Q180 160 170 200Z" fill="#52b788" opacity="0.8"/>
+    <path d="M125 195 Q120 160 130 135 Q135 120 140 135 Q145 110 150 135 Q155 125 155 145 Q160 170 155 195Z" fill="#2d6a4f" opacity="0.6"/>
+    <line x1="140" y1="200" x2="140" y2="240" stroke="#2d6a4f" stroke-width="3"/>
+    <text x="140" y="265" text-anchor="middle" font-size="12" fill="#2d6a4f" font-weight="bold">Whole Foods</text>
+    <rect x="230" y="55" width="160" height="230" rx="16" fill="#ffffff" stroke="#d8f3dc" stroke-width="2"/>
+    <text x="310" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d6a4f">Daily Fiber</text>
+    <circle cx="310" cy="155" r="55" fill="none" stroke="#e9ecef" stroke-width="8"/>
+    <circle cx="310" cy="155" r="55" fill="none" stroke="url(#fiberBar)" stroke-width="8" stroke-dasharray="260 346" stroke-dashoffset="0" transform="rotate(-90 310 155)"/>
+    <text x="310" y="150" text-anchor="middle" font-size="26" font-weight="bold" fill="#2d6a4f">28g</text>
+    <text x="310" y="170" text-anchor="middle" font-size="11" fill="#52b788">of 30g goal</text>
+    <rect x="260" y="225" width="100" height="24" rx="12" fill="#d8f3dc"/>
+    <text x="310" y="241" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d6a4f">93% Complete</text>
+    <text x="310" y="270" text-anchor="middle" font-size="10" fill="#1b1f1e">Great progress!</text>
+    <rect x="420" y="55" width="150" height="55" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <rect x="435" y="73" width="80" height="8" rx="4" fill="#e9ecef"/>
+    <rect x="435" y="73" width="65" height="8" rx="4" fill="#52b788"/>
+    <text x="435" y="96" font-size="10" fill="#1b1f1e">Soluble: 12g</text>
+    <rect x="420" y="120" width="150" height="55" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <rect x="435" y="138" width="80" height="8" rx="4" fill="#e9ecef"/>
+    <rect x="435" y="138" width="55" height="8" rx="4" fill="#2d6a4f"/>
+    <text x="435" y="161" font-size="10" fill="#1b1f1e">Insoluble: 16g</text>
+    <rect x="420" y="195" width="150" height="110" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="495" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d6a4f">Top Sources</text>
+    <text x="435" y="240" font-size="10" fill="#1b1f1e">🥦 Broccoli — 5g</text>
+    <text x="435" y="258" font-size="10" fill="#1b1f1e">🫘 Lentils — 8g</text>
+    <text x="435" y="276" font-size="10" fill="#1b1f1e">🍎 Apple — 4g</text>
+    <text x="435" y="294" font-size="10" fill="#1b1f1e">🌾 Oats — 4g</text>
+    <circle cx="50" cy="30" r="4" fill="#52b788" opacity="0.3"/>
+    <circle cx="570" cy="320" r="5" fill="#2d6a4f" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Fiber Intake Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate your recommended daily fiber intake.</p>
 <div class="calc-form fade-in">

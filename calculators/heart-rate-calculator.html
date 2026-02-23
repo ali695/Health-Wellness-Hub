@@ -131,7 +131,53 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><path d="M160 150s-55-33-55-70c0-22 18-40 40-40 14 0 26 8 32 16a44 44 0 0 1 32-16c22 0 40 18 40 40 0 37-55 70-55 70z" fill="#f8d7da" stroke="#e76f51" stroke-width="2"/><polyline points="100,110 130,110 145,80 160,130 175,100 190,110 220,110" stroke="#2d6a4f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Heart Rate</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#e76f51" font-weight="800">72</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">BPM - Normal</text></svg>
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hr-title" class="calc-hero-svg">
+    <title id="hr-title">Heart Rate Calculator</title>
+    <defs>
+      <linearGradient id="hr-bg-left" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1b1f1e"/>
+        <stop offset="100%" stop-color="#2d3a35"/>
+      </linearGradient>
+      <linearGradient id="hr-heart" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e76f51"/>
+        <stop offset="100%" stop-color="#c1121f"/>
+      </linearGradient>
+      <radialGradient id="hr-glow" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#e76f51" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect x="0" y="0" width="300" height="340" rx="20" fill="url(#hr-bg-left)"/>
+    <rect x="300" y="0" width="300" height="340" rx="20" fill="#f0faf2"/>
+    <rect x="285" y="0" width="30" height="340" fill="#2d3a35"/>
+    <circle cx="150" cy="150" r="70" fill="url(#hr-glow)"/>
+    <path d="M150,200 C150,200 90,160 90,120 C90,95 110,85 130,95 C140,100 148,112 150,120 C152,112 160,100 170,95 C190,85 210,95 210,120 C210,160 150,200 150,200 Z" fill="url(#hr-heart)" stroke="#c1121f" stroke-width="1"/>
+    <path d="M120,130 Q130,115 140,130" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+    <circle cx="140" cy="120" r="8" fill="#ffffff" opacity="0.1"/>
+    <path d="M60,235 Q65,235 70,235 L80,235 L85,225 L95,250 L105,210 L115,245 L125,220 L130,235 Q140,235 180,235 L240,235" fill="none" stroke="#52b788" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="95" cy="250" r="2" fill="#52b788"/>
+    <circle cx="105" cy="210" r="2" fill="#52b788"/>
+    <rect x="360" y="50" width="200" height="80" rx="14" fill="#ffffff" stroke="#d8f3dc" stroke-width="2"/>
+    <text x="460" y="85" text-anchor="middle" font-size="36" font-weight="bold" fill="#e76f51">72</text>
+    <text x="460" y="105" text-anchor="middle" font-size="14" fill="#6c757d">BPM</text>
+    <text x="460" y="120" text-anchor="middle" font-size="10" fill="#52b788">Resting Heart Rate</text>
+    <rect x="430" y="30" width="60" height="20" rx="10" fill="#52b788"/>
+    <text x="460" y="44" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">Normal</text>
+    <rect x="370" y="160" width="180" height="150" rx="10" fill="#ffffff" stroke="#e9ecef" stroke-width="1"/>
+    <text x="460" y="182" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b1f1e">Target HR Zones</text>
+    <rect x="385" y="195" width="150" height="22" rx="4" fill="#e76f51" opacity="0.8"/>
+    <text x="460" y="210" text-anchor="middle" font-size="9" fill="#ffffff">Max HR: 170-190</text>
+    <rect x="385" y="222" width="150" height="22" rx="4" fill="#f4a261" opacity="0.8"/>
+    <text x="460" y="237" text-anchor="middle" font-size="9" fill="#ffffff">Cardio: 140-170</text>
+    <rect x="385" y="249" width="150" height="22" rx="4" fill="#52b788"/>
+    <text x="460" y="264" text-anchor="middle" font-size="9" fill="#ffffff">Fat Burn: 110-140</text>
+    <polygon points="375,260 382,254 382,266" fill="#52b788"/>
+    <rect x="385" y="276" width="150" height="22" rx="4" fill="#90e0ef" opacity="0.8"/>
+    <text x="460" y="291" text-anchor="middle" font-size="9" fill="#1b1f1e">Warm Up: 90-110</text>
+    <circle cx="40" cy="40" r="3" fill="#52b788" opacity="0.4"/>
+    <circle cx="260" cy="300" r="2" fill="#e76f51" opacity="0.3"/>
+    <circle cx="560" cy="320" r="3" fill="#52b788" opacity="0.2"/>
+  </svg>
 <h1 class="fade-in">Heart Rate Zone Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate your target heart rate zones for exercise.</p>
 <div class="calc-form fade-in">

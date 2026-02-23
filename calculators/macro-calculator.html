@@ -131,7 +131,52 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="140" cy="110" r="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><ellipse cx="140" cy="100" rx="40" ry="12" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="125" cy="85" r="8" fill="#f4a261"/><circle cx="150" cy="82" r="6" fill="#52b788"/><circle cx="138" cy="74" r="5" fill="#e76f51"/><rect x="260" y="40" width="180" height="120" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Nutritional Breakdown</text><rect x="280" y="82" width="100" height="10" rx="5" fill="#52b788"/><text x="395" y="91" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Protein</text><rect x="280" y="100" width="120" height="10" rx="5" fill="#f4a261"/><text x="415" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Carbs</text><rect x="280" y="118" width="70" height="10" rx="5" fill="#e76f51"/><text x="365" y="127" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Fat</text><text x="350" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="700">2,100 kcal</text></svg>
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="macro-title" class="calc-hero-svg">
+    <title id="macro-title">Macronutrient Calculator</title>
+    <defs>
+      <linearGradient id="macro-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f0faf2"/>
+        <stop offset="100%" stop-color="#d8f3dc"/>
+      </linearGradient>
+      <linearGradient id="macro-protein" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#52b788"/>
+        <stop offset="100%" stop-color="#2d6a4f"/>
+      </linearGradient>
+      <linearGradient id="macro-carbs" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f4a261"/>
+        <stop offset="100%" stop-color="#e76f51"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#macro-bg)"/>
+    <circle cx="260" cy="165" r="105" fill="#e9ecef" opacity="0.5"/>
+    <path d="M260,60 A105,105 0 0,1 355,200 L260,165 Z" fill="url(#macro-protein)"/>
+    <path d="M355,200 A105,105 0 0,1 155,200 L260,165 Z" fill="url(#macro-carbs)"/>
+    <path d="M155,200 A105,105 0 0,1 260,60 L260,165 Z" fill="#ffd166"/>
+    <circle cx="260" cy="165" r="50" fill="#ffffff"/>
+    <text x="260" y="158" text-anchor="middle" font-size="11" fill="#6c757d">Daily</text>
+    <text x="260" y="178" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b1f1e">Macros</text>
+    <rect x="430" y="55" width="140" height="60" rx="12" fill="#ffffff" stroke="#52b788" stroke-width="2"/>
+    <circle cx="455" cy="85" r="14" fill="#d8f3dc"/>
+    <ellipse cx="455" cy="82" rx="8" ry="6" fill="#f8f9fa" stroke="#52b788" stroke-width="1"/>
+    <text x="500" y="78" font-size="20" font-weight="bold" fill="#2d6a4f">150g</text>
+    <text x="500" y="98" font-size="12" fill="#52b788">Protein</text>
+    <rect x="430" y="130" width="140" height="60" rx="12" fill="#ffffff" stroke="#f4a261" stroke-width="2"/>
+    <circle cx="455" cy="160" r="14" fill="#ffecd2"/>
+    <rect x="448" y="154" width="14" height="10" rx="3" fill="#f4a261"/>
+    <text x="500" y="153" font-size="20" font-weight="bold" fill="#e76f51">225g</text>
+    <text x="500" y="173" font-size="12" fill="#f4a261">Carbs</text>
+    <rect x="430" y="205" width="140" height="60" rx="12" fill="#ffffff" stroke="#ffd166" stroke-width="2"/>
+    <circle cx="455" cy="235" r="14" fill="#fff3cd"/>
+    <path d="M455,224 Q458,230 455,240 Q452,230 455,224 Z" fill="#ffd166"/>
+    <text x="500" y="228" font-size="20" font-weight="bold" fill="#c77dff">65g</text>
+    <text x="500" y="248" font-size="12" fill="#ffd166">Fat</text>
+    <rect x="170" y="290" width="180" height="30" rx="15" fill="#ffffff" stroke="#e9ecef" stroke-width="1"/>
+    <path d="M195,298 C195,292 207,292 207,298 L201,312 L195,298 Z" fill="#f4a261" transform="scale(0.7) translate(100,140)"/>
+    <text x="260" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b1f1e">2,000 kcal</text>
+    <circle cx="80" cy="60" r="4" fill="#52b788" opacity="0.3"/>
+    <circle cx="60" cy="280" r="3" fill="#f4a261" opacity="0.3"/>
+    <circle cx="390" cy="300" r="5" fill="#ffd166" opacity="0.25"/>
+  </svg>
 <h1 class="fade-in">Macro Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate your ideal protein, carbs, and fat intake.</p>
 <div class="calc-form fade-in">

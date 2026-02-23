@@ -131,7 +131,57 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="120" y="60" width="80" height="80" rx="40" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2" transform="rotate(45 160 100)"/><line x1="135" y1="75" x2="185" y2="125" stroke="#52b788" stroke-width="2"/><circle cx="140" cy="90" r="8" fill="#f4a261"/><circle cx="180" cy="110" r="6" fill="#e76f51"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Health Score</text><rect x="300" y="95" width="120" height="10" rx="5" fill="#b7e4c7"/><rect x="300" y="95" width="90" height="10" rx="5" fill="#52b788"/><text x="360" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="600">Low Risk</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ironTitle">
+    <title id="ironTitle">Iron Intake Calculator</title>
+    <defs>
+      <linearGradient id="ironBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fce4e4"/>
+        <stop offset="100%" stop-color="#fff5f5"/>
+      </linearGradient>
+      <linearGradient id="ironRed" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#e76f51"/>
+        <stop offset="100%" stop-color="#c1121f"/>
+      </linearGradient>
+      <radialGradient id="ironGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#e76f51" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#e76f51" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#ironBg)"/>
+    <circle cx="130" cy="150" r="100" fill="url(#ironGlow)"/>
+    <circle cx="130" cy="130" r="50" fill="url(#ironRed)" opacity="0.9"/>
+    <circle cx="115" cy="115" r="8" fill="#ffffff" opacity="0.3"/>
+    <text x="130" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Fe</text>
+    <text x="130" y="145" text-anchor="middle" font-size="10" fill="#ffffff">Iron</text>
+    <circle cx="90" cy="190" r="12" fill="#e76f51" opacity="0.5"/>
+    <circle cx="170" cy="185" r="10" fill="#e76f51" opacity="0.4"/>
+    <circle cx="110" cy="210" r="8" fill="#e76f51" opacity="0.3"/>
+    <circle cx="155" cy="215" r="9" fill="#e76f51" opacity="0.35"/>
+    <text x="130" y="255" text-anchor="middle" font-size="11" fill="#1b1f1e">Red Blood Cells</text>
+    <rect x="240" y="50" width="150" height="240" rx="16" fill="#ffffff" stroke="#e76f51" stroke-width="2"/>
+    <text x="315" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b1f1e">Iron Level</text>
+    <rect x="285" y="95" width="60" height="140" rx="8" fill="#e9ecef"/>
+    <rect x="285" y="155" width="60" height="80" rx="8" fill="url(#ironRed)"/>
+    <text x="265" y="105" text-anchor="end" font-size="9" fill="#e76f51">High</text>
+    <text x="265" y="155" text-anchor="end" font-size="9" fill="#52b788">Normal</text>
+    <text x="265" y="230" text-anchor="end" font-size="9" fill="#f4a261">Low</text>
+    <line x1="280" y1="155" x2="350" y2="155" stroke="#52b788" stroke-width="1" stroke-dasharray="3"/>
+    <text x="315" y="258" text-anchor="middle" font-size="22" font-weight="bold" fill="#e76f51">18mg</text>
+    <text x="315" y="278" text-anchor="middle" font-size="11" fill="#1b1f1e">Daily Need</text>
+    <rect x="420" y="50" width="150" height="60" rx="10" fill="#ffffff" stroke="#e76f51" stroke-width="1"/>
+    <text x="495" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#e76f51">Heme Iron</text>
+    <text x="495" y="95" text-anchor="middle" font-size="10" fill="#1b1f1e">Red meat, poultry</text>
+    <rect x="420" y="120" width="150" height="60" rx="10" fill="#ffffff" stroke="#52b788" stroke-width="1"/>
+    <text x="495" y="145" text-anchor="middle" font-size="11" font-weight="bold" fill="#52b788">Non-Heme Iron</text>
+    <text x="495" y="165" text-anchor="middle" font-size="10" fill="#1b1f1e">Spinach, lentils</text>
+    <rect x="420" y="195" width="150" height="95" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="495" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d6a4f">Benefits</text>
+    <text x="435" y="240" font-size="10" fill="#1b1f1e">🩸 O₂ Transport</text>
+    <text x="435" y="258" font-size="10" fill="#1b1f1e">⚡ Energy</text>
+    <text x="435" y="276" font-size="10" fill="#1b1f1e">🧠 Brain Function</text>
+    <circle cx="50" cy="30" r="4" fill="#e76f51" opacity="0.3"/>
+    <circle cx="560" cy="310" r="5" fill="#e76f51" opacity="0.25"/>
+  </svg>
 <h1 class="fade-in">Iron Intake Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Find your recommended daily iron intake.</p>
 <div class="calc-form fade-in">

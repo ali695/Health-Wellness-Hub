@@ -131,7 +131,40 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><ellipse cx="160" cy="100" rx="50" ry="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><path d="M135 70c10-15 40-15 50 0" stroke="#2d6a4f" stroke-width="2" fill="none"/><path d="M130 90c8 5 15-5 25 0s15-5 25 0" stroke="#52b788" stroke-width="2" fill="none"/><path d="M130 110c8 5 15-5 25 0s15-5 25 0" stroke="#52b788" stroke-width="2" fill="none"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Mental Health</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="22" fill="#52b788" font-weight="800">Score: 8/10</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Well-Balanced</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="anxiety-title">
+    <title id="anxiety-title">Anxiety Score Calculator</title>
+    <defs>
+      <linearGradient id="anxBgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8f9fa"/><stop offset="100%" stop-color="#d8f3dc" stop-opacity="0.4"/></linearGradient>
+      <linearGradient id="anxBrainGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c77dff"/><stop offset="100%" stop-color="#90e0ef"/></linearGradient>
+      <linearGradient id="anxMeterGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#52b788"/><stop offset="40%" stop-color="#ffd166"/><stop offset="70%" stop-color="#f4a261"/><stop offset="100%" stop-color="#e76f51"/></linearGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#anxBgGrad)"/>
+    <path d="M120 200 C120 130 160 80 200 80 C220 80 240 95 250 110 C255 100 270 80 290 80 C330 80 370 130 370 200 C370 230 350 255 320 270 C290 285 260 280 250 280 C240 280 200 285 170 270 C140 255 120 230 120 200 Z" fill="url(#anxBrainGrad)" opacity="0.7"/>
+    <path d="M190 150 Q210 130 230 150 Q250 130 270 150" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M170 190 Q200 170 230 190 Q260 170 290 190" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3"/>
+    <path d="M200 230 Q220 215 240 230 Q260 215 280 230" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.25"/>
+    <path d="M145 155 L155 145 M155 155 L145 145" stroke="#ffd166" stroke-width="2.5" opacity="0.7"/>
+    <path d="M320 140 L330 130 M330 140 L320 130" stroke="#ffd166" stroke-width="2.5" opacity="0.7"/>
+    <path d="M170 110 L175 100 M175 110 L170 100" stroke="#f4a261" stroke-width="2" opacity="0.5"/>
+    <rect x="420" y="55" width="40" height="220" rx="10" fill="#f8f9fa" stroke="#d8f3dc" stroke-width="2"/>
+    <rect x="425" y="165" width="30" height="105" rx="6" fill="url(#anxMeterGrad)"/>
+    <text x="440" y="50" text-anchor="middle" font-size="9" fill="#e76f51">Severe</text>
+    <text x="440" y="110" text-anchor="middle" font-size="9" fill="#f4a261">Moderate</text>
+    <text x="440" y="195" text-anchor="middle" font-size="9" fill="#ffd166">Mild</text>
+    <text x="440" y="265" text-anchor="middle" font-size="9" fill="#52b788">Minimal</text>
+    <line x1="415" y1="165" x2="465" y2="165" stroke="#f4a261" stroke-width="2"/>
+    <rect x="475" y="140" width="105" height="55" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="2"/>
+    <text x="527" y="162" text-anchor="middle" font-size="22" font-weight="bold" fill="#f4a261">7</text>
+    <text x="527" y="180" text-anchor="middle" font-size="10" fill="#1b1f1e">GAD-7 Score</text>
+    <rect x="485" y="205" width="85" height="24" rx="12" fill="#ffd166" opacity="0.3"/>
+    <text x="527" y="221" text-anchor="middle" font-size="10" font-weight="bold" fill="#f4a261">Mild Anxiety</text>
+    <rect x="475" y="245" width="105" height="60" rx="8" fill="#d8f3dc" opacity="0.5"/>
+    <text x="527" y="265" text-anchor="middle" font-size="9" fill="#2d6a4f">Breathing</text>
+    <text x="527" y="280" text-anchor="middle" font-size="9" fill="#2d6a4f">Meditation</text>
+    <text x="527" y="295" text-anchor="middle" font-size="9" fill="#2d6a4f">Exercise</text>
+    <circle cx="50" cy="50" r="6" fill="#c77dff" opacity="0.2"/>
+    <circle cx="560" cy="30" r="5" fill="#90e0ef" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Anxiety Score Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Screen for anxiety symptoms with the GAD-7 inspired assessment.</p>
 <div class="calc-form fade-in">

@@ -131,7 +131,73 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="85" r="35" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="148" cy="80" r="3" fill="#2d6a4f"/><circle cx="172" cy="80" r="3" fill="#2d6a4f"/><path d="M150 95c5 5 15 5 20 0" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round"/><path d="M130 70c5-15 55-15 60 0" stroke="#f4a261" stroke-width="3" fill="none"/><rect x="140" y="125" width="40" height="10" rx="5" fill="#52b788"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Due Date</text><text x="360" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="18" fill="#f4a261" font-weight="800">Week 28</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">Healthy Progress</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="preg-title">
+    <title id="preg-title">Pregnancy Due Date Calculator</title>
+    <defs>
+      <linearGradient id="preg-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#fff8f0"/>
+        <stop offset="100%" stop-color="#ffecd2"/>
+      </linearGradient>
+      <linearGradient id="preg-belly" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffd166"/>
+        <stop offset="100%" stop-color="#f4a261"/>
+      </linearGradient>
+      <radialGradient id="preg-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffd166" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#preg-bg)"/>
+    <circle cx="120" cy="170" r="60" fill="url(#preg-glow)"/>
+    <path d="M130 100 C130 80, 115 75, 115 95 L115 110 C100 100, 85 115, 90 135 C75 135, 70 165, 90 175 C85 195, 95 225, 115 235 C120 255, 130 265, 135 265 L135 100Z" fill="#f4a261" opacity="0.7"/>
+    <ellipse cx="120" cy="190" rx="35" ry="42" fill="url(#preg-belly)"/>
+    <path d="M110 185 C110 175, 130 175, 130 185 C130 195, 120 200, 120 200 C120 200, 110 195, 110 185Z" fill="#e76f51" opacity="0.4"/>
+    <circle cx="115" cy="105" r="18" fill="#f4a261" opacity="0.8"/>
+    <rect x="220" y="50" width="180" height="170" rx="12" fill="#ffffff" stroke="#e0d5c7" stroke-width="1.5"/>
+    <rect x="220" y="50" width="180" height="35" rx="12" fill="#2d6a4f"/>
+    <text x="310" y="73" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Due Date Calendar</text>
+    <line x1="220" y1="85" x2="400" y2="85" stroke="#e0d5c7" stroke-width="0.5"/>
+    <text x="240" y="105" fill="#999" font-size="9">S  M  T  W  T  F  S</text>
+    <text x="237" y="122" fill="#666" font-size="9">1</text>
+    <text x="253" y="122" fill="#666" font-size="9">2</text>
+    <text x="269" y="122" fill="#666" font-size="9">3</text>
+    <text x="285" y="122" fill="#666" font-size="9">4</text>
+    <text x="301" y="122" fill="#666" font-size="9">5</text>
+    <text x="317" y="122" fill="#666" font-size="9">6</text>
+    <text x="333" y="122" fill="#666" font-size="9">7</text>
+    <text x="237" y="140" fill="#666" font-size="9">8</text>
+    <text x="253" y="140" fill="#666" font-size="9">9</text>
+    <text x="269" y="140" fill="#666" font-size="9">10</text>
+    <circle cx="287" cy="137" r="9" fill="#f4a261" opacity="0.5"/>
+    <text x="285" y="140" fill="#fff" font-size="9" font-weight="bold">11</text>
+    <text x="301" y="140" fill="#666" font-size="9">12</text>
+    <text x="317" y="140" fill="#666" font-size="9">13</text>
+    <text x="333" y="140" fill="#666" font-size="9">14</text>
+    <text x="237" y="158" fill="#666" font-size="9">15</text>
+    <text x="253" y="158" fill="#666" font-size="9">16</text>
+    <text x="269" y="158" fill="#666" font-size="9">17</text>
+    <text x="285" y="158" fill="#666" font-size="9">18</text>
+    <text x="301" y="158" fill="#666" font-size="9">19</text>
+    <text x="317" y="158" fill="#666" font-size="9">20</text>
+    <circle cx="335" cy="155" r="10" fill="#52b788"/>
+    <text x="333" y="158" fill="#fff" font-size="9" font-weight="bold">21</text>
+    <text x="310" y="190" text-anchor="middle" fill="#2d6a4f" font-size="11" font-weight="bold">Week 28 of 40</text>
+    <rect x="440" y="60" width="130" height="30" rx="6" fill="#f4a261" opacity="0.2"/>
+    <circle cx="455" cy="75" r="5" fill="#f4a261"/>
+    <text x="470" y="80" fill="#c66a10" font-size="10">1st Tri (1-13)</text>
+    <rect x="440" y="100" width="130" height="30" rx="6" fill="#ffd166" opacity="0.2"/>
+    <circle cx="455" cy="115" r="5" fill="#ffd166"/>
+    <text x="470" y="120" fill="#856404" font-size="10">2nd Tri (14-26)</text>
+    <rect x="440" y="140" width="130" height="30" rx="6" fill="#52b788" opacity="0.25" stroke="#52b788" stroke-width="1"/>
+    <circle cx="455" cy="155" r="5" fill="#52b788"/>
+    <text x="470" y="160" fill="#2d6a4f" font-size="10" font-weight="bold">3rd Tri (27-40)</text>
+    <path d="M480 200 C480 193, 490 193, 490 200 C490 207, 485 212, 485 212 C485 212, 480 207, 480 200Z" fill="#e76f51" opacity="0.5"/>
+    <path d="M510 195 C510 188, 520 188, 520 195 C520 202, 515 207, 515 207 C515 207, 510 202, 510 195Z" fill="#e76f51" opacity="0.4"/>
+    <circle cx="550" cy="280" r="3" fill="#ffd166" opacity="0.5"/>
+    <circle cx="30" cy="30" r="4" fill="#f4a261" opacity="0.3"/>
+    <path d="M460 250 L465 240 L470 250 M462 248 L468 248" fill="none" stroke="#ffd166" stroke-width="1.5" opacity="0.4"/>
+    <text x="310" y="310" text-anchor="middle" fill="#2d6a4f" font-size="12" opacity="0.5">Your journey to parenthood</text>
+  </svg>
 <h1 class="fade-in">Pregnancy Due Date Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Estimate your baby's due date from your last menstrual period.</p>
 <div class="calc-form fade-in">

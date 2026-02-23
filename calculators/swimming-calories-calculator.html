@@ -131,7 +131,55 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="100" y="90" width="120" height="12" rx="4" fill="#2d6a4f"/><rect x="80" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="220" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="60" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="240" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="300" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="380" y="78" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Fitness Score</text><text x="380" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#52b788" font-weight="800">85</text><text x="380" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Excellent Shape</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="swim-title">
+    <title id="swim-title">Swimming Calories Calculator</title>
+    <defs>
+      <linearGradient id="swim-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#f8f9fa"/>
+        <stop offset="100%" stop-color="#90e0ef" stop-opacity="0.3"/>
+      </linearGradient>
+      <linearGradient id="swim-water" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#90e0ef"/>
+        <stop offset="100%" stop-color="#0077b6"/>
+      </linearGradient>
+      <linearGradient id="swim-fire" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#e76f51"/>
+        <stop offset="100%" stop-color="#ffd166"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#swim-bg)"/>
+    <rect x="40" y="180" width="300" height="140" rx="10" fill="url(#swim-water)" opacity="0.4"/>
+    <path d="M40,190 Q70,180 100,190 Q130,200 160,190 Q190,180 220,190 Q250,200 280,190 Q310,180 340,190" stroke="#90e0ef" stroke-width="3" fill="none"/>
+    <path d="M40,205 Q70,195 100,205 Q130,215 160,205 Q190,195 220,205 Q250,215 280,205 Q310,195 340,205" stroke="#90e0ef" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="160" cy="185" r="14" fill="#f4a261"/>
+    <line x1="160" y1="199" x2="160" y2="230" stroke="#f4a261" stroke-width="5" stroke-linecap="round"/>
+    <line x1="160" y1="210" x2="130" y2="195" stroke="#f4a261" stroke-width="4" stroke-linecap="round"/>
+    <line x1="160" y1="210" x2="195" y2="200" stroke="#f4a261" stroke-width="4" stroke-linecap="round"/>
+    <line x1="160" y1="230" x2="140" y2="260" stroke="#f4a261" stroke-width="4" stroke-linecap="round"/>
+    <line x1="160" y1="230" x2="180" y2="260" stroke="#f4a261" stroke-width="4" stroke-linecap="round"/>
+    <rect x="60" y="280" width="40" height="8" rx="4" fill="#ffffff" opacity="0.4"/>
+    <rect x="120" y="290" width="50" height="8" rx="4" fill="#ffffff" opacity="0.3"/>
+    <rect x="200" y="285" width="45" height="8" rx="4" fill="#ffffff" opacity="0.35"/>
+    <rect x="270" y="278" width="35" height="8" rx="4" fill="#ffffff" opacity="0.3"/>
+    <rect x="390" y="50" width="180" height="95" rx="14" fill="#ffffff" stroke="#90e0ef" stroke-width="2"/>
+    <path d="M418,88 C418,76 426,70 430,70 C434,70 438,76 438,83 C438,90 430,100 428,102 C426,100 418,90 418,88 Z" fill="url(#swim-fire)"/>
+    <text x="505" y="90" font-size="28" fill="#e76f51" text-anchor="middle" font-family="Arial" font-weight="bold">550</text>
+    <text x="505" y="112" font-size="13" fill="#f4a261" text-anchor="middle" font-family="Arial">kcal burned</text>
+    <rect x="390" y="165" width="85" height="50" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="432" y="185" font-size="10" fill="#1b1f1e" text-anchor="middle" font-family="Arial">Stroke</text>
+    <text x="432" y="203" font-size="12" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">Freestyle</text>
+    <rect x="485" y="165" width="85" height="50" rx="10" fill="#ffffff" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="527" y="185" font-size="10" fill="#1b1f1e" text-anchor="middle" font-family="Arial">Duration</text>
+    <text x="527" y="203" font-size="14" fill="#90e0ef" text-anchor="middle" font-family="Arial" font-weight="bold">60 min</text>
+    <text x="390" y="245" font-size="11" fill="#1b1f1e" font-family="Arial" font-weight="bold">Laps Completed</text>
+    <rect x="390" y="255" width="180" height="12" rx="6" fill="#d8f3dc"/>
+    <rect x="390" y="255" width="135" height="12" rx="6" fill="#90e0ef"/>
+    <text x="530" y="264" font-size="9" fill="#2d6a4f" font-family="Arial">40 laps</text>
+    <rect x="390" y="280" width="85" height="28" rx="6" fill="#d8f3dc"/>
+    <text x="432" y="299" font-size="10" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">1,000m</text>
+    <circle cx="50" cy="40" r="5" fill="#ffd166" opacity="0.5"/>
+    <circle cx="550" cy="320" r="4" fill="#c77dff" opacity="0.4"/>
+  </svg>
 <h1 class="fade-in">Swimming Calories Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate calories burned while swimming.</p>
 <div class="calc-form fade-in">

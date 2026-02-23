@@ -131,7 +131,61 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="140" cy="110" r="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><ellipse cx="140" cy="100" rx="40" ry="12" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="125" cy="85" r="8" fill="#f4a261"/><circle cx="150" cy="82" r="6" fill="#52b788"/><circle cx="138" cy="74" r="5" fill="#e76f51"/><rect x="260" y="40" width="180" height="120" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Nutritional Breakdown</text><rect x="280" y="82" width="100" height="10" rx="5" fill="#52b788"/><text x="395" y="91" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Protein</text><rect x="280" y="100" width="120" height="10" rx="5" fill="#f4a261"/><text x="415" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Carbs</text><rect x="280" y="118" width="70" height="10" rx="5" fill="#e76f51"/><text x="365" y="127" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Fat</text><text x="350" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="700">2,100 kcal</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="keto-title">
+    <title id="keto-title">Keto Diet Calculator</title>
+    <defs>
+      <linearGradient id="keto-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#fffcf2"/>
+        <stop offset="100%" stop-color="#ffefd5"/>
+      </linearGradient>
+      <linearGradient id="keto-avo" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#52b788"/>
+        <stop offset="100%" stop-color="#2d6a4f"/>
+      </linearGradient>
+      <radialGradient id="keto-pit" cx="50%" cy="45%" r="40%">
+        <stop offset="0%" stop-color="#a0522d"/>
+        <stop offset="100%" stop-color="#6b3410"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#keto-bg)"/>
+    <ellipse cx="100" cy="150" rx="50" ry="60" fill="url(#keto-avo)"/>
+    <ellipse cx="100" cy="145" rx="30" ry="35" fill="#d8f3dc"/>
+    <ellipse cx="100" cy="140" rx="15" ry="18" fill="url(#keto-pit)"/>
+    <ellipse cx="80" cy="230" rx="22" ry="16" fill="#fff8e8" stroke="#e0d5c7" stroke-width="1.5"/>
+    <ellipse cx="80" cy="228" rx="10" ry="7" fill="#ffd166"/>
+    <ellipse cx="125" cy="235" rx="20" ry="14" fill="#fff8e8" stroke="#e0d5c7" stroke-width="1.5"/>
+    <ellipse cx="125" cy="233" rx="9" ry="6" fill="#ffd166"/>
+    <rect x="45" y="260" width="50" height="8" rx="3" fill="#e76f51" opacity="0.7"/>
+    <rect x="45" y="272" width="50" height="8" rx="3" fill="#ff8a80" opacity="0.6"/>
+    <rect x="45" y="284" width="50" height="8" rx="3" fill="#e76f51" opacity="0.5"/>
+    <path d="M140 265 Q155 255, 170 265 Q155 275, 140 265Z" fill="#f4a261" opacity="0.6"/>
+    <circle cx="152" cy="280" r="5" fill="#a0522d" opacity="0.7"/>
+    <circle cx="163" cy="278" r="4" fill="#8b6914" opacity="0.6"/>
+    <circle cx="145" cy="290" r="4.5" fill="#a0522d" opacity="0.5"/>
+    <circle cx="320" cy="170" r="90" fill="#ffd166" opacity="0.15"/>
+    <path d="M320 80 L320 170 L395 125 Z" fill="#ffd166" opacity="0.8"/>
+    <path d="M395 125 A90 90 0 1 1 320 80" fill="#ffd166" opacity="0.6"/>
+    <path d="M320 80 L320 170 L253 210 Z" fill="#52b788" opacity="0.7"/>
+    <path d="M253 210 L320 170 L395 125" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+    <path d="M320 170 L345 256" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+    <circle cx="320" cy="170" r="30" fill="#ffffff"/>
+    <text x="320" y="167" text-anchor="middle" fill="#1b1f1e" font-size="9" font-weight="bold">Daily</text>
+    <text x="320" y="180" text-anchor="middle" fill="#1b1f1e" font-size="9" font-weight="bold">Macros</text>
+    <text x="380" y="100" fill="#856404" font-size="12" font-weight="bold">Fat 70%</text>
+    <text x="240" y="240" fill="#2d6a4f" font-size="12" font-weight="bold">Protein 25%</text>
+    <text x="340" y="270" fill="#f4a261" font-size="12" font-weight="bold">Carbs 5%</text>
+    <rect x="470" y="80" width="110" height="140" rx="12" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="525" y="105" text-anchor="middle" fill="#1b1f1e" font-size="11" font-weight="bold">Ketosis Meter</text>
+    <rect x="510" y="115" width="30" height="90" rx="6" fill="#f0f0f0"/>
+    <rect x="510" y="135" width="30" height="70" rx="6" fill="#52b788" opacity="0.7"/>
+    <text x="525" y="155" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">IN</text>
+    <text x="525" y="165" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">KETOSIS</text>
+    <circle cx="490" cy="130" r="4" fill="#f4a261" opacity="0.5"/>
+    <circle cx="490" cy="280" r="4" fill="#f4a261" opacity="0.4"/>
+    <circle cx="560" cy="280" r="3" fill="#ffd166" opacity="0.4"/>
+    <path d="M480 300 L485 290 L490 300" fill="#f4a261" opacity="0.4"/>
+    <path d="M510 300 L515 290 L520 300" fill="#e76f51" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Keto Macro Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate your ideal macros for a ketogenic diet.</p>
 <div class="calc-form fade-in">

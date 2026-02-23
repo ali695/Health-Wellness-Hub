@@ -131,7 +131,49 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="100" r="50" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><circle cx="160" cy="80" r="16" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><rect x="148" y="96" width="24" height="34" rx="4" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="148" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="172" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="148" y1="104" x2="135" y2="118" stroke="#2d6a4f" stroke-width="2"/><line x1="172" y1="104" x2="185" y2="118" stroke="#2d6a4f" stroke-width="2"/><rect x="260" y="50" width="180" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#2d6a4f" font-weight="700">BMI Result</text><rect x="280" y="95" width="140" height="12" rx="6" fill="#b7e4c7"/><rect x="280" y="95" width="80" height="12" rx="6" fill="#52b788"/><text x="350" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788" font-weight="600">Normal Weight</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="whr-title">
+    <title id="whr-title">Waist to Hip Ratio Calculator</title>
+    <defs>
+      <linearGradient id="whr-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f0faf2"/>
+        <stop offset="100%" stop-color="#d8f3dc"/>
+      </linearGradient>
+      <linearGradient id="whr-body" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#d8f3dc"/>
+        <stop offset="100%" stop-color="#52b788"/>
+      </linearGradient>
+      <linearGradient id="whr-tape" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#ffd166"/>
+        <stop offset="100%" stop-color="#f4a261"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#whr-bg)"/>
+    <circle cx="155" cy="70" r="22" fill="url(#whr-body)"/>
+    <path d="M140 92 L130 130 Q125 140, 135 140 L145 140 L145 190 Q145 195, 140 195 L140 260 Q140 270, 148 270 L148 270 Q155 270, 155 260 L155 195 Q155 195, 155 195 L155 260 Q155 270, 162 270 L162 270 Q170 270, 170 260 L170 195 Q170 195, 165 195 L165 140 L175 140 Q185 140, 180 130 L170 92Z" fill="url(#whr-body)" opacity="0.85"/>
+    <ellipse cx="155" cy="145" rx="22" ry="6" fill="none" stroke="url(#whr-tape)" stroke-width="4" stroke-dasharray="4 2"/>
+    <text x="190" y="148" fill="#f4a261" font-size="11" font-weight="bold">Waist: 76cm</text>
+    <ellipse cx="155" cy="195" rx="26" ry="7" fill="none" stroke="url(#whr-tape)" stroke-width="4" stroke-dasharray="4 2"/>
+    <text x="195" y="198" fill="#f4a261" font-size="11" font-weight="bold">Hip: 96cm</text>
+    <line x1="100" y1="140" x2="100" y2="200" stroke="#2d6a4f" stroke-width="1.5" opacity="0.5"/>
+    <path d="M95 145 L100 140 L105 145" fill="none" stroke="#2d6a4f" stroke-width="1.5"/>
+    <path d="M95 195 L100 200 L105 195" fill="none" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="85" y="175" fill="#2d6a4f" font-size="9" text-anchor="middle" transform="rotate(-90, 85, 175)">Ratio</text>
+    <circle cx="420" cy="155" r="90" fill="none" stroke="#e0e0e0" stroke-width="12"/>
+    <path d="M420 65 A90 90 0 0 1 496 110" fill="none" stroke="#52b788" stroke-width="12" stroke-linecap="round"/>
+    <path d="M496 110 A90 90 0 0 1 505 170" fill="none" stroke="#ffd166" stroke-width="12" stroke-linecap="round"/>
+    <path d="M505 170 A90 90 0 0 1 470 230" fill="none" stroke="#e76f51" stroke-width="12" stroke-linecap="round"/>
+    <line x1="420" y1="155" x2="475" y2="110" stroke="#1b1f1e" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="420" cy="155" r="5" fill="#1b1f1e"/>
+    <text x="420" y="150" text-anchor="middle" fill="#1b1f1e" font-size="28" font-weight="bold">0.79</text>
+    <text x="420" y="172" text-anchor="middle" fill="#52b788" font-size="12">WHR</text>
+    <rect x="380" y="260" width="80" height="22" rx="11" fill="#52b788" opacity="0.2"/>
+    <text x="420" y="275" text-anchor="middle" fill="#2d6a4f" font-size="10" font-weight="bold">Healthy</text>
+    <text x="490" y="95" fill="#52b788" font-size="9">Low</text>
+    <text x="510" y="165" fill="#ffd166" font-size="9">Mod</text>
+    <text x="480" y="235" fill="#e76f51" font-size="9">High</text>
+    <circle cx="50" cy="300" r="4" fill="#52b788" opacity="0.2"/>
+    <circle cx="560" cy="40" r="5" fill="#ffd166" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Waist-to-Hip Ratio Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Calculate your waist-to-hip ratio and health risk.</p>
 <div class="calc-form fade-in">

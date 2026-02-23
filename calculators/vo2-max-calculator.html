@@ -131,7 +131,50 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="100" y="90" width="120" height="12" rx="4" fill="#2d6a4f"/><rect x="80" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="220" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="60" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="240" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="300" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="380" y="78" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Fitness Score</text><text x="380" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#52b788" font-weight="800">85</text><text x="380" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Excellent Shape</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="vo2-title">
+    <title id="vo2-title">VO2 Max Calculator</title>
+    <defs>
+      <linearGradient id="vo2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#d8f3dc"/>
+        <stop offset="100%" stop-color="#90e0ef" stop-opacity="0.3"/>
+      </linearGradient>
+      <linearGradient id="vo2-lung" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#90e0ef"/>
+        <stop offset="100%" stop-color="#2d6a4f"/>
+      </linearGradient>
+      <radialGradient id="vo2-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#52b788" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#52b788" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#vo2-bg)"/>
+    <circle cx="180" cy="160" r="120" fill="url(#vo2-glow)"/>
+    <path d="M160,100 C130,100 110,130 110,160 C110,200 140,230 160,230 C170,230 175,220 180,220 C185,220 190,230 200,230 C220,230 250,200 250,160 C250,130 230,100 200,100 C190,100 185,110 180,110 C175,110 170,100 160,100 Z" fill="url(#vo2-lung)" opacity="0.8"/>
+    <path d="M180,110 L180,240" stroke="#ffffff" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+    <circle cx="150" cy="140" r="5" fill="#ffffff" opacity="0.3"/>
+    <circle cx="210" cy="145" r="4" fill="#ffffff" opacity="0.25"/>
+    <circle cx="165" cy="190" r="6" fill="#ffffff" opacity="0.2"/>
+    <circle cx="195" cy="180" r="3" fill="#ffffff" opacity="0.35"/>
+    <text x="180" y="280" font-size="12" fill="#2d6a4f" text-anchor="middle" font-family="Arial">O₂ Uptake</text>
+    <path d="M350,170 C360,170 365,130 380,130 C395,130 395,170 400,170 C405,170 405,90 420,90 C435,90 435,200 440,200 C445,200 445,145 460,145 C475,145 475,170 490,170" stroke="#52b788" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <line x1="340" y1="170" x2="500" y2="170" stroke="#1b1f1e" stroke-width="1" opacity="0.2"/>
+    <rect x="370" y="50" width="160" height="90" rx="14" fill="#ffffff" stroke="#52b788" stroke-width="2"/>
+    <text x="450" y="78" font-size="12" fill="#1b1f1e" text-anchor="middle" font-family="Arial">Your VO2 Max</text>
+    <text x="450" y="112" font-size="34" fill="#2d6a4f" text-anchor="middle" font-family="Arial" font-weight="bold">48.5</text>
+    <text x="450" y="130" font-size="12" fill="#52b788" text-anchor="middle" font-family="Arial">mL/kg/min</text>
+    <rect x="380" y="220" width="42" height="60" rx="6" fill="#90e0ef" opacity="0.3"/>
+    <rect x="380" y="250" width="42" height="30" rx="0" fill="#90e0ef"/>
+    <text x="401" y="295" font-size="9" fill="#2d6a4f" text-anchor="middle" font-family="Arial">Poor</text>
+    <rect x="428" y="220" width="42" height="60" rx="6" fill="#ffd166" opacity="0.3"/>
+    <rect x="428" y="235" width="42" height="45" rx="0" fill="#ffd166"/>
+    <text x="449" y="295" font-size="9" fill="#2d6a4f" text-anchor="middle" font-family="Arial">Good</text>
+    <rect x="476" y="220" width="42" height="60" rx="6" fill="#52b788" opacity="0.3"/>
+    <rect x="476" y="225" width="42" height="55" rx="0" fill="#52b788"/>
+    <text x="497" y="295" font-size="9" fill="#2d6a4f" text-anchor="middle" font-family="Arial">Elite</text>
+    <circle cx="80" cy="30" r="5" fill="#ffd166" opacity="0.5"/>
+    <circle cx="550" cy="310" r="4" fill="#c77dff" opacity="0.4"/>
+    <rect x="50" y="310" width="30" height="4" rx="2" fill="#52b788" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">VO2 Max Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Estimate your VO2 max aerobic fitness level.</p>
 <div class="calc-form fade-in">

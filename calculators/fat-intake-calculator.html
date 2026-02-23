@@ -131,7 +131,59 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="140" cy="110" r="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><ellipse cx="140" cy="100" rx="40" ry="12" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="125" cy="85" r="8" fill="#f4a261"/><circle cx="150" cy="82" r="6" fill="#52b788"/><circle cx="138" cy="74" r="5" fill="#e76f51"/><rect x="260" y="40" width="180" height="120" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Nutritional Breakdown</text><rect x="280" y="82" width="100" height="10" rx="5" fill="#52b788"/><text x="395" y="91" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Protein</text><rect x="280" y="100" width="120" height="10" rx="5" fill="#f4a261"/><text x="415" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Carbs</text><rect x="280" y="118" width="70" height="10" rx="5" fill="#e76f51"/><text x="365" y="127" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Fat</text><text x="350" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="700">2,100 kcal</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fatTitle">
+    <title id="fatTitle">Fat Intake Calculator</title>
+    <defs>
+      <linearGradient id="fatBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff8e8"/>
+        <stop offset="100%" stop-color="#fef5d4"/>
+      </linearGradient>
+      <linearGradient id="fatDrop" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ffd166"/>
+        <stop offset="100%" stop-color="#f4a261"/>
+      </linearGradient>
+      <radialGradient id="fatGlow" cx="50%" cy="40%" r="50%">
+        <stop offset="0%" stop-color="#ffd166" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#fatBg)"/>
+    <circle cx="150" cy="150" r="100" fill="url(#fatGlow)"/>
+    <path d="M150 60 Q110 120 110 160 Q110 200 150 210 Q190 200 190 160 Q190 120 150 60Z" fill="url(#fatDrop)" stroke="#f4a261" stroke-width="2"/>
+    <ellipse cx="140" cy="130" rx="10" ry="15" fill="#ffffff" opacity="0.3"/>
+    <text x="150" y="175" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">65g</text>
+    <text x="150" y="195" text-anchor="middle" font-size="11" fill="#ffffff">Daily Fat</text>
+    <text x="150" y="245" text-anchor="middle" font-size="12" fill="#1b1f1e">25% of calories</text>
+    <rect x="240" y="50" width="160" height="70" rx="12" fill="#ffffff" stroke="#52b788" stroke-width="2"/>
+    <circle cx="270" cy="85" r="14" fill="#d8f3dc"/>
+    <text x="270" y="89" text-anchor="middle" font-size="12" fill="#2d6a4f">✓</text>
+    <text x="340" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d6a4f">Unsaturated</text>
+    <text x="340" y="96" text-anchor="middle" font-size="11" fill="#52b788">44g — Healthy fats</text>
+    <rect x="240" y="130" width="160" height="70" rx="12" fill="#ffffff" stroke="#f4a261" stroke-width="2"/>
+    <circle cx="270" cy="165" r="14" fill="#fef3e2"/>
+    <text x="270" y="169" text-anchor="middle" font-size="12" fill="#f4a261">!</text>
+    <text x="340" y="158" text-anchor="middle" font-size="12" font-weight="bold" fill="#f4a261">Saturated</text>
+    <text x="340" y="176" text-anchor="middle" font-size="11" fill="#f4a261">18g — Limit intake</text>
+    <rect x="240" y="210" width="160" height="70" rx="12" fill="#ffffff" stroke="#e76f51" stroke-width="2"/>
+    <circle cx="270" cy="245" r="14" fill="#fce4e4"/>
+    <text x="270" y="249" text-anchor="middle" font-size="12" fill="#e76f51">✗</text>
+    <text x="340" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#e76f51">Trans Fat</text>
+    <text x="340" y="256" text-anchor="middle" font-size="11" fill="#e76f51">0g — Avoid</text>
+    <rect x="430" y="60" width="140" height="220" rx="14" fill="#ffffff" stroke="#ffd166" stroke-width="1.5"/>
+    <text x="500" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b1f1e">Fat Sources</text>
+    <ellipse cx="460" cy="120" rx="14" ry="10" fill="#52b788"/>
+    <text x="510" y="124" text-anchor="middle" font-size="11" fill="#1b1f1e">Avocado</text>
+    <circle cx="460" cy="155" r="10" fill="#ffd166"/>
+    <text x="510" y="159" text-anchor="middle" font-size="11" fill="#1b1f1e">Olive Oil</text>
+    <ellipse cx="460" cy="190" rx="12" ry="8" fill="#f4a261"/>
+    <text x="510" y="194" text-anchor="middle" font-size="11" fill="#1b1f1e">Nuts</text>
+    <ellipse cx="460" cy="225" rx="14" ry="7" fill="#90e0ef"/>
+    <text x="510" y="229" text-anchor="middle" font-size="11" fill="#1b1f1e">Fish</text>
+    <circle cx="50" cy="310" r="4" fill="#ffd166" opacity="0.4"/>
+    <circle cx="560" cy="30" r="5" fill="#f4a261" opacity="0.3"/>
+    <rect x="440" y="250" width="120" height="20" rx="10" fill="#d8f3dc"/>
+    <text x="500" y="264" text-anchor="middle" font-size="10" font-weight="bold" fill="#2d6a4f">585 kcal total</text>
+  </svg>
 <h1 class="fade-in">Fat Intake Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Determine your optimal daily fat intake.</p>
 <div class="calc-form fade-in">

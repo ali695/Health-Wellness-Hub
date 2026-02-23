@@ -131,7 +131,42 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="85" r="35" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="148" cy="80" r="3" fill="#2d6a4f"/><circle cx="172" cy="80" r="3" fill="#2d6a4f"/><path d="M150 95c5 5 15 5 20 0" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round"/><path d="M130 70c5-15 55-15 60 0" stroke="#f4a261" stroke-width="3" fill="none"/><rect x="140" y="125" width="40" height="10" rx="5" fill="#52b788"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Due Date</text><text x="360" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="18" fill="#f4a261" font-weight="800">Week 28</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">Healthy Progress</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ovulation-title">
+    <title id="ovulation-title">Ovulation Calculator</title>
+    <defs>
+      <linearGradient id="ovBgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8f9fa"/><stop offset="100%" stop-color="#d8f3dc"/></linearGradient>
+      <radialGradient id="ovEggGrad" cx="0.4" cy="0.35" r="0.6"><stop offset="0%" stop-color="#ffd166"/><stop offset="100%" stop-color="#f4a261"/></radialGradient>
+      <linearGradient id="ovFertileGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#52b788"/><stop offset="100%" stop-color="#2d6a4f"/></linearGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#ovBgGrad)"/>
+    <rect x="30" y="40" width="250" height="260" rx="16" fill="#ffffff" stroke="#d8f3dc" stroke-width="2"/>
+    <text x="155" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d6a4f">March 2025</text>
+    <g font-size="10" fill="#1b1f1e" text-anchor="middle">
+      <text x="55" y="100">S</text><text x="85" y="100">M</text><text x="115" y="100">T</text><text x="145" y="100">W</text><text x="175" y="100">T</text><text x="205" y="100">F</text><text x="235" y="100">S</text>
+    </g>
+    <g font-size="11" fill="#1b1f1e" text-anchor="middle">
+      <text x="175" y="125">1</text><text x="205" y="125">2</text><text x="235" y="125">3</text>
+      <text x="55" y="150">4</text><text x="85" y="150">5</text><text x="115" y="150">6</text><text x="145" y="150">7</text><text x="175" y="150">8</text><text x="205" y="150">9</text><text x="235" y="150">10</text>
+      <text x="55" y="175">11</text><text x="85" y="175">12</text><text x="115" y="175">13</text><text x="145" y="175">14</text><text x="175" y="175">15</text><text x="205" y="175">16</text><text x="235" y="175">17</text>
+    </g>
+    <rect x="128" y="160" width="34" height="20" rx="4" fill="#52b788" opacity="0.25"/>
+    <rect x="158" y="160" width="34" height="20" rx="4" fill="#52b788" opacity="0.4"/>
+    <circle cx="175" cy="170" r="12" fill="url(#ovFertileGrad)"/>
+    <text x="175" y="174" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">15</text>
+    <rect x="188" y="160" width="34" height="20" rx="4" fill="#52b788" opacity="0.25"/>
+    <text x="155" y="215" text-anchor="middle" font-size="10" fill="#52b788" font-weight="bold">Fertile Window</text>
+    <circle cx="420" cy="130" r="60" fill="url(#ovEggGrad)" opacity="0.9"/>
+    <circle cx="420" cy="130" r="45" fill="#ffd166" opacity="0.4"/>
+    <circle cx="408" cy="118" r="10" fill="#ffffff" opacity="0.35"/>
+    <text x="420" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d6a4f">Day 14</text>
+    <text x="420" y="210" text-anchor="middle" font-size="13" fill="#1b1f1e">Ovulation Day</text>
+    <rect x="350" y="230" width="140" height="36" rx="10" fill="#52b788"/>
+    <text x="420" y="253" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Peak Fertility</text>
+    <path d="M370 280 C380 260 390 295 400 275 C410 260 420 290 430 275 C440 260 450 290 460 275" stroke="#e76f51" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="550" cy="50" r="6" fill="#ffd166" opacity="0.3"/>
+    <circle cx="530" cy="290" r="4" fill="#c77dff" opacity="0.25"/>
+    <path d="M490 140 L500 125 L510 140" stroke="#52b788" stroke-width="2" fill="none" opacity="0.4"/>
+  </svg>
 <h1 class="fade-in">Ovulation Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Predict your most fertile days for conception planning.</p>
 <div class="calc-form fade-in">

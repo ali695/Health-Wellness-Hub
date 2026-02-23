@@ -131,7 +131,44 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="85" r="35" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="148" cy="80" r="3" fill="#2d6a4f"/><circle cx="172" cy="80" r="3" fill="#2d6a4f"/><path d="M150 95c5 5 15 5 20 0" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round"/><path d="M130 70c5-15 55-15 60 0" stroke="#f4a261" stroke-width="3" fill="none"/><rect x="140" y="125" width="40" height="10" rx="5" fill="#52b788"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Due Date</text><text x="360" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="18" fill="#f4a261" font-weight="800">Week 28</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">Healthy Progress</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="baby-weight-title">
+    <title id="baby-weight-title">Baby Weight Calculator</title>
+    <defs>
+      <linearGradient id="bwBgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#90e0ef" stop-opacity="0.2"/><stop offset="100%" stop-color="#f8f9fa"/></linearGradient>
+      <radialGradient id="bwBabyGrad" cx="0.5" cy="0.4" r="0.5"><stop offset="0%" stop-color="#ffd166"/><stop offset="100%" stop-color="#f4a261"/></radialGradient>
+      <linearGradient id="bwChartGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#52b788"/><stop offset="100%" stop-color="#2d6a4f"/></linearGradient>
+    </defs>
+    <rect x="0" y="0" width="600" height="340" rx="20" fill="url(#bwBgGrad)"/>
+    <ellipse cx="150" cy="220" rx="90" ry="50" fill="#90e0ef" opacity="0.15"/>
+    <circle cx="150" cy="130" r="40" fill="url(#bwBabyGrad)"/>
+    <circle cx="138" cy="122" r="4" fill="#1b1f1e" opacity="0.6"/>
+    <circle cx="162" cy="122" r="4" fill="#1b1f1e" opacity="0.6"/>
+    <path d="M143 138 Q150 145 157 138" stroke="#e76f51" stroke-width="2" fill="none"/>
+    <ellipse cx="150" cy="200" rx="35" ry="45" fill="#ffd166" opacity="0.6"/>
+    <rect x="110" y="180" width="25" height="8" rx="4" fill="#ffd166" opacity="0.5" transform="rotate(-30 122 184)"/>
+    <rect x="165" y="180" width="25" height="8" rx="4" fill="#ffd166" opacity="0.5" transform="rotate(30 178 184)"/>
+    <rect x="100" y="260" width="100" height="35" rx="8" fill="#52b788"/>
+    <text x="150" y="282" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">7.5 lbs</text>
+    <rect x="290" y="50" width="270" height="230" rx="14" fill="#ffffff" stroke="#d8f3dc" stroke-width="2"/>
+    <text x="425" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d6a4f">Growth Chart</text>
+    <line x1="320" y1="90" x2="320" y2="250" stroke="#d8f3dc" stroke-width="1"/>
+    <line x1="320" y1="250" x2="530" y2="250" stroke="#d8f3dc" stroke-width="1"/>
+    <text x="310" y="100" text-anchor="end" font-size="8" fill="#1b1f1e">12lb</text>
+    <text x="310" y="140" text-anchor="end" font-size="8" fill="#1b1f1e">9lb</text>
+    <text x="310" y="180" text-anchor="end" font-size="8" fill="#1b1f1e">6lb</text>
+    <text x="310" y="220" text-anchor="end" font-size="8" fill="#1b1f1e">3lb</text>
+    <path d="M330 230 Q370 210 410 180 Q450 150 490 110 Q510 95 520 90" stroke="url(#bwChartGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M330 240 Q370 225 410 200 Q450 175 490 145 Q510 130 520 125" stroke="#52b788" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.4"/>
+    <circle cx="490" cy="110" r="5" fill="#2d6a4f"/>
+    <text x="490" y="103" text-anchor="middle" font-size="8" fill="#2d6a4f">Now</text>
+    <text x="345" y="268" font-size="8" fill="#1b1f1e">Birth</text>
+    <text x="420" y="268" font-size="8" fill="#1b1f1e">3mo</text>
+    <text x="490" y="268" font-size="8" fill="#1b1f1e">6mo</text>
+    <rect x="400" y="275" width="80" height="20" rx="6" fill="#52b788" opacity="0.15"/>
+    <text x="440" y="289" text-anchor="middle" font-size="9" fill="#2d6a4f">50th Percentile</text>
+    <circle cx="50" cy="50" r="8" fill="#ffd166" opacity="0.2"/>
+    <circle cx="570" cy="310" r="6" fill="#90e0ef" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Baby Weight Percentile Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Check if your baby's weight is within a healthy percentile range.</p>
 <div class="calc-form fade-in">

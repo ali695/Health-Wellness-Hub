@@ -131,7 +131,59 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><path d="M160 150s-55-33-55-70c0-22 18-40 40-40 14 0 26 8 32 16a44 44 0 0 1 32-16c22 0 40 18 40 40 0 37-55 70-55 70z" fill="#f8d7da" stroke="#e76f51" stroke-width="2"/><polyline points="100,110 130,110 145,80 160,130 175,100 190,110 220,110" stroke="#2d6a4f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Heart Rate</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#e76f51" font-weight="800">72</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">BPM - Normal</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="diab-title">
+    <title id="diab-title">Diabetes Risk Calculator</title>
+    <defs>
+      <linearGradient id="diab-bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f8f9fa"/>
+        <stop offset="100%" stop-color="#f0faf2"/>
+      </linearGradient>
+      <linearGradient id="diab-device" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="100%" stop-color="#e0e0e0"/>
+      </linearGradient>
+      <linearGradient id="diab-screen" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#d8f3dc"/>
+        <stop offset="100%" stop-color="#b7e4c7"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#diab-bg)"/>
+    <rect x="40" y="50" width="130" height="240" rx="16" fill="url(#diab-device)" stroke="#ccc" stroke-width="2"/>
+    <rect x="55" y="70" width="100" height="70" rx="8" fill="url(#diab-screen)"/>
+    <text x="105" y="100" text-anchor="middle" fill="#1b1f1e" font-size="22" font-weight="bold">99</text>
+    <text x="105" y="120" text-anchor="middle" fill="#2d6a4f" font-size="10">mg/dL</text>
+    <rect x="70" y="155" width="30" height="12" rx="3" fill="#bbb"/>
+    <rect x="110" y="155" width="30" height="12" rx="3" fill="#bbb"/>
+    <rect x="85" y="180" width="40" height="80" rx="4" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+    <rect x="90" y="250" width="30" height="15" rx="2" fill="#f8f9fa"/>
+    <circle cx="105" cy="257" r="4" fill="#e76f51"/>
+    <path d="M230 200 A100 100 0 0 1 430 200" fill="none" stroke="#f8f9fa" stroke-width="20" stroke-linecap="round"/>
+    <path d="M230 200 A100 100 0 0 1 280 130" fill="none" stroke="#90e0ef" stroke-width="18" stroke-linecap="round"/>
+    <path d="M280 130 A100 100 0 0 1 380 130" fill="none" stroke="#52b788" stroke-width="18" stroke-linecap="round"/>
+    <path d="M380 130 A100 100 0 0 1 415 165" fill="none" stroke="#ffd166" stroke-width="18" stroke-linecap="round"/>
+    <path d="M415 165 A100 100 0 0 1 430 200" fill="none" stroke="#e76f51" stroke-width="18" stroke-linecap="round"/>
+    <line x1="330" y1="200" x2="310" y2="145" stroke="#1b1f1e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="330" cy="200" r="6" fill="#1b1f1e"/>
+    <text x="330" y="235" text-anchor="middle" fill="#1b1f1e" font-size="20" font-weight="bold">99 mg/dL</text>
+    <rect x="295" y="245" width="70" height="22" rx="11" fill="#52b788" opacity="0.2"/>
+    <text x="330" y="260" text-anchor="middle" fill="#2d6a4f" font-size="10" font-weight="bold">Normal</text>
+    <text x="250" y="220" text-anchor="middle" fill="#90e0ef" font-size="9">&lt;70</text>
+    <text x="330" y="120" text-anchor="middle" fill="#52b788" font-size="9">70-99</text>
+    <text x="410" y="160" text-anchor="middle" fill="#ffd166" font-size="9">100-125</text>
+    <text x="440" y="205" text-anchor="middle" fill="#e76f51" font-size="9">126+</text>
+    <rect x="480" y="60" width="100" height="30" rx="6" fill="#52b788" opacity="0.1"/>
+    <text x="497" y="80" fill="#2d6a4f" font-size="11">✓ Healthy wt</text>
+    <rect x="480" y="98" width="100" height="30" rx="6" fill="#52b788" opacity="0.1"/>
+    <text x="497" y="118" fill="#2d6a4f" font-size="11">✓ Active</text>
+    <rect x="480" y="136" width="100" height="30" rx="6" fill="#52b788" opacity="0.1"/>
+    <text x="497" y="156" fill="#2d6a4f" font-size="11">✓ Diet</text>
+    <rect x="480" y="174" width="100" height="30" rx="6" fill="#52b788" opacity="0.1"/>
+    <text x="497" y="194" fill="#2d6a4f" font-size="11">✓ No history</text>
+    <rect x="480" y="212" width="100" height="30" rx="6" fill="#52b788" opacity="0.1"/>
+    <text x="497" y="232" fill="#2d6a4f" font-size="11">✓ Normal BP</text>
+    <circle cx="550" cy="300" r="5" fill="#52b788" opacity="0.2"/>
+    <circle cx="30" cy="20" r="4" fill="#ffd166" opacity="0.3"/>
+  </svg>
 <h1 class="fade-in">Diabetes Risk Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Assess your risk factors for type 2 diabetes.</p>
 <div class="calc-form fade-in">

@@ -131,7 +131,58 @@ VitalHealth Hub</a>
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
-<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><ellipse cx="160" cy="100" rx="50" ry="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><path d="M135 70c10-15 40-15 50 0" stroke="#2d6a4f" stroke-width="2" fill="none"/><path d="M130 90c8 5 15-5 25 0s15-5 25 0" stroke="#52b788" stroke-width="2" fill="none"/><path d="M130 110c8 5 15-5 25 0s15-5 25 0" stroke="#52b788" stroke-width="2" fill="none"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Mental Health</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="22" fill="#52b788" font-weight="800">Score: 8/10</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Well-Balanced</text></svg>
+<svg class="calc-hero-svg" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stress-title">
+    <title id="stress-title">Stress Level Calculator</title>
+    <defs>
+      <linearGradient id="stress-bg-l" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2d2d3d"/>
+        <stop offset="100%" stop-color="#f0faf2"/>
+      </linearGradient>
+      <linearGradient id="stress-brain-l" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c77dff"/>
+        <stop offset="100%" stop-color="#e76f51"/>
+      </linearGradient>
+      <linearGradient id="stress-brain-r" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#90e0ef"/>
+        <stop offset="100%" stop-color="#52b788"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="340" rx="20" fill="url(#stress-bg-l)"/>
+    <ellipse cx="300" cy="190" rx="85" ry="75" fill="url(#stress-brain-l)" opacity="0.5"/>
+    <path d="M300 120 C250 120, 220 155, 225 190 C228 215, 245 245, 265 255 Q280 262, 300 260" fill="url(#stress-brain-l)" opacity="0.9"/>
+    <path d="M300 120 C350 120, 380 155, 375 190 C372 215, 355 245, 335 255 Q320 262, 300 260" fill="url(#stress-brain-r)" opacity="0.9"/>
+    <line x1="300" y1="125" x2="300" y2="255" stroke="#ffffff" stroke-width="1.5" opacity="0.4"/>
+    <path d="M250 160 L240 145 L255 150" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <path d="M270 180 L260 165 L275 172" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <path d="M255 200 L245 215 L260 208" fill="none" stroke="#e76f51" stroke-width="1.5" opacity="0.7"/>
+    <path d="M330 155 Q345 160, 340 175 Q335 185, 345 190" fill="none" stroke="#90e0ef" stroke-width="2"/>
+    <path d="M350 165 Q360 175, 355 185" fill="none" stroke="#52b788" stroke-width="2"/>
+    <ellipse cx="340" cy="220" rx="10" ry="8" fill="#52b788" opacity="0.5"/>
+    <ellipse cx="355" cy="210" rx="6" ry="5" fill="#d8f3dc" opacity="0.6"/>
+    <path d="M160 50 A60 60 0 0 1 280 50" fill="none" stroke="#f8f9fa" stroke-width="10" stroke-linecap="round" opacity="0.2"/>
+    <path d="M175 50 A50 50 0 0 1 215 20" fill="none" stroke="#52b788" stroke-width="8" stroke-linecap="round"/>
+    <path d="M215 20 A50 50 0 0 1 250 30" fill="none" stroke="#f4a261" stroke-width="8" stroke-linecap="round"/>
+    <path d="M250 30 A50 50 0 0 1 265 50" fill="none" stroke="#e76f51" stroke-width="8" stroke-linecap="round"/>
+    <line x1="220" y1="55" x2="225" y2="30" stroke="#1b1f1e" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="220" cy="55" r="4" fill="#1b1f1e"/>
+    <rect x="185" y="65" width="70" height="20" rx="10" fill="#f4a261" opacity="0.3"/>
+    <text x="220" y="79" text-anchor="middle" fill="#f4a261" font-size="10" font-weight="bold">Moderate</text>
+    <rect x="30" y="100" width="85" height="35" rx="8" fill="#e76f51" opacity="0.2"/>
+    <text x="72" y="122" text-anchor="middle" fill="#e76f51" font-size="10">💼 Work</text>
+    <rect x="30" y="145" width="85" height="35" rx="8" fill="#e76f51" opacity="0.2"/>
+    <text x="72" y="167" text-anchor="middle" fill="#e76f51" font-size="10">⏰ Time</text>
+    <rect x="30" y="190" width="85" height="35" rx="8" fill="#e76f51" opacity="0.2"/>
+    <text x="72" y="212" text-anchor="middle" fill="#e76f51" font-size="10">💰 Money</text>
+    <rect x="485" y="100" width="85" height="35" rx="8" fill="#52b788" opacity="0.2"/>
+    <text x="527" y="122" text-anchor="middle" fill="#52b788" font-size="10">🧘 Meditate</text>
+    <rect x="485" y="145" width="85" height="35" rx="8" fill="#52b788" opacity="0.2"/>
+    <text x="527" y="167" text-anchor="middle" fill="#52b788" font-size="10">🏃 Exercise</text>
+    <rect x="485" y="190" width="85" height="35" rx="8" fill="#52b788" opacity="0.2"/>
+    <text x="527" y="212" text-anchor="middle" fill="#52b788" font-size="10">🌙 Sleep</text>
+    <circle cx="50" cy="300" r="4" fill="#c77dff" opacity="0.3"/>
+    <circle cx="550" cy="300" r="5" fill="#52b788" opacity="0.3"/>
+    <path d="M400 290 Q420 280, 440 290 Q460 300, 480 290" fill="none" stroke="#90e0ef" stroke-width="1.5" opacity="0.4"/>
+  </svg>
 <h1 class="fade-in">Stress Level Calculator</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">Assess your current stress level with this quick quiz.</p>
 <div class="calc-form fade-in">

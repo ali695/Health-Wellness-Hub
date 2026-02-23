@@ -35,6 +35,8 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 /blog/                   - 99 blog post HTML pages (with Unsplash hero images)
 /server.js               - Express static server
 /generate.js             - Page generator script
+/calculator-svgs.js      - Combines all SVG batch files for calculator hero illustrations
+/svgs/batch1-5.js        - 51 unique SVG illustrations (10-11 per batch file)
 ```
 
 ## Key Features
@@ -43,7 +45,7 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 - **Top bar** (fixed, z-index 1001) with email link and social media icons (LinkedIn, Facebook, Instagram)
 - **Redesigned footer** with 5-column grid: brand+socials, quick links, popular tools, legal, creator info
 - **Reviews section** on homepage with 5 detailed testimonials (horizontal scroll, star ratings, verified badges)
-- **SVG hero illustrations** on all calculator pages (category-specific scenes)
+- **51 unique premium SVG hero illustrations** on calculator pages (each slug has its own detailed SVG with gradients, gauges, data displays)
 - **Unsplash hero images** on all blog post pages
 - Color-coded results (green/yellow/red) for calculators
 - Blog search and category filtering
