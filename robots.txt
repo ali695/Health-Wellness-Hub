@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vitalhealthhub.com/sitemap.xml
