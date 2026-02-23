@@ -41,14 +41,15 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 
 ## Key Features
 - 51 fully functional health calculators with real JS logic
-- 99 blog posts with full content, FAQs, author boxes
+- 99 blog posts with full content, FAQs, author boxes, related articles section
 - **Top bar** (fixed, z-index 1001) with email link and social media icons (LinkedIn, Facebook, Instagram)
 - **Redesigned footer** with 5-column grid: brand+socials, quick links, popular tools, legal, creator info
 - **Reviews section** on homepage with 5 detailed testimonials (horizontal scroll, star ratings, verified badges)
 - **51 unique premium SVG hero illustrations** on calculator pages (each slug has its own detailed SVG with gradients, gauges, data displays)
-- **Unsplash hero images** on all blog post pages
+- **Unsplash hero images** on all blog post pages (1200x500, eager loading, descriptive alt text)
+- **Premium blog archive page** (blog.html) with editorial hero, trending ticker, category filter bar, search overlay, 3-column article grid with Unsplash images, newsletter banner, load more pagination, tag cloud
+- **Related articles** section on every blog post (3 cards with images, same-category matching)
 - Color-coded results (green/yellow/red) for calculators
-- Blog search and category filtering
 - Responsive design (CSS Grid + Flexbox)
 - SEO: unique meta tags, canonical URLs, Open Graph, Schema.org JSON-LD
 - **Mega dropdown navigation** for Calculators (6-column categorized layout, hover on desktop, click on mobile)

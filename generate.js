@@ -219,79 +219,118 @@ function calcSvg(type) {
   return icons[type] || icons.weight;
 }
 
-function blogUnsplashUrl(slug) {
+function blogCardImage(slug) {
   const map = {
-    'how-to-calculate-bmi': 'photo-1571019613454-1cb2f99b2d8b',
-    'what-is-a-healthy-bmi': 'photo-1476480862126-209bfaa8edc8',
-    'bmi-vs-body-fat-percentage': 'photo-1517836357463-d25dfeac3438',
-    'how-many-calories-should-i-eat': 'photo-1490645935967-10de6ba17061',
-    'calorie-deficit-for-weight-loss': 'photo-1498837167922-ddd27525d352',
-    'what-are-macronutrients': 'photo-1512621776951-a57141f2eefd',
-    'high-protein-diet-benefits': 'photo-1532550907401-a500c9a57435',
-    'how-much-water-should-you-drink': 'photo-1548839140-29a749e1cf4d',
-    'benefits-of-drinking-water': 'photo-1559839914-17aae19cec71',
-    'how-much-sleep-do-you-need': 'photo-1541781774459-bb2af2f05b55',
-    'sleep-deprivation-effects': 'photo-1515894203077-9cd36032142f',
-    'best-sleeping-positions': 'photo-1520206183501-b80df61043c2',
-    'heart-rate-zones-explained': 'photo-1571019614242-c5c5dee9f50b',
-    'how-to-lower-blood-pressure': 'photo-1505576399279-565b52d4ac71',
-    'cholesterol-explained': 'photo-1559757175-0eb30cd8c063',
-    'benefits-of-walking-daily': 'photo-1476480862126-209bfaa8edc8',
-    'strength-training-benefits': 'photo-1534438327276-14e5300c3a48',
-    'how-to-start-running': 'photo-1571008887538-b36bb32f4571',
-    'yoga-for-beginners': 'photo-1544367567-0f2fcb009e0b',
-    'hiit-workout-benefits': 'photo-1517963879433-6ad2b056d712',
-    'body-fat-percentage-guide': 'photo-1571019613454-1cb2f99b2d8b',
-    'how-to-gain-muscle': 'photo-1583454110551-21f2fa2afe61',
-    'ideal-weight-explained': 'photo-1571019613454-1cb2f99b2d8b',
-    'waist-to-hip-ratio-guide': 'photo-1576678927484-cc907957088c',
-    'understanding-metabolism': 'photo-1505576399279-565b52d4ac71',
-    'intermittent-fasting-guide': 'photo-1490645935967-10de6ba17061',
-    'mediterranean-diet-benefits': 'photo-1504674900247-0877df9cc836',
-    'vitamins-and-minerals-guide': 'photo-1512621776951-a57141f2eefd',
-    'fiber-rich-foods-benefits': 'photo-1457530378978-8bac673b8062',
-    'stress-management-techniques': 'photo-1506126613408-eca07ce68773',
-    'anxiety-relief-strategies': 'photo-1506126613408-eca07ce68773',
-    'mindfulness-meditation-guide': 'photo-1544367567-0f2fcb009e0b',
-    'depression-understanding': 'photo-1499209974431-9dddcece7f88',
-    'diabetes-prevention-tips': 'photo-1505576399279-565b52d4ac71',
-    'cancer-prevention-lifestyle': 'photo-1559757175-0eb30cd8c063',
-    'immune-system-boosting': 'photo-1498837167922-ddd27525d352',
-    'gut-health-importance': 'photo-1512621776951-a57141f2eefd',
-    'posture-correction-tips': 'photo-1576678927484-cc907957088c',
-    'back-pain-prevention': 'photo-1571019614242-c5c5dee9f50b',
-    'healthy-snacking-guide': 'photo-1490645935967-10de6ba17061',
-    'meal-prep-for-beginners': 'photo-1504674900247-0877df9cc836',
-    'sugar-reduction-tips': 'photo-1559757175-0eb30cd8c063',
-    'healthy-breakfast-ideas': 'photo-1490645935967-10de6ba17061',
-    'plant-based-diet-guide': 'photo-1512621776951-a57141f2eefd',
-    'cardio-vs-strength-training': 'photo-1534438327276-14e5300c3a48',
-    'flexibility-stretching-guide': 'photo-1544367567-0f2fcb009e0b',
-    'home-workout-ideas': 'photo-1517963879433-6ad2b056d712',
-    'exercise-and-mental-health': 'photo-1506126613408-eca07ce68773',
-    'recovery-rest-days': 'photo-1544367567-0f2fcb009e0b',
-    'caffeine-effects-on-health': 'photo-1559039914-43b487297218',
-    'alcohol-health-effects': 'photo-1559757175-0eb30cd8c063',
-    'smoking-cessation-guide': 'photo-1505576399279-565b52d4ac71',
-    'healthy-skin-tips': 'photo-1576091160550-2173dba999ef',
-    'eye-health-tips': 'photo-1559757175-0eb30cd8c063',
-    'dental-health-guide': 'photo-1588776814546-1ffcf47267a5',
-    'pregnancy-nutrition-guide': 'photo-1498837167922-ddd27525d352',
-    'fertility-factors': 'photo-1505576399279-565b52d4ac71',
-    'menstrual-cycle-explained': 'photo-1559757175-0eb30cd8c063',
-    'postpartum-health-tips': 'photo-1492725764893-90b379c2b6e7',
-    'menopause-health-guide': 'photo-1559757175-0eb30cd8c063',
-    'mens-health-tips': 'photo-1534438327276-14e5300c3a48',
-    'childrens-nutrition-guide': 'photo-1490645935967-10de6ba17061',
-    'elderly-health-tips': 'photo-1476480862126-209bfaa8edc8',
-    'healthy-aging-tips': 'photo-1476480862126-209bfaa8edc8',
-    'longevity-secrets': 'photo-1476480862126-209bfaa8edc8',
-    'biological-age-vs-chronological-age': 'photo-1571019613454-1cb2f99b2d8b',
-    'life-expectancy-factors': 'photo-1559757175-0eb30cd8c063',
-    'preventive-health-checkups': 'photo-1576091160399-112ba8d25d1d',
+    'how-to-calculate-bmi': { id: 'photo-1571019613454-1cb2f99b2d8b', alt: 'Doctor measuring patient BMI and body weight' },
+    'what-is-a-healthy-bmi': { id: 'photo-1559757148-5c350d0d3c56', alt: 'Healthy person measuring waist for BMI assessment' },
+    'bmi-vs-body-fat-percentage': { id: 'photo-1534438327276-14e5300c3a48', alt: 'Fitness assessment comparing BMI and body fat percentage' },
+    'how-many-calories-should-i-eat': { id: 'photo-1490645935967-10de6ba17061', alt: 'Healthy balanced meal for daily calorie planning' },
+    'calorie-deficit-for-weight-loss': { id: 'photo-1512621776951-a57141f2eefd', alt: 'Fresh vegetables and fruits for calorie deficit diet' },
+    'what-are-macronutrients': { id: 'photo-1547592180-85f173990554', alt: 'Macronutrient rich foods protein carbs and healthy fats' },
+    'high-protein-diet-benefits': { id: 'photo-1532550907401-a500c9a57435', alt: 'High protein foods including chicken eggs and legumes' },
+    'how-much-water-should-you-drink': { id: 'photo-1548839140-29a749e1cf4d', alt: 'Person drinking water for daily hydration goals' },
+    'benefits-of-drinking-water': { id: 'photo-1560472355-536de3962603', alt: 'Clear glass of water representing hydration benefits' },
+    'how-much-sleep-do-you-need': { id: 'photo-1541781774459-bb2af2f05b55', alt: 'Person sleeping peacefully for optimal sleep duration' },
+    'sleep-deprivation-effects': { id: 'photo-1531353826977-0941b4779a1c', alt: 'Tired person showing signs of sleep deprivation' },
+    'how-to-improve-sleep-quality': { id: 'photo-1455642305367-68834a9c6b3e', alt: 'Cozy bedroom environment for better sleep quality' },
+    'normal-resting-heart-rate': { id: 'photo-1628348068343-c6a848d2b6dd', alt: 'Heart rate monitor showing normal pulse reading' },
+    'how-to-lower-heart-rate': { id: 'photo-1506126613408-eca07ce68773', alt: 'Person meditating to lower resting heart rate naturally' },
+    'blood-pressure-explained': { id: 'photo-1584820927498-cfe5211fd8bf', alt: 'Blood pressure monitor and stethoscope on table' },
+    'how-to-lower-blood-pressure-naturally': { id: 'photo-1498837167922-ddd27525d352', alt: 'Healthy foods that naturally lower blood pressure' },
+    'what-is-tdee': { id: 'photo-1571019614242-c5c5dee9f50b', alt: 'Active person exercising showing total daily energy expenditure' },
+    'bmr-explained': { id: 'photo-1520763185298-f928aebd8105', alt: 'Person resting while body burns basal metabolic calories' },
+    'intermittent-fasting-guide': { id: 'photo-1611516491426-03025e6043c8', alt: 'Clock next to empty plate representing intermittent fasting' },
+    '16-8-intermittent-fasting': { id: 'photo-1505253468034-514d2507d914', alt: 'Meal timing window for 16-8 intermittent fasting method' },
+    'keto-diet-beginners-guide': { id: 'photo-1558618666-fcd25c85cd64', alt: 'Ketogenic diet foods including avocado eggs and nuts' },
+    'mediterranean-diet-benefits': { id: 'photo-1540189549336-e6e99eb4b951', alt: 'Mediterranean diet foods with olive oil fish and vegetables' },
+    'plant-based-diet-guide': { id: 'photo-1512621776951-a57141f2eefd', alt: 'Colorful plant-based diet vegetables and fruits' },
+    'best-foods-for-weight-loss': { id: 'photo-1490645935967-10de6ba17061', alt: 'Best foods for weight loss including salads and lean protein' },
+    'foods-that-boost-metabolism': { id: 'photo-1546069901-ba9599a7e63c', alt: 'Metabolism boosting foods including spices and green tea' },
+    'how-to-lose-belly-fat': { id: 'photo-1571019613454-1cb2f99b2d8b', alt: 'Core exercises to lose belly fat effectively' },
+    'how-to-build-muscle': { id: 'photo-1583454110551-21f2fa2afe61', alt: 'Person lifting weights to build muscle mass' },
+    'protein-for-muscle-growth': { id: 'photo-1532550907401-a500c9a57435', alt: 'Protein rich foods essential for muscle growth' },
+    'creatine-benefits': { id: 'photo-1534438327276-14e5300c3a48', alt: 'Creatine supplement and fitness equipment for workout performance' },
+    'best-exercises-for-weight-loss': { id: 'photo-1538805060514-97d9cc17730c', alt: 'High intensity exercise routine for weight loss' },
+    'cardio-vs-strength-training': { id: 'photo-1534438327276-14e5300c3a48', alt: 'Cardio vs strength training comparison for fitness' },
+    'hiit-workout-benefits': { id: 'photo-1517836357463-d25dfeac3438', alt: 'High intensity interval training HIIT workout session' },
+    'yoga-benefits-for-health': { id: 'photo-1506126613408-eca07ce68773', alt: 'Yoga practice showing health and wellness benefits' },
+    'walking-10000-steps-benefits': { id: 'photo-1476480862126-209bfaa8edc8', alt: 'Person walking outdoors for 10000 daily steps goal' },
+    'running-for-beginners': { id: 'photo-1552674605-db6ffd4facb5', alt: 'Beginner runner jogging outdoors in park' },
+    'cycling-health-benefits': { id: 'photo-1558618666-fcd25c85cd64', alt: 'Cyclist riding bike for cardiovascular health benefits' },
+    'swimming-health-benefits': { id: 'photo-1530549387789-4c1017266635', alt: 'Swimmer in pool enjoying full body workout' },
+    'stretching-importance': { id: 'photo-1544367567-0f2fcb009e0b', alt: 'Person stretching for flexibility and injury prevention' },
+    'how-to-start-exercising': { id: 'photo-1538805060514-97d9cc17730c', alt: 'Beginner starting an exercise routine outdoors' },
+    'workout-frequency-guide': { id: 'photo-1517836357463-d25dfeac3438', alt: 'Workout schedule planning for optimal fitness frequency' },
+    'rest-days-importance': { id: 'photo-1544367567-0f2fcb009e0b', alt: 'Person resting and recovering between workout sessions' },
+    'muscle-soreness-recovery': { id: 'photo-1571019613454-1cb2f99b2d8b', alt: 'Muscle recovery and soreness relief after exercise' },
+    'vo2-max-explained': { id: 'photo-1571019614242-c5c5dee9f50b', alt: 'Aerobic fitness testing and VO2 max measurement' },
+    'one-rep-max-guide': { id: 'photo-1534438327276-14e5300c3a48', alt: 'Strength testing one rep max with barbell exercise' },
+    'ideal-weight-for-height': { id: 'photo-1559757148-5c350d0d3c56', alt: 'Ideal weight chart based on height measurements' },
+    'waist-to-hip-ratio-health': { id: 'photo-1576678927484-cc907957088c', alt: 'Measuring waist to hip ratio for health assessment' },
+    'body-fat-percentage-guide': { id: 'photo-1571019613454-1cb2f99b2d8b', alt: 'Body fat percentage measurement and fitness guide' },
+    'lean-body-mass-explained': { id: 'photo-1583454110551-21f2fa2afe61', alt: 'Lean body mass composition and muscle measurement' },
+    'cholesterol-levels-explained': { id: 'photo-1628348068343-c6a848d2b6dd', alt: 'Medical illustration of cholesterol levels in blood' },
+    'how-to-lower-cholesterol': { id: 'photo-1498837167922-ddd27525d352', alt: 'Heart healthy foods to lower cholesterol naturally' },
+    'diabetes-prevention-tips': { id: 'photo-1505253468034-514d2507d914', alt: 'Healthy lifestyle habits for diabetes prevention' },
+    'blood-sugar-normal-levels': { id: 'photo-1584820927498-cfe5211fd8bf', alt: 'Blood glucose meter showing normal blood sugar levels' },
+    'signs-of-diabetes': { id: 'photo-1584820927498-cfe5211fd8bf', alt: 'Early warning signs and symptoms of diabetes' },
+    'heart-disease-risk-factors': { id: 'photo-1628348068343-c6a848d2b6dd', alt: 'Heart health assessment and disease risk factors' },
+    'stroke-prevention-guide': { id: 'photo-1559757175-0eb30cd8c063', alt: 'Brain health and stroke prevention lifestyle tips' },
+    'cancer-prevention-lifestyle': { id: 'photo-1490645935967-10de6ba17061', alt: 'Anti-cancer foods and lifestyle for cancer prevention' },
+    'immune-system-boosting-foods': { id: 'photo-1547592180-85f173990554', alt: 'Immune boosting foods including citrus and vegetables' },
+    'vitamin-d-deficiency-signs': { id: 'photo-1507003211169-0a1dd7228f2d', alt: 'Sunlight exposure for vitamin D production and health' },
+    'vitamin-c-benefits': { id: 'photo-1547592180-85f173990554', alt: 'Vitamin C rich citrus fruits for immune health' },
+    'magnesium-benefits': { id: 'photo-1512621776951-a57141f2eefd', alt: 'Magnesium rich foods including nuts seeds and greens' },
+    'iron-deficiency-symptoms': { id: 'photo-1512621776951-a57141f2eefd', alt: 'Iron rich foods to prevent deficiency symptoms' },
+    'calcium-for-bone-health': { id: 'photo-1550583724-b2692b85b150', alt: 'Calcium rich dairy foods for strong bone health' },
+    'omega-3-fatty-acids-benefits': { id: 'photo-1532550907401-a500c9a57435', alt: 'Omega 3 rich salmon and fatty fish for heart health' },
+    'probiotics-gut-health': { id: 'photo-1544025162-d76694265947', alt: 'Probiotic foods like yogurt for gut health improvement' },
+    'fiber-importance-digestion': { id: 'photo-1512621776951-a57141f2eefd', alt: 'High fiber vegetables and grains for healthy digestion' },
+    'anti-inflammatory-foods': { id: 'photo-1546069901-ba9599a7e63c', alt: 'Anti-inflammatory turmeric and spices for health' },
+    'antioxidants-health-benefits': { id: 'photo-1547592180-85f173990554', alt: 'Antioxidant rich berries and colorful fruits' },
+    'superfoods-list': { id: 'photo-1512621776951-a57141f2eefd', alt: 'Top superfoods including berries greens and seeds' },
+    'how-to-manage-stress': { id: 'photo-1506126613408-eca07ce68773', alt: 'Meditation and mindfulness for stress management' },
+    'anxiety-management-tips': { id: 'photo-1474631245212-32dc3c8310c6', alt: 'Calm breathing techniques for anxiety management' },
+    'depression-natural-remedies': { id: 'photo-1490730141103-6cac27aaab94', alt: 'Sunlight and nature walk as natural depression remedy' },
+    'mindfulness-meditation-guide': { id: 'photo-1508672019048-805c876b67e2', alt: 'Person meditating mindfully in peaceful environment' },
+    'mental-health-self-care': { id: 'photo-1499728603263-13726abce5fd', alt: 'Self care routine for mental health and wellness' },
+    'burnout-signs-recovery': { id: 'photo-1520975916090-3105956dac38', alt: 'Person resting and recovering from workplace burnout' },
+    'work-life-balance-tips': { id: 'photo-1499728603263-13726abce5fd', alt: 'Work life balance tips for better health and happiness' },
+    'sleep-and-mental-health': { id: 'photo-1541781774459-bb2af2f05b55', alt: 'Quality sleep for improved mental health and mood' },
+    'exercise-and-mental-health': { id: 'photo-1571019613454-1cb2f99b2d8b', alt: 'Exercise and physical activity boosting mental health' },
+    'social-connections-health': { id: 'photo-1529156069898-49953e39b3ac', alt: 'Friends socializing for health and social connections' },
+    'how-to-quit-smoking': { id: 'photo-1518609878373-06d740f60d8b', alt: 'Breaking free from smoking for better lung health' },
+    'alcohol-health-effects': { id: 'photo-1474552226712-ac0f0961a954', alt: 'Understanding alcohol effects on overall health' },
+    'caffeine-effects-on-body': { id: 'photo-1495474472287-4d71bcdd2085', alt: 'Coffee cup representing caffeine effects on body' },
+    'dehydration-signs': { id: 'photo-1548839140-29a749e1cf4d', alt: 'Signs of dehydration and importance of drinking water' },
+    'gut-health-guide': { id: 'photo-1544025162-d76694265947', alt: 'Gut health foods and microbiome wellness tips' },
+    'liver-health-tips': { id: 'photo-1505576399279-565b52d4ac71', alt: 'Liver healthy foods and detox lifestyle tips' },
+    'kidney-health-guide': { id: 'photo-1505576399279-565b52d4ac71', alt: 'Kidney health protection and prevention guide' },
+    'thyroid-health-guide': { id: 'photo-1559757175-0eb30cd8c063', alt: 'Thyroid health symptoms and wellness solutions' },
+    'hormonal-balance-tips': { id: 'photo-1559757148-5c350d0d3c56', alt: 'Hormonal balance and wellness for women health' },
+    'menstrual-health-guide': { id: 'photo-1576091160399-112ba8d25d1d', alt: 'Women health and menstrual cycle wellness guide' },
+    'pregnancy-nutrition-guide': { id: 'photo-1555939594-58d7cb561ad1', alt: 'Nutritious foods for healthy pregnancy and baby' },
+    'postpartum-health-tips': { id: 'photo-1492725764893-90b379c2b6e7', alt: 'Postpartum health and recovery tips for new mothers' },
+    'menopause-health-guide': { id: 'photo-1559757175-0eb30cd8c063', alt: 'Menopause health guide and transition management' },
+    'mens-health-tips': { id: 'photo-1583454110551-21f2fa2afe61', alt: 'Men fitness and health tips for vitality' },
+    'childrens-nutrition-guide': { id: 'photo-1490645935967-10de6ba17061', alt: 'Healthy nutritious foods for children balanced diet' },
+    'elderly-health-tips': { id: 'photo-1507003211169-0a1dd7228f2d', alt: 'Active senior living and elderly health wellness' },
+    'healthy-aging-tips': { id: 'photo-1507003211169-0a1dd7228f2d', alt: 'Active senior living and healthy aging lifestyle' },
+    'longevity-secrets': { id: 'photo-1476480862126-209bfaa8edc8', alt: 'Longevity lifestyle secrets for living longer healthier' },
+    'biological-age-vs-chronological-age': { id: 'photo-1571019613454-1cb2f99b2d8b', alt: 'Biological age versus chronological age comparison' },
+    'life-expectancy-factors': { id: 'photo-1559757175-0eb30cd8c063', alt: 'Factors affecting life expectancy and longevity' },
+    'preventive-health-checkups': { id: 'photo-1584820927498-cfe5211fd8bf', alt: 'Doctor patient consultation for preventive health checkup' },
   };
-  const id = map[slug] || 'photo-1505576399279-565b52d4ac71';
-  return `https://images.unsplash.com/${id}?w=800&h=400&fit=crop&auto=format`;
+  const entry = map[slug] || { id: 'photo-1505576399279-565b52d4ac71', alt: 'Health and wellness lifestyle guide' };
+  return {
+    url: `https://images.unsplash.com/${entry.id}?w=600&h=340&fit=crop&auto=format`,
+    alt: `${entry.alt} | VitalHealth Hub`
+  };
+}
+
+function blogUnsplashUrl(slug) {
+  const img = blogCardImage(slug);
+  return img.url.replace('w=600&h=340&fit=crop&auto=format', 'w=1200&h=500&fit=crop&auto=format&q=80');
 }
 
 // ========================
@@ -912,7 +951,7 @@ ${faq.schema}
 <div class="container">
 <div class="blog-post">
 <div class="blog-post-content">
-<figure class="blog-hero-figure"><img src="${blogUnsplashUrl(post.slug)}" alt="${post.title}" width="800" height="400" loading="lazy"><figcaption>Image via Unsplash</figcaption></figure>
+<figure class="blog-hero-image"><img src="${blogUnsplashUrl(post.slug)}" alt="${blogCardImage(post.slug).alt}" title="${post.title}" width="1200" height="500" loading="eager"><figcaption>${post.title} — Expert guide from VitalHealth Hub</figcaption></figure>
 <div class="key-takeaways">
 <h3>Key Takeaways</h3>
 <ul>${takeaways.map(t=>'<li>'+t+'</li>').join('')}</ul>
@@ -927,6 +966,28 @@ ${share}
 </div>
 </div>
 </div>
+<section class="blog-related-section">
+<div class="container">
+<h2>Related Articles</h2>
+<div class="blog-related-grid">
+${(() => {
+  const related = blogPosts.filter(p => p.category === post.category && p.slug !== post.slug);
+  const selected = related.length >= 3 ? related.slice(0, 3) : related.concat(blogPosts.filter(p => p.slug !== post.slug && p.category !== post.category)).slice(0, 3);
+  return selected.map(r => {
+    const img = blogCardImage(r.slug);
+    return `<a href="/blog/${r.slug}.html" class="blog-card">
+<div class="blog-card-image"><img src="${img.url}" alt="${img.alt}" title="${r.title}" width="600" height="340" loading="lazy"></div>
+<div class="blog-card-body">
+<div class="blog-card-meta"><span class="blog-card-category">${r.category}</span><span>${r.readTime} read</span></div>
+<h3>${r.title}</h3>
+<span class="read-more">Read Article &rarr;</span>
+</div>
+</a>`;
+  }).join('');
+})()}
+</div>
+</div>
+</section>
 </article>
 ${FOOTER}
 ${BTT}
@@ -1442,48 +1503,245 @@ ${BTT}
 </body></html>`);
 
 // BLOG INDEX
-fs.writeFileSync('blog.html', `${head('Health Blog | '+SITE_NAME, 'Expert health and wellness articles covering nutrition, fitness, mental health, and disease prevention. 100+ free guides.', '/blog.html')}
+const blogCategories = [...new Set(blogPosts.map(p => p.category))];
+const featuredPost = blogPosts.find(p => p.slug === 'how-many-calories-should-i-eat') || blogPosts[0];
+const featuredImg = blogCardImage(featuredPost.slug);
+const sidebarPosts = [
+  blogPosts.find(p => p.slug === 'how-much-water-should-you-drink'),
+  blogPosts.find(p => p.slug === 'intermittent-fasting-guide'),
+  blogPosts.find(p => p.slug === 'how-to-manage-stress')
+].filter(Boolean);
+
+const trendingTopics = ['Intermittent Fasting Guide', 'BMI vs Body Fat', 'Best Foods for Sleep', 'Diabetes Risk Factors', 'Heart Rate Zones Explained'];
+
+const popularTags = [
+  {name:'Weight Loss',size:'lg'},{name:'BMI',size:'lg'},{name:'Calories',size:'lg'},{name:'Protein',size:'md'},{name:'Sleep',size:'lg'},
+  {name:'Hydration',size:'md'},{name:'Heart Health',size:'lg'},{name:'Diabetes',size:'md'},{name:'Keto',size:'md'},{name:'Intermittent Fasting',size:'lg'},
+  {name:'Mental Health',size:'lg'},{name:'Anxiety',size:'md'},{name:'Depression',size:'sm'},{name:'Meditation',size:'md'},{name:'Yoga',size:'md'},
+  {name:'Running',size:'sm'},{name:'HIIT',size:'sm'},{name:'Cholesterol',size:'md'},{name:'Blood Pressure',size:'md'},{name:'Pregnancy',size:'sm'},
+  {name:"Women's Health",size:'md'},{name:"Men's Health",size:'sm'},{name:'Aging',size:'sm'},{name:'Vitamins',size:'md'},
+  {name:'Gut Health',size:'md'},{name:'Immunity',size:'md'},{name:'Stress',size:'lg'},{name:'Inflammation',size:'sm'},
+  {name:'Hormones',size:'sm'},{name:'Cancer Prevention',size:'sm'}
+];
+
+const ITEMS_PER_PAGE = 24;
+
+const blogCardHtml = blogPosts.map((p, i) => {
+  const img = blogCardImage(p.slug);
+  return `<a href="/blog/${p.slug}.html" class="blog-card fade-in" data-category="${p.category}" data-title="${p.title.toLowerCase()}" data-index="${i}" style="${i >= ITEMS_PER_PAGE ? 'display:none;' : ''}">
+<div class="blog-card-image"><img src="${img.url}" alt="${img.alt}" title="${p.title}" width="600" height="340" loading="lazy"></div>
+<div class="blog-card-body">
+<div class="blog-card-meta"><span class="blog-card-category">${p.category}</span><span>${p.readTime}</span></div>
+<h3>${p.title}</h3>
+<p>Evidence-based health insights and practical tips for better wellness.</p>
+<hr class="blog-card-divider">
+<div class="blog-card-footer"><span class="blog-card-author">\u{1F464} Dr. Sarah Mitchell</span><span class="blog-card-date">${p.date}</span></div>
+<span class="read-more">Read More \u2192</span>
+</div></a>`;
+}).join('\n');
+
+const blogSchemaItems = blogPosts.map((p, i) => `{"@type":"ListItem","position":${i+1},"url":"${SITE}/blog/${p.slug}.html","name":"${p.title.replace(/"/g,'\\"')}"}`).join(',');
+
+fs.writeFileSync('blog.html', `${head('Health & Wellness Blog \u2014 100+ Expert Articles | '+SITE_NAME, 'Browse 100+ evidence-based health articles covering weight loss, nutrition, fitness, mental health, heart health and more. Free expert wellness guides.', '/blog.html', '<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Health & Wellness Blog","description":"100+ evidence-based health articles","url":"'+SITE+'/blog.html","mainEntity":{"@type":"ItemList","numberOfItems":'+blogPosts.length+',"itemListElement":['+blogSchemaItems+']}}</script>')}
 <body>
 ${NAV}
-${breadcrumb([{name:'Home',url:'/'},{name:'Blog',url:'/blog.html'}]).html}
-${breadcrumb([{name:'Home',url:'/'},{name:'Blog',url:'/blog.html'}]).schema}
-<section class="content-page">
-<div class="container">
-<h1 class="fade-in" style="text-align:center;">Health & Wellness Blog</h1>
-<p class="fade-in" style="text-align:center;max-width:600px;margin:0 auto 30px;color:var(--gray-500);">Expert-written articles on nutrition, fitness, mental health, and more.</p>
-<div class="search-bar fade-in">
-<svg viewBox="0 0 20 20" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-<input type="text" id="blogSearch" placeholder="Search articles..." oninput="filterPosts()">
+
+<section class="blog-editorial-hero">
+<div class="blog-editorial-hero-grid">
+<a href="/blog/${featuredPost.slug}.html" class="blog-editorial-featured">
+<img src="https://images.unsplash.com/${featuredImg.url.split('unsplash.com/')[1].split('?')[0]}?w=1200&h=520&fit=crop&auto=format&q=80" alt="${featuredImg.alt}" width="1200" height="520" loading="eager">
+<div class="blog-editorial-featured-overlay">
+<span class="badge-editors-pick">EDITOR'S PICK</span>
+<h1>The Complete Guide to Understanding Your Body's Daily Calorie Needs</h1>
+<p>Discover the science behind calorie counting and learn how to fuel your body for optimal health and performance.</p>
+<span class="featured-meta">Dr. Sarah Mitchell \u2022 ${featuredPost.date} \u2022 ${featuredPost.readTime} read</span>
+<span class="btn-outline-white">Read Article \u2192</span>
 </div>
-<div class="filter-buttons fade-in" id="filterBtns">
-<button class="filter-btn active" onclick="filterCategory('all',this)">All</button>
-${[...new Set(blogPosts.map(p=>p.category))].map(c=>`<button class="filter-btn" onclick="filterCategory('${c}',this)">${c}</button>`).join('')}
+</a>
+<div class="blog-editorial-sidebar">
+${sidebarPosts.map(sp => {
+  const sImg = blogCardImage(sp.slug);
+  return `<div class="blog-editorial-sidebar-item">
+<img src="https://images.unsplash.com/${sImg.url.split('unsplash.com/')[1].split('?')[0]}?w=200&h=160&fit=crop&auto=format" alt="${sImg.alt}" width="100" height="80" loading="eager">
+<div class="sidebar-item-content">
+<span class="blog-card-category">${sp.category}</span>
+<h4><a href="/blog/${sp.slug}.html">${sp.title}</a></h4>
+<span class="sidebar-item-meta">${sp.date} \u2022 ${sp.readTime}</span>
 </div>
-<div class="grid-3" id="blogGrid">
-${blogPosts.map(p => `<a href="/blog/${p.slug}.html" class="blog-card fade-in" data-category="${p.category}" data-title="${p.title.toLowerCase()}"><div class="blog-card-image"><svg viewBox="0 0 80 80" fill="none"><rect x="10" y="20" width="60" height="40" rx="4" stroke="#2d6a4f" stroke-width="2"/><path d="M20 35h40M20 45h30" stroke="#52b788" stroke-width="2" stroke-linecap="round"/></svg></div><div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-category">${p.category}</span><span>${p.date}</span><span>${p.readTime}</span></div><h3>${p.title}</h3><p>Evidence-based health insights and practical tips for better wellness.</p><span class="read-more">Read More →</span></div></a>`).join('')}
+</div>`;
+}).join('')}
 </div>
 </div>
 </section>
+
+<div class="blog-trending-ticker">
+<span class="blog-trending-ticker-label">\u{1F525} TRENDING THIS WEEK:</span>
+<div class="blog-trending-ticker-scroll">
+${trendingTopics.map(t => `<span>${t}</span>`).join('')}
+${trendingTopics.map(t => `<span>${t}</span>`).join('')}
+</div>
+</div>
+
+<div class="blog-category-bar">
+<div class="blog-category-bar-inner">
+<div class="blog-category-pills">
+<button class="blog-category-pill active" onclick="blogFilterCat('all',this)">All Articles</button>
+${blogCategories.map(c => `<button class="blog-category-pill" onclick="blogFilterCat('${c.replace(/'/g,"\\'")}',this)">${c}</button>`).join('')}
+</div>
+<div class="blog-category-bar-actions">
+<select class="blog-sort-select" id="blogSortSelect" onchange="blogSort(this.value)">
+<option value="latest">Latest</option>
+<option value="az">A\u2013Z</option>
+</select>
+<button class="blog-search-btn" onclick="openBlogSearch()" aria-label="Search articles">
+<svg viewBox="0 0 20 20" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+</div>
+</div>
+</div>
+
+<div class="blog-search-overlay" id="blogSearchOverlay">
+<button class="blog-search-overlay-close" onclick="closeBlogSearch()" aria-label="Close search">\u2715</button>
+<input class="blog-search-overlay-input" id="blogSearchInput" type="text" placeholder="Search 100+ health articles..." oninput="liveSearchBlog()">
+<div class="blog-search-overlay-results" id="blogSearchResults"></div>
+</div>
+
+<section class="blog-articles-section">
+<div class="blog-articles-header">
+<h2>All Health Articles</h2>
+<p>100+ evidence-based guides written by health experts</p>
+</div>
+<div class="blog-articles-grid" id="blogGrid">
+${blogCardHtml}
+</div>
+</section>
+
+<div class="blog-newsletter">
+<div class="blog-newsletter-inner">
+<div>
+<h3>Get Weekly Health Insights</h3>
+<p>Join 50,000+ readers who get our best health tips every Tuesday morning.</p>
+<ul class="blog-newsletter-benefits">
+<li>\u2713 Free expert health guides</li>
+<li>\u2713 Calculator tips and tricks</li>
+<li>\u2713 No spam, unsubscribe anytime</li>
+</ul>
+</div>
+<div class="blog-newsletter-form">
+<input type="email" placeholder="Enter your email address">
+<button class="btn btn-highlight">Subscribe Free \u2192</button>
+<small>100% free. No spam ever.</small>
+</div>
+</div>
+</div>
+
+<div class="blog-load-more" id="blogLoadMore">
+<button class="blog-load-more-btn" onclick="loadMoreBlog()">Load More Articles</button>
+<div class="blog-load-more-counter" id="blogCounter">Showing ${ITEMS_PER_PAGE} of ${blogPosts.length} articles</div>
+</div>
+
+<section class="blog-tag-cloud">
+<h2>Browse by Health Topic</h2>
+<div class="blog-tag-cloud-inner">
+${popularTags.map(t => `<span class="blog-tag${t.size === 'lg' ? ' tag-lg' : t.size === 'sm' ? ' tag-sm' : ''}" onclick="blogTagClick('${t.name.replace(/'/g,"\\'")}',this)">${t.name}</span>`).join('\n')}
+</div>
+</section>
+
 ${FOOTER}
 ${BTT}
 <script src="/js/main.js"></script>
 <script>
-var currentCat='all';
-function filterPosts(){
-  var q=document.getElementById('blogSearch').value.toLowerCase();
-  document.querySelectorAll('#blogGrid .blog-card').forEach(function(card){
-    var title=card.getAttribute('data-title');
-    var cat=card.getAttribute('data-category');
-    var matchQ=!q||title.indexOf(q)!==-1;
-    var matchC=currentCat==='all'||cat===currentCat;
-    card.style.display=(matchQ&&matchC)?'':'none';
-  });
+var blogCurrentCat='all';
+var blogCurrentPage=1;
+var blogItemsPerPage=${ITEMS_PER_PAGE};
+var blogTotal=${blogPosts.length};
+var allBlogData=${JSON.stringify(blogPosts.map(p => ({slug:p.slug,title:p.title,category:p.category})))};
+
+function blogFilterCat(cat,btn){
+  blogCurrentCat=cat;
+  document.querySelectorAll('.blog-category-pill').forEach(function(b){b.classList.remove('active');});
+  if(btn)btn.classList.add('active');
+  blogCurrentPage=1;
+  applyBlogFilters();
 }
-function filterCategory(cat,btn){
-  currentCat=cat;
-  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
-  btn.classList.add('active');
-  filterPosts();
+
+function applyBlogFilters(){
+  var cards=document.querySelectorAll('#blogGrid .blog-card');
+  var shown=0;
+  var total=0;
+  cards.forEach(function(card){
+    var cat=card.getAttribute('data-category');
+    var matchC=blogCurrentCat==='all'||cat===blogCurrentCat;
+    if(matchC){
+      total++;
+      if(total<=blogCurrentPage*blogItemsPerPage){
+        card.style.display='';
+        shown++;
+      } else {
+        card.style.display='none';
+      }
+    } else {
+      card.style.display='none';
+    }
+  });
+  var counter=document.getElementById('blogCounter');
+  counter.textContent='Showing '+shown+' of '+total+' articles';
+  var loadBtn=document.getElementById('blogLoadMore');
+  loadBtn.style.display=shown<total?'':'none';
+}
+
+function loadMoreBlog(){
+  blogCurrentPage++;
+  applyBlogFilters();
+}
+
+function blogSort(val){
+  var grid=document.getElementById('blogGrid');
+  var cards=Array.from(grid.querySelectorAll('.blog-card'));
+  cards.sort(function(a,b){
+    if(val==='az') return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'));
+    return parseInt(a.getAttribute('data-index'))-parseInt(b.getAttribute('data-index'));
+  });
+  cards.forEach(function(c){grid.appendChild(c);});
+  blogCurrentPage=1;
+  applyBlogFilters();
+}
+
+function openBlogSearch(){
+  document.getElementById('blogSearchOverlay').classList.add('active');
+  document.getElementById('blogSearchInput').focus();
+  document.body.style.overflow='hidden';
+}
+
+function closeBlogSearch(){
+  document.getElementById('blogSearchOverlay').classList.remove('active');
+  document.getElementById('blogSearchInput').value='';
+  document.getElementById('blogSearchResults').innerHTML='';
+  document.body.style.overflow='';
+}
+
+function liveSearchBlog(){
+  var q=document.getElementById('blogSearchInput').value.toLowerCase().trim();
+  var results=document.getElementById('blogSearchResults');
+  if(!q){results.innerHTML='';return;}
+  var matches=allBlogData.filter(function(p){return p.title.toLowerCase().indexOf(q)!==-1;}).slice(0,10);
+  if(matches.length===0){results.innerHTML='<a style="pointer-events:none;color:var(--gray-500);">No articles found</a>';return;}
+  results.innerHTML=matches.map(function(p){return '<a href="/blog/'+p.slug+'.html"><span class="search-result-category">'+p.category+'</span> '+p.title+'</a>';}).join('');
+}
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') closeBlogSearch();
+});
+
+function blogTagClick(tag){
+  closeBlogSearch();
+  var matchedCat=null;
+  var catMap={'Weight Loss':'Body Metrics','BMI':'Body Metrics','Calories':'Nutrition','Protein':'Nutrition','Sleep':'Sleep','Hydration':'Nutrition','Heart Health':'Heart Health','Diabetes':'Disease Prevention','Keto':'Nutrition','Intermittent Fasting':'Nutrition','Mental Health':'Mental Health','Anxiety':'Mental Health','Depression':'Mental Health','Meditation':'Mental Health','Yoga':'Fitness','Running':'Fitness','HIIT':'Fitness','Cholesterol':'Heart Health','Blood Pressure':'Heart Health','Pregnancy':"Women's Health","Women's Health":"Women's Health","Men's Health":'Wellness','Aging':'Wellness','Vitamins':'Nutrition','Gut Health':'Wellness','Immunity':'Nutrition','Stress':'Mental Health','Inflammation':'Nutrition','Hormones':'Wellness','Cancer Prevention':'Disease Prevention'};
+  matchedCat=catMap[tag]||'all';
+  var pill=null;
+  document.querySelectorAll('.blog-category-pill').forEach(function(b){if(b.textContent===matchedCat)pill=b;});
+  blogFilterCat(matchedCat,pill||document.querySelector('.blog-category-pill'));
+  window.scrollTo({top:document.querySelector('.blog-category-bar').offsetTop-120,behavior:'smooth'});
 }
 </script>
 </body></html>`);
