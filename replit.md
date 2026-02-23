@@ -7,6 +7,8 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 - **Name**: VitalHealth Hub
 - **Tagline**: "Your Guide to a Healthier Life"
 - **Niche**: General Health & Wellness
+- **Creator**: Ali Haider (SEO Consultant & Web Developer)
+- **Email**: ma7122671@gmail.com
 
 ## Architecture
 - **Server**: Express.js static file server (`server.js`) on port 5000
@@ -16,20 +18,21 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 
 ## File Structure
 ```
-/index.html              - Homepage
-/about.html              - About Us
-/contact.html            - Contact Page
+/index.html              - Homepage (with reviews section)
+/about.html              - About Us (creator bio, stats, social links)
+/contact.html            - Contact Page (two-column layout with contact details)
 /faq.html                - General FAQ
 /blog.html               - Blog Index (search + category filters)
 /privacy.html            - Privacy Policy
 /disclaimer.html         - Medical Disclaimer
+/terms.html              - Terms of Service
 /sitemap.html            - HTML Sitemap
 /sitemap.xml             - XML Sitemap
 /robots.txt              - Robots file
 /css/style.css           - Shared styles
 /js/main.js              - Shared JavaScript
-/calculators/            - 51 calculator HTML pages
-/blog/                   - 99 blog post HTML pages
+/calculators/            - 51 calculator HTML pages (with SVG hero illustrations)
+/blog/                   - 99 blog post HTML pages (with Unsplash hero images)
 /server.js               - Express static server
 /generate.js             - Page generator script
 ```
@@ -37,6 +40,11 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 ## Key Features
 - 51 fully functional health calculators with real JS logic
 - 99 blog posts with full content, FAQs, author boxes
+- **Top bar** (fixed, z-index 1001) with email link and social media icons (LinkedIn, Facebook, Instagram)
+- **Redesigned footer** with 5-column grid: brand+socials, quick links, popular tools, legal, creator info
+- **Reviews section** on homepage with 5 detailed testimonials (horizontal scroll, star ratings, verified badges)
+- **SVG hero illustrations** on all calculator pages (category-specific scenes)
+- **Unsplash hero images** on all blog post pages
 - Color-coded results (green/yellow/red) for calculators
 - Blog search and category filtering
 - Responsive design (CSS Grid + Flexbox)
@@ -50,6 +58,16 @@ A complete health and wellness website built with pure HTML, CSS, and vanilla Ja
 - Reading progress bar on blog posts
 - Print-friendly styles
 - Medical disclaimer on all calculator pages
+
+## Social Links (target="_blank" rel="noopener noreferrer")
+- LinkedIn: https://www.linkedin.com/in/ali-haider-seo-consultant/
+- Facebook: https://www.facebook.com/AliHadi768
+- Instagram: https://www.instagram.com/ali_haiderseo/
+
+## Layout Structure
+- Top bar: 37px fixed at top (z-index 1001), green background, email + social icons
+- Navbar: fixed at top: 37px (z-index 1000), white with blur backdrop
+- Content: padded 175px top for hero sections, 155px for content pages, 125px for breadcrumbs
 
 ## Color Palette
 - Primary: #2d6a4f (deep green)

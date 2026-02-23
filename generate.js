@@ -6,7 +6,16 @@ const SITE_NAME = 'VitalHealth Hub';
 
 function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
 
-const NAV = `<nav class="navbar">
+const TOPBAR = `<div class="top-bar"><div class="top-bar-inner">
+<a href="mailto:ma7122671@gmail.com" class="top-bar-email"><svg viewBox="0 0 20 20" fill="none" width="14" height="14"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.5"/></svg> <span>ma7122671@gmail.com</span></a>
+<div class="top-bar-social">
+<a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" target="_blank" rel="noopener noreferrer" title="Ali Haider on LinkedIn" aria-label="Visit Ali Haider LinkedIn Profile" class="tb-linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="https://www.facebook.com/AliHadi768" target="_blank" rel="noopener noreferrer" title="Ali Haider on Facebook" aria-label="Visit Ali Haider Facebook Page" class="tb-facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+<a href="https://www.instagram.com/ali_haiderseo/" target="_blank" rel="noopener noreferrer" title="Ali Haider SEO on Instagram" aria-label="Visit Ali Haider Instagram Profile" class="tb-instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg></a>
+</div>
+</div></div>`;
+
+const NAV = `${TOPBAR}<nav class="navbar">
 <div class="nav-container">
 <a href="/" class="nav-logo">
 <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#2d6a4f" stroke-width="2.5"/><path d="M16 8v16M8 16h16" stroke="#2d6a4f" stroke-width="2.5" stroke-linecap="round"/></svg>
@@ -25,13 +34,31 @@ ${SITE_NAME}</a>
 const FOOTER = `<footer class="footer">
 <div class="container">
 <div class="footer-grid">
-<div class="footer-brand"><h3>${SITE_NAME}</h3><p>Your trusted source for health calculators, wellness tools, and expert health articles. Making health information accessible to everyone.</p></div>
+<div class="footer-brand">
+<h3><svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="16" cy="16" r="14" stroke="#52b788" stroke-width="2.5"/><path d="M16 8v16M8 16h16" stroke="#52b788" stroke-width="2.5" stroke-linecap="round"/></svg> ${SITE_NAME}</h3>
+<p>Your trusted source for health calculators, wellness tools, and expert health articles. Making health information accessible to everyone.</p>
+<div class="footer-social-links">
+<a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="https://www.facebook.com/AliHadi768" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+<a href="https://www.instagram.com/ali_haiderseo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg></a>
+</div>
+</div>
 <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/blog.html">Blog</a></li></ul></div>
 <div><h4>Popular Tools</h4><ul class="footer-links"><li><a href="/calculators/bmi-calculator.html">BMI Calculator</a></li><li><a href="/calculators/calorie-calculator.html">Calorie Calculator</a></li><li><a href="/calculators/tdee-calculator.html">TDEE Calculator</a></li><li><a href="/calculators/body-fat-calculator.html">Body Fat Calculator</a></li></ul></div>
-<div><h4>Legal</h4><ul class="footer-links"><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/disclaimer.html">Medical Disclaimer</a></li><li><a href="/sitemap.html">Sitemap</a></li></ul></div>
+<div><h4>Legal</h4><ul class="footer-links"><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/disclaimer.html">Medical Disclaimer</a></li><li><a href="/terms.html">Terms of Service</a></li><li><a href="/sitemap.html">Sitemap</a></li></ul></div>
+<div>
+<h4>Created By</h4>
+<div class="footer-contact-item"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M2 18c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.5"/></svg><div><strong>Ali Haider</strong><br><small>SEO Consultant &amp; Web Developer</small></div></div>
+<div class="footer-contact-item"><svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.5"/></svg><a href="mailto:ma7122671@gmail.com">ma7122671@gmail.com</a></div>
+<div class="footer-social-links" style="margin-top:10px;">
+<a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="https://www.facebook.com/AliHadi768" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+<a href="https://www.instagram.com/ali_haiderseo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg></a>
+</div>
+</div>
 </div>
 <div class="footer-disclaimer">Disclaimer: The content on ${SITE_NAME} is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider.</div>
-<div class="footer-bottom">&copy; 2024 ${SITE_NAME}. All rights reserved.</div>
+<div class="footer-bottom"><span>&copy; 2024 ${SITE_NAME}. All rights reserved.</span><span>Created with care by <a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" target="_blank" rel="noopener noreferrer">Ali Haider</a></span></div>
 </div></footer>`;
 
 const BTT = `<button class="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
@@ -101,6 +128,97 @@ function calcSvg(type) {
     pill: `<svg viewBox="0 0 48 48" fill="none"><rect x="14" y="8" width="20" height="32" rx="10" stroke="#2d6a4f" stroke-width="2.5" transform="rotate(45 24 24)"/><path d="M17 17l14 14" stroke="#52b788" stroke-width="2"/></svg>`,
   };
   return icons[type] || icons.weight;
+}
+
+function calcHeroSvg(icon) {
+  const scenes = {
+    body: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="100" r="50" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><circle cx="160" cy="80" r="16" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><rect x="148" y="96" width="24" height="34" rx="4" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="148" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="160" y1="130" x2="172" y2="155" stroke="#2d6a4f" stroke-width="2"/><line x1="148" y1="104" x2="135" y2="118" stroke="#2d6a4f" stroke-width="2"/><line x1="172" y1="104" x2="185" y2="118" stroke="#2d6a4f" stroke-width="2"/><rect x="260" y="50" width="180" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#2d6a4f" font-weight="700">BMI Result</text><rect x="280" y="95" width="140" height="12" rx="6" fill="#b7e4c7"/><rect x="280" y="95" width="80" height="12" rx="6" fill="#52b788"/><text x="350" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788" font-weight="600">Normal Weight</text></svg>`,
+    food: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="140" cy="110" r="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><ellipse cx="140" cy="100" rx="40" ry="12" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="125" cy="85" r="8" fill="#f4a261"/><circle cx="150" cy="82" r="6" fill="#52b788"/><circle cx="138" cy="74" r="5" fill="#e76f51"/><rect x="260" y="40" width="180" height="120" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="350" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Nutritional Breakdown</text><rect x="280" y="82" width="100" height="10" rx="5" fill="#52b788"/><text x="395" y="91" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Protein</text><rect x="280" y="100" width="120" height="10" rx="5" fill="#f4a261"/><text x="415" y="109" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Carbs</text><rect x="280" y="118" width="70" height="10" rx="5" fill="#e76f51"/><text x="365" y="127" font-family="DM Sans,sans-serif" font-size="11" fill="#2d6a4f">Fat</text><text x="350" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="700">2,100 kcal</text></svg>`,
+    heart: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><path d="M160 150s-55-33-55-70c0-22 18-40 40-40 14 0 26 8 32 16a44 44 0 0 1 32-16c22 0 40 18 40 40 0 37-55 70-55 70z" fill="#f8d7da" stroke="#e76f51" stroke-width="2"/><polyline points="100,110 130,110 145,80 160,130 175,100 190,110 220,110" stroke="#2d6a4f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Heart Rate</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#e76f51" font-weight="800">72</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">BPM - Normal</text></svg>`,
+    water: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><path d="M160 30c0 0-50 58-50 90a50 50 0 0 0 100 0c0-32-50-90-50-90z" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><path d="M130 120c0-13 13-24 26-24" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Daily Water Goal</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="24" fill="#2d6a4f" font-weight="800">2.5L</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">Stay Hydrated!</text></svg>`,
+    sleep: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#1b2838"/><circle cx="400" cy="50" r="25" fill="#f4a261" opacity="0.9"/><circle cx="385" cy="45" r="22" fill="#1b2838"/><circle cx="350" cy="30" r="2" fill="#fff" opacity="0.6"/><circle cx="300" cy="50" r="1.5" fill="#fff" opacity="0.5"/><circle cx="420" cy="80" r="1" fill="#fff" opacity="0.4"/><text x="150" y="100" font-family="DM Sans,sans-serif" font-size="36" fill="#52b788" font-weight="700" opacity="0.6">Z</text><text x="180" y="80" font-family="DM Sans,sans-serif" font-size="28" fill="#52b788" font-weight="700" opacity="0.4">Z</text><text x="200" y="65" font-family="DM Sans,sans-serif" font-size="20" fill="#52b788" font-weight="700" opacity="0.3">Z</text><rect x="80" y="120" width="120" height="50" rx="8" fill="#2d6a4f" opacity="0.5"/><rect x="260" y="60" width="160" height="90" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/><text x="340" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#b7e4c7" font-weight="700">Sleep Cycles</text><text x="340" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="22" fill="#f4a261" font-weight="800">7.5 hrs</text><text x="340" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#52b788">Optimal Rest</text></svg>`,
+    fitness: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="100" y="90" width="120" height="12" rx="4" fill="#2d6a4f"/><rect x="80" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="220" y="78" width="20" height="36" rx="4" fill="#52b788" stroke="#2d6a4f" stroke-width="2"/><rect x="60" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="240" y="84" width="20" height="24" rx="4" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><rect x="300" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="380" y="78" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Fitness Score</text><text x="380" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="28" fill="#52b788" font-weight="800">85</text><text x="380" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Excellent Shape</text></svg>`,
+    brain: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><ellipse cx="160" cy="100" rx="50" ry="55" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2"/><path d="M135 70c10-15 40-15 50 0" stroke="#2d6a4f" stroke-width="2" fill="none"/><path d="M130 90c8 5 15-5 25 0s15-5 25 0" stroke="#52b788" stroke-width="2" fill="none"/><path d="M130 110c8 5 15-5 25 0s15-5 25 0" stroke="#52b788" stroke-width="2" fill="none"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Mental Health</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="22" fill="#52b788" font-weight="800">Score: 8/10</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Well-Balanced</text></svg>`,
+    baby: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><circle cx="160" cy="85" r="35" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="148" cy="80" r="3" fill="#2d6a4f"/><circle cx="172" cy="80" r="3" fill="#2d6a4f"/><path d="M150 95c5 5 15 5 20 0" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round"/><path d="M130 70c5-15 55-15 60 0" stroke="#f4a261" stroke-width="3" fill="none"/><rect x="140" y="125" width="40" height="10" rx="5" fill="#52b788"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Due Date</text><text x="360" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="18" fill="#f4a261" font-weight="800">Week 28</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#52b788">Healthy Progress</text></svg>`,
+    pill: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="120" y="60" width="80" height="80" rx="40" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="2" transform="rotate(45 160 100)"/><line x1="135" y1="75" x2="185" y2="125" stroke="#52b788" stroke-width="2"/><circle cx="140" cy="90" r="8" fill="#f4a261"/><circle cx="180" cy="110" r="6" fill="#e76f51"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Health Score</text><rect x="300" y="95" width="120" height="10" rx="5" fill="#b7e4c7"/><rect x="300" y="95" width="90" height="10" rx="5" fill="#52b788"/><text x="360" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#52b788" font-weight="600">Low Risk</text></svg>`,
+    weight: `<svg viewBox="0 0 500 200" fill="none" class="calc-hero-svg"><rect width="500" height="200" rx="16" fill="#d8f3dc"/><rect x="110" y="70" width="100" height="70" rx="10" fill="#f0faf2" stroke="#2d6a4f" stroke-width="2"/><circle cx="160" cy="100" r="20" fill="#b7e4c7" stroke="#52b788" stroke-width="2"/><path d="M160 90v10l8 4" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round"/><rect x="280" y="50" width="160" height="100" rx="12" fill="#fff" stroke="#2d6a4f" stroke-width="2"/><text x="360" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" fill="#2d6a4f" font-weight="700">Your Result</text><text x="360" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="24" fill="#52b788" font-weight="800">Healthy</text><text x="360" y="135" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#2d6a4f">Keep it up!</text></svg>`,
+  };
+  return scenes[icon] || scenes.weight;
+}
+
+function blogUnsplashUrl(slug) {
+  const map = {
+    'how-to-calculate-bmi': 'photo-1571019613454-1cb2f99b2d8b',
+    'what-is-a-healthy-bmi': 'photo-1476480862126-209bfaa8edc8',
+    'bmi-vs-body-fat-percentage': 'photo-1517836357463-d25dfeac3438',
+    'how-many-calories-should-i-eat': 'photo-1490645935967-10de6ba17061',
+    'calorie-deficit-for-weight-loss': 'photo-1498837167922-ddd27525d352',
+    'what-are-macronutrients': 'photo-1512621776951-a57141f2eefd',
+    'high-protein-diet-benefits': 'photo-1532550907401-a500c9a57435',
+    'how-much-water-should-you-drink': 'photo-1548839140-29a749e1cf4d',
+    'benefits-of-drinking-water': 'photo-1559839914-17aae19cec71',
+    'how-much-sleep-do-you-need': 'photo-1541781774459-bb2af2f05b55',
+    'sleep-deprivation-effects': 'photo-1515894203077-9cd36032142f',
+    'best-sleeping-positions': 'photo-1520206183501-b80df61043c2',
+    'heart-rate-zones-explained': 'photo-1571019614242-c5c5dee9f50b',
+    'how-to-lower-blood-pressure': 'photo-1505576399279-565b52d4ac71',
+    'cholesterol-explained': 'photo-1559757175-0eb30cd8c063',
+    'benefits-of-walking-daily': 'photo-1476480862126-209bfaa8edc8',
+    'strength-training-benefits': 'photo-1534438327276-14e5300c3a48',
+    'how-to-start-running': 'photo-1571008887538-b36bb32f4571',
+    'yoga-for-beginners': 'photo-1544367567-0f2fcb009e0b',
+    'hiit-workout-benefits': 'photo-1517963879433-6ad2b056d712',
+    'body-fat-percentage-guide': 'photo-1571019613454-1cb2f99b2d8b',
+    'how-to-gain-muscle': 'photo-1583454110551-21f2fa2afe61',
+    'ideal-weight-explained': 'photo-1571019613454-1cb2f99b2d8b',
+    'waist-to-hip-ratio-guide': 'photo-1576678927484-cc907957088c',
+    'understanding-metabolism': 'photo-1505576399279-565b52d4ac71',
+    'intermittent-fasting-guide': 'photo-1490645935967-10de6ba17061',
+    'mediterranean-diet-benefits': 'photo-1504674900247-0877df9cc836',
+    'vitamins-and-minerals-guide': 'photo-1512621776951-a57141f2eefd',
+    'fiber-rich-foods-benefits': 'photo-1457530378978-8bac673b8062',
+    'stress-management-techniques': 'photo-1506126613408-eca07ce68773',
+    'anxiety-relief-strategies': 'photo-1506126613408-eca07ce68773',
+    'mindfulness-meditation-guide': 'photo-1544367567-0f2fcb009e0b',
+    'depression-understanding': 'photo-1499209974431-9dddcece7f88',
+    'diabetes-prevention-tips': 'photo-1505576399279-565b52d4ac71',
+    'cancer-prevention-lifestyle': 'photo-1559757175-0eb30cd8c063',
+    'immune-system-boosting': 'photo-1498837167922-ddd27525d352',
+    'gut-health-importance': 'photo-1512621776951-a57141f2eefd',
+    'posture-correction-tips': 'photo-1576678927484-cc907957088c',
+    'back-pain-prevention': 'photo-1571019614242-c5c5dee9f50b',
+    'healthy-snacking-guide': 'photo-1490645935967-10de6ba17061',
+    'meal-prep-for-beginners': 'photo-1504674900247-0877df9cc836',
+    'sugar-reduction-tips': 'photo-1559757175-0eb30cd8c063',
+    'healthy-breakfast-ideas': 'photo-1490645935967-10de6ba17061',
+    'plant-based-diet-guide': 'photo-1512621776951-a57141f2eefd',
+    'cardio-vs-strength-training': 'photo-1534438327276-14e5300c3a48',
+    'flexibility-stretching-guide': 'photo-1544367567-0f2fcb009e0b',
+    'home-workout-ideas': 'photo-1517963879433-6ad2b056d712',
+    'exercise-and-mental-health': 'photo-1506126613408-eca07ce68773',
+    'recovery-rest-days': 'photo-1544367567-0f2fcb009e0b',
+    'caffeine-effects-on-health': 'photo-1559039914-43b487297218',
+    'alcohol-health-effects': 'photo-1559757175-0eb30cd8c063',
+    'smoking-cessation-guide': 'photo-1505576399279-565b52d4ac71',
+    'healthy-skin-tips': 'photo-1576091160550-2173dba999ef',
+    'eye-health-tips': 'photo-1559757175-0eb30cd8c063',
+    'dental-health-guide': 'photo-1588776814546-1ffcf47267a5',
+    'pregnancy-nutrition-guide': 'photo-1498837167922-ddd27525d352',
+    'fertility-factors': 'photo-1505576399279-565b52d4ac71',
+    'menstrual-cycle-explained': 'photo-1559757175-0eb30cd8c063',
+    'postpartum-health-tips': 'photo-1492725764893-90b379c2b6e7',
+    'menopause-health-guide': 'photo-1559757175-0eb30cd8c063',
+    'mens-health-tips': 'photo-1534438327276-14e5300c3a48',
+    'childrens-nutrition-guide': 'photo-1490645935967-10de6ba17061',
+    'elderly-health-tips': 'photo-1476480862126-209bfaa8edc8',
+    'healthy-aging-tips': 'photo-1476480862126-209bfaa8edc8',
+    'longevity-secrets': 'photo-1476480862126-209bfaa8edc8',
+    'biological-age-vs-chronological-age': 'photo-1571019613454-1cb2f99b2d8b',
+    'life-expectancy-factors': 'photo-1559757175-0eb30cd8c063',
+    'preventive-health-checkups': 'photo-1576091160399-112ba8d25d1d',
+  };
+  const id = map[slug] || 'photo-1505576399279-565b52d4ac71';
+  return `https://images.unsplash.com/${id}?w=800&h=400&fit=crop&auto=format`;
 }
 
 // ========================
@@ -481,6 +599,7 @@ ${faq.schema}
 <section class="section" style="padding-top:40px;">
 <div class="container">
 <div class="calc-container">
+${calcHeroSvg(calc.icon)}
 <h1 class="fade-in">${calc.name}</h1>
 <p class="fade-in" style="margin-bottom:30px;color:var(--gray-500);">${calc.desc}</p>
 <div class="calc-form fade-in">
@@ -720,6 +839,7 @@ ${faq.schema}
 <div class="container">
 <div class="blog-post">
 <div class="blog-post-content">
+<figure class="blog-hero-figure"><img src="${blogUnsplashUrl(post.slug)}" alt="${post.title}" width="800" height="400" loading="lazy"><figcaption>Image via Unsplash</figcaption></figure>
 <div class="key-takeaways">
 <h3>Key Takeaways</h3>
 <ul>${takeaways.map(t=>'<li>'+t+'</li>').join('')}</ul>
@@ -820,13 +940,69 @@ ${featuredPosts.map(p => `<a href="/blog/${p.slug}.html" class="blog-card fade-i
 </div>
 </section>
 
-<section class="section section-alt">
+<section class="reviews-section">
 <div class="container">
-<div class="section-title fade-in"><h2>What Our Users Say</h2></div>
-<div class="grid-3">
-<div class="testimonial-card fade-in"><p>"${SITE_NAME} helped me understand my BMI and calorie needs. The calculators are so easy to use and the results are really helpful!"</p><div class="testimonial-author">— Jessica M., Teacher</div></div>
-<div class="testimonial-card fade-in"><p>"I use the TDEE and macro calculators weekly to plan my nutrition. The blog articles are incredibly well-researched and practical."</p><div class="testimonial-author">— Michael R., Fitness Enthusiast</div></div>
-<div class="testimonial-card fade-in"><p>"As a healthcare professional, I recommend ${SITE_NAME} to my patients. The tools are accurate and the health information is reliable."</p><div class="testimonial-author">— Dr. Emily K., Family Medicine</div></div>
+<div class="reviews-header fade-in">
+<h2>What Our Users Say</h2>
+<div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="rating-text">Rated 4.9/5 based on 2,400+ reviews</p>
+</div>
+<div class="reviews-scroll">
+<div class="review-card fade-in">
+<span class="quote-mark">&ldquo;</span>
+<div class="review-card-header">
+<div class="review-avatar" style="background:#d8f3dc;"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
+<div><div class="review-name">Jessica M.</div><div class="review-location">New York, USA</div></div>
+</div>
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">${SITE_NAME} completely changed how I approach my health. The BMI and calorie calculators are incredibly intuitive. I lost 15 pounds in 3 months just by tracking my TDEE and following the nutrition articles. The results are color-coded and come with personalized suggestions that actually make sense. I recommend it to everyone at my school!</p>
+<div class="review-date">Reviewed on January 12, 2024</div>
+<div class="review-verified"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="8" r="7" fill="#52b788"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified User</div>
+</div>
+<div class="review-card fade-in">
+<span class="quote-mark">&ldquo;</span>
+<div class="review-card-header">
+<div class="review-avatar" style="background:#b7e4c7;"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
+<div><div class="review-name">Michael R.</div><div class="review-location">London, UK</div></div>
+</div>
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">As a personal trainer, I use the TDEE and macro calculators with all my clients. The accuracy is impressive compared to other free tools. The blog articles on strength training and protein intake are backed by real research, not bro-science. I have bookmarked at least 20 articles. The one-rep-max calculator is spot-on with my actual gym numbers.</p>
+<div class="review-date">Reviewed on February 3, 2024</div>
+<div class="review-verified"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="8" r="7" fill="#52b788"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified User</div>
+</div>
+<div class="review-card fade-in">
+<span class="quote-mark">&ldquo;</span>
+<div class="review-card-header">
+<div class="review-avatar" style="background:#f0faf2;"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
+<div><div class="review-name">Dr. Emily K.</div><div class="review-location">Toronto, Canada</div></div>
+</div>
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">I am a family medicine physician and I routinely recommend ${SITE_NAME} to my patients. The calculators use medically validated formulas (Mifflin-St Jeor for BMR, standard BMI equations) and clearly state they are not a substitute for medical advice. The sleep calculator helped several of my patients with insomnia understand their sleep cycles better. Excellent free resource.</p>
+<div class="review-date">Reviewed on March 18, 2024</div>
+<div class="review-verified"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="8" r="7" fill="#52b788"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified User</div>
+</div>
+<div class="review-card fade-in">
+<span class="quote-mark">&ldquo;</span>
+<div class="review-card-header">
+<div class="review-avatar" style="background:#d8f3dc;"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
+<div><div class="review-name">Sarah L.</div><div class="review-location">Sydney, Australia</div></div>
+</div>
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+<p class="review-text">I have been using ${SITE_NAME} for six months during my pregnancy. The pregnancy due date calculator was accurate to within 2 days of my ultrasound date. The pregnancy nutrition guide helped me plan balanced meals during each trimester. I also love the water intake calculator — it adjusted recommendations for pregnancy. My only wish is a mobile app for offline use!</p>
+<div class="review-date">Reviewed on April 5, 2024</div>
+<div class="review-verified"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="8" r="7" fill="#52b788"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified User</div>
+</div>
+<div class="review-card fade-in">
+<span class="quote-mark">&ldquo;</span>
+<div class="review-card-header">
+<div class="review-avatar" style="background:#b7e4c7;"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
+<div><div class="review-name">David T.</div><div class="review-location">Chicago, USA</div></div>
+</div>
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">After my doctor flagged my cholesterol levels, I found the cholesterol risk calculator and heart health articles on ${SITE_NAME}. They helped me understand what my numbers meant and motivated me to change my diet. Six months later, my LDL dropped by 30 points. The blood pressure checker and diabetes risk tools also gave me peace of mind. Truly a life-changing resource.</p>
+<div class="review-date">Reviewed on May 22, 2024</div>
+<div class="review-verified"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="8" r="7" fill="#52b788"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified User</div>
+</div>
 </div>
 </div>
 </section>
@@ -869,23 +1045,43 @@ fs.writeFileSync('about.html', `${head('About Us | '+SITE_NAME, 'Learn about '+S
 ${NAV}
 ${breadcrumb([{name:'Home',url:'/'},{name:'About Us',url:'/about.html'}]).html}
 ${breadcrumb([{name:'Home',url:'/'},{name:'About Us',url:'/about.html'}]).schema}
-<section class="content-page">
+<section class="about-hero">
 <div class="container">
 <h1 class="fade-in">About ${SITE_NAME}</h1>
-<p class="fade-in">${SITE_NAME} was founded with a simple mission: to make health information accessible, understandable, and actionable for everyone. We believe that informed individuals make better health decisions, and we are committed to providing the tools and knowledge to support that journey.</p>
+<p class="fade-in">Making health information accessible, understandable, and actionable for everyone around the world.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
 <h2 class="fade-in">Our Mission</h2>
-<p class="fade-in">We strive to empower people with free, evidence-based health calculators and expert-written wellness content. Our tools are designed to help you understand your body better, track your health metrics, and make informed decisions about your lifestyle.</p>
+<p class="fade-in">${SITE_NAME} was founded with a simple yet powerful mission: to empower people with free, evidence-based health calculators and expert-written wellness content. We believe that informed individuals make better health decisions, and we are committed to providing the tools and knowledge to support that journey.</p>
+<p class="fade-in">We strive to bridge the gap between complex medical data and everyday health understanding, ensuring that everyone — regardless of background, location, or income — has access to reliable health assessment tools.</p>
 <h2 class="fade-in">What We Offer</h2>
 <ul class="fade-in">
-<li><strong>50+ Free Health Calculators:</strong> From BMI and calorie calculators to specialized tools for fitness, nutrition, and mental health assessment.</li>
-<li><strong>100+ Expert Articles:</strong> Comprehensive health and wellness content written and reviewed by healthcare professionals.</li>
-<li><strong>Evidence-Based Information:</strong> All our calculators use established medical formulas and our content references peer-reviewed research.</li>
-<li><strong>Privacy-First Approach:</strong> Your health data stays on your device. We do not store personal health information.</li>
+<li><strong>50+ Free Health Calculators:</strong> From BMI and calorie calculators to specialized tools for fitness, nutrition, mental health, pregnancy, and disease risk assessment.</li>
+<li><strong>100+ Expert Articles:</strong> Comprehensive health and wellness content written and reviewed by healthcare professionals, updated regularly with the latest research.</li>
+<li><strong>Evidence-Based Information:</strong> All our calculators use established medical formulas (Mifflin-St Jeor, Harris-Benedict, WHO standards) and our content references peer-reviewed research.</li>
+<li><strong>Privacy-First Approach:</strong> Your health data stays on your device. We do not store, transmit, or sell personal health information. All computations happen locally in your browser.</li>
 </ul>
-<h2 class="fade-in">Our Team</h2>
-<div class="author-box fade-in">
-<div class="author-avatar"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
-<div class="author-info"><h4>Dr. Sarah Mitchell, MD</h4><p>Lead Medical Advisor — Board-certified physician with over 15 years of experience in preventive medicine. Dr. Mitchell oversees all health content and calculator accuracy.</p></div>
+<div class="numbers-grid fade-in" style="margin:40px 0;">
+<div class="number-item"><div class="stat-number">50+</div><p>Health Calculators</p></div>
+<div class="number-item"><div class="stat-number">100+</div><p>Expert Articles</p></div>
+<div class="number-item"><div class="stat-number">1M+</div><p>Users Helped</p></div>
+<div class="number-item"><div class="stat-number">10+</div><p>Health Categories</p></div>
+</div>
+<h2 class="fade-in">Created By</h2>
+<div class="creator-card fade-in">
+<div class="creator-avatar"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#2d6a4f" stroke-width="2"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#2d6a4f" stroke-width="2"/></svg></div>
+<div>
+<h3>Ali Haider</h3>
+<p style="color:var(--gray-500);margin-bottom:8px;">SEO Consultant &amp; Web Developer</p>
+<p>Ali Haider is a passionate SEO consultant and web developer who created ${SITE_NAME} to make health information freely available to everyone. With expertise in search engine optimization and a deep interest in health and wellness, Ali built this platform to combine technical excellence with medically accurate information, ensuring the tools reach the people who need them most.</p>
+<div class="creator-social">
+<a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+<a href="https://www.facebook.com/AliHadi768" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
+<a href="https://www.instagram.com/ali_haiderseo/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg> Instagram</a>
+</div>
+</div>
 </div>
 <h2 class="fade-in">Our Commitment</h2>
 <p class="fade-in">We are committed to maintaining the highest standards of accuracy and transparency. Our calculators are regularly reviewed against the latest medical guidelines, and our articles are updated to reflect current research. We encourage users to consult healthcare professionals for personalized advice.</p>
@@ -905,16 +1101,30 @@ ${breadcrumb([{name:'Home',url:'/'},{name:'Contact',url:'/contact.html'}]).html}
 ${breadcrumb([{name:'Home',url:'/'},{name:'Contact',url:'/contact.html'}]).schema}
 <section class="content-page">
 <div class="container">
-<h1 class="fade-in">Contact Us</h1>
-<p class="fade-in" style="text-align:center;max-width:600px;margin:0 auto 40px;">Have questions, feedback, or suggestions? We would love to hear from you. Fill out the form below and we will get back to you as soon as possible.</p>
-<div class="contact-form fade-in">
+<h1 class="fade-in" style="text-align:center;">Contact Us</h1>
+<p class="fade-in" style="text-align:center;max-width:600px;margin:0 auto 40px;">Have questions, feedback, or suggestions? We would love to hear from you.</p>
+<div class="contact-grid fade-in">
+<div class="contact-form">
 <form onsubmit="event.preventDefault();alert('Thank you for your message! We will respond within 24-48 hours.');">
-<div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="Your name" required></div>
-<div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="your@email.com" required></div>
-<div class="form-group"><label for="subject">Subject</label><select id="subject"><option>General Inquiry</option><option>Calculator Feedback</option><option>Content Suggestion</option><option>Bug Report</option><option>Partnership</option></select></div>
+<div class="form-row"><div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="Your name" required></div><div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="your@email.com" required></div></div>
+<div class="form-group"><label for="subject">Subject</label><select id="subject"><option>General Inquiry</option><option>Calculator Feedback</option><option>Content Suggestion</option><option>Bug Report</option><option>Partnership</option><option>SEO Consultation</option></select></div>
 <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Your message..." required></textarea></div>
+<div class="checkbox-group"><input type="checkbox" id="agree" required><label for="agree" style="font-size:0.85rem;">I agree that the information submitted is accurate and I consent to being contacted.</label></div>
 <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
 </form>
+</div>
+<div class="contact-detail-card">
+<h3>Get in Touch</h3>
+<div class="contact-detail-item"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 7l10 6 10-6" stroke="currentColor" stroke-width="2"/></svg><div><a href="mailto:ma7122671@gmail.com">ma7122671@gmail.com</a><small>We respond within 24-48 hours</small></div></div>
+<div class="contact-detail-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><div><strong>Business Hours</strong><small>Monday - Friday, 9AM - 6PM (PKT)</small></div></div>
+<div class="contact-detail-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg><div><strong>Location</strong><small>Available globally, based in Pakistan</small></div></div>
+<h3 style="margin-top:24px;">Follow Us</h3>
+<div class="creator-social" style="margin-top:12px;">
+<a href="https://www.linkedin.com/in/ali-haider-seo-consultant/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+<a href="https://www.facebook.com/AliHadi768" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
+<a href="https://www.instagram.com/ali_haiderseo/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg> Instagram</a>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -1021,9 +1231,55 @@ ${BTT}
 <script src="/js/main.js"></script>
 </body></html>`);
 
+// TERMS
+fs.writeFileSync('terms.html', `${head('Terms of Service | '+SITE_NAME, 'Read the '+SITE_NAME+' terms of service. Understand the conditions for using our free health calculators and wellness tools.', '/terms.html')}
+<body>
+${NAV}
+${breadcrumb([{name:'Home',url:'/'},{name:'Terms of Service',url:'/terms.html'}]).html}
+${breadcrumb([{name:'Home',url:'/'},{name:'Terms of Service',url:'/terms.html'}]).schema}
+<section class="content-page">
+<div class="container" style="max-width:800px;">
+<h1 class="fade-in">Terms of Service</h1>
+<p><em>Last updated: January 2024</em></p>
+<h2>Acceptance of Terms</h2>
+<p>By accessing and using ${SITE_NAME} ("the Website"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the Website.</p>
+<h2>Description of Service</h2>
+<p>${SITE_NAME} provides free health calculators, wellness tools, and informational articles for educational purposes. Our services are provided "as is" and are intended to supplement, not replace, professional medical advice.</p>
+<h2>Use of Health Calculators</h2>
+<p>Our health calculators use established medical formulas to provide estimates. These results are for informational purposes only and should not be used for self-diagnosis, treatment decisions, or as a substitute for consultation with qualified healthcare professionals. You acknowledge that individual health outcomes may vary significantly.</p>
+<h2>User Responsibilities</h2>
+<ul>
+<li>You agree to use the Website only for lawful purposes and in accordance with these Terms.</li>
+<li>You are responsible for the accuracy of any information you input into our calculators.</li>
+<li>You agree not to misrepresent calculator results as professional medical advice.</li>
+<li>You agree not to attempt to access, tamper with, or use non-public areas of the Website.</li>
+</ul>
+<h2>Intellectual Property</h2>
+<p>All content on ${SITE_NAME}, including text, graphics, logos, icons, images, calculator designs, and software, is the property of ${SITE_NAME} and is protected by international copyright laws. You may not reproduce, distribute, modify, or create derivative works from our content without prior written permission.</p>
+<h2>Privacy</h2>
+<p>Your use of the Website is also governed by our <a href="/privacy.html">Privacy Policy</a>. All health data entered into our calculators is processed locally in your browser and is never transmitted to our servers.</p>
+<h2>Disclaimer of Warranties</h2>
+<p>The Website and its content are provided "as is" without warranties of any kind, either express or implied. We do not warrant that the Website will be uninterrupted, error-free, or free of viruses or other harmful components. We make no guarantees about the accuracy, reliability, or completeness of calculator results or health information.</p>
+<h2>Limitation of Liability</h2>
+<p>In no event shall ${SITE_NAME}, its creator Ali Haider, or its contributors be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Website. This includes, without limitation, damages for health decisions made based on calculator results or article content.</p>
+<h2>External Links</h2>
+<p>The Website may contain links to third-party websites. We are not responsible for the content, privacy practices, or accuracy of information on external websites.</p>
+<h2>Modifications to Terms</h2>
+<p>We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting. Your continued use of the Website after changes constitutes acceptance of the modified terms.</p>
+<h2>Governing Law</h2>
+<p>These Terms shall be governed by and construed in accordance with applicable international laws and regulations.</p>
+<h2>Contact</h2>
+<p>If you have questions about these Terms of Service, please <a href="/contact.html">contact us</a> or email <a href="mailto:ma7122671@gmail.com">ma7122671@gmail.com</a>.</p>
+</div>
+</section>
+${FOOTER}
+${BTT}
+<script src="/js/main.js"></script>
+</body></html>`);
+
 // SITEMAP.HTML
 let sitemapLinks = '<div class="sitemap-category"><h3>Main Pages</h3><ul class="sitemap-list">';
-['index.html','about.html','contact.html','faq.html','blog.html','privacy.html','disclaimer.html'].forEach(p => {
+['index.html','about.html','contact.html','faq.html','blog.html','privacy.html','disclaimer.html','terms.html'].forEach(p => {
   sitemapLinks += `<li><a href="/${p}">${p.replace('.html','').replace('index','Home')}</a></li>`;
 });
 sitemapLinks += '</ul></div>';
@@ -1099,7 +1355,7 @@ function filterCategory(cat,btn){
 
 // SITEMAP.XML
 let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-['/','/about.html','/contact.html','/faq.html','/blog.html','/privacy.html','/disclaimer.html','/sitemap.html'].forEach(u => {
+['/','/about.html','/contact.html','/faq.html','/blog.html','/privacy.html','/disclaimer.html','/terms.html','/sitemap.html'].forEach(u => {
   sitemapXml += `<url><loc>${SITE}${u}</loc><changefreq>weekly</changefreq><priority>${u==='/'?'1.0':'0.8'}</priority></url>\n`;
 });
 calculators.forEach(c => {

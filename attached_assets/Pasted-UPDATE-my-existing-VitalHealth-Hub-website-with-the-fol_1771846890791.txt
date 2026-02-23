@@ -1,0 +1,594 @@
+UPDATE my existing VitalHealth Hub website with the following 
+improvements. Do NOT rebuild from scratch. Modify and enhance 
+existing files only, then create the new pages listed below.
+
+─────────────────────────────────────────
+OWNER DETAILS (use everywhere below)
+─────────────────────────────────────────
+Owner: Ali Haider
+Email: ma7122671@gmail.com
+LinkedIn: https://www.linkedin.com/in/ali-haider-seo-consultant/
+Facebook: https://www.facebook.com/AliHadi768
+Instagram: https://www.instagram.com/ali_haiderseo/
+
+─────────────────────────────────────────
+UPDATE 1 — HEADER (update in css/style.css + js/main.js 
+and apply to ALL existing HTML files)
+─────────────────────────────────────────
+Add a TOP BAR above the existing navbar on every page:
+
+Left side of top bar:
+  📧 ma7122671@gmail.com (clickable mailto link)
+
+Right side of top bar:
+  Three social icons (SVG inline icons, no libraries):
+  
+  LinkedIn SVG icon → 
+    href: https://www.linkedin.com/in/ali-haider-seo-consultant/
+    title: "Ali Haider on LinkedIn"
+    aria-label: "Visit Ali Haider LinkedIn Profile"
+    Hover color: #0077b5
+    
+  Facebook SVG icon → 
+    href: https://www.facebook.com/AliHadi768
+    title: "Ali Haider on Facebook"
+    aria-label: "Visit Ali Haider Facebook Page"
+    Hover color: #1877f2
+    
+  Instagram SVG icon → 
+    href: https://www.instagram.com/ali_haiderseo/
+    title: "Ali Haider SEO on Instagram"
+    aria-label: "Visit Ali Haider Instagram Profile"
+    Hover color: #e1306c
+
+Top bar styling:
+  Background: #2d6a4f (dark green)
+  Text color: #ffffff
+  Font size: 13px
+  Padding: 8px 0
+  All links open in new tab (target="_blank" rel="noopener")
+
+Existing navbar behavior stays the same.
+Update this top bar in every single HTML file on the site.
+
+─────────────────────────────────────────
+UPDATE 2 — FOOTER (replace existing footer in ALL files)
+─────────────────────────────────────────
+Replace the existing footer with this detailed 5-column footer:
+
+COLUMN 1 — Brand & Social:
+  VitalHealth Hub (SVG leaf logo)
+  Tagline: "Your trusted source for free health calculators,
+  evidence-based wellness tools, and expert health guidance."
+  
+  Social links with SVG icons + platform names below icon:
+    LinkedIn → https://www.linkedin.com/in/ali-haider-seo-consultant/
+    Facebook → https://www.facebook.com/AliHadi768
+    Instagram → https://www.instagram.com/ali_haiderseo/
+  
+  Email with envelope SVG icon:
+    ma7122671@gmail.com
+
+COLUMN 2 — Popular Calculators:
+  → BMI Calculator
+  → Calorie Calculator
+  → Macro Calculator
+  → TDEE Calculator
+  → Body Fat Calculator
+  → Ideal Weight Calculator
+  → Water Intake Calculator
+  → Heart Rate Calculator
+
+COLUMN 3 — Health Blog Topics:
+  → Weight Loss Tips
+  → Nutrition Guides
+  → Mental Health
+  → Fitness & Exercise
+  → Women's Health
+  → Heart Health
+  → Diabetes & Prevention
+  → Healthy Aging
+
+COLUMN 4 — Quick Links:
+  → Home
+  → About Us
+  → Contact Us
+  → FAQ
+  → Blog
+  → Privacy Policy
+  → Medical Disclaimer
+  → Terms of Use
+
+COLUMN 5 — Contact Info:
+  Heading: "Get In Touch"
+  📧 Email: ma7122671@gmail.com
+  🔗 LinkedIn: Ali Haider — SEO Consultant
+  📘 Facebook: AliHadi768
+  📸 Instagram: @ali_haiderseo
+  
+  Small text below:
+  "Have a question or want to collaborate? 
+   We'd love to hear from you."
+  CTA button: "Send a Message →" linking to contact.html
+
+FOOTER BOTTOM BAR:
+  Left: © 2025 VitalHealth Hub. All rights reserved.
+  Center: "Built with ❤️ for your health"
+  Right: Privacy Policy | Disclaimer | Terms of Use
+  
+  Full-width top border: 1px solid rgba(255,255,255,0.15)
+
+FOOTER STYLING:
+  Background: #1b1f1e (near black)
+  Text color: #d1d5db
+  Headings color: #ffffff
+  Link hover color: #52b788 (light green)
+  Padding: 64px 0 32px
+  Apply to every single HTML file on the site
+
+─────────────────────────────────────────
+UPDATE 3 — IMAGES (update all calculator + blog pages)
+─────────────────────────────────────────
+CALCULATOR PAGES — add unique SVG illustration to each:
+Place SVG hero illustration at top of each calculator page,
+above the calculator form. Each SVG must:
+  - Be fully inline (no external file)
+  - Use viewBox="0 0 500 320"
+  - Use site colors: #2d6a4f, #52b788, #f4a261, #f0faf2
+  - Visually represent the calculator topic
+  - Have a title element inside SVG for accessibility
+  - Have role="img" and aria-labelledby attributes
+
+SVG themes per calculator:
+  bmi-calculator → Person on weighing scale with BMI chart
+  calorie-calculator → Colorful food plate with calorie flames
+  macro-calculator → Pie chart of protein/carbs/fat with food icons
+  body-fat-calculator → Human silhouette with body composition layers
+  ideal-weight-calculator → Balance scale with healthy person
+  bmr-calculator → Sleeping person with metabolic energy waves
+  tdee-calculator → Active person with energy meter gauge
+  water-intake-calculator → Water droplets and glass filling up
+  sleep-calculator → Moon, stars, and person sleeping peacefully
+  heart-rate-calculator → Beating heart with EKG wave line
+  blood-pressure-checker → Blood pressure cuff with gauge dial
+  pregnancy-calculator → Pregnant woman silhouette with calendar
+  ovulation-calculator → Calendar with fertility window highlighted
+  baby-weight-calculator → Baby on scale with growth chart
+  child-bmi-calculator → Child playing with BMI growth curve
+  menstrual-cycle-calculator → Calendar cycle with phase colors
+  fertility-calculator → Flowers blooming representing fertility
+  protein-intake-calculator → Protein shake and muscle with gram meter
+  carb-calculator → Bread, rice, pasta with energy bar
+  fat-intake-calculator → Healthy fats: avocado, nuts, olive oil
+  fiber-intake-calculator → Vegetables and digestive tract outline
+  vitamin-d-calculator → Sun rays hitting person outdoors
+  iron-intake-calculator → Red blood cells with iron molecule
+  calcium-calculator → Bones and dairy products with strength meter
+  cholesterol-calculator → Arteries with good vs bad cholesterol
+  diabetes-risk-calculator → Blood glucose meter with sugar cubes
+  stroke-risk-calculator → Brain with circulation pathways
+  waist-to-hip-ratio → Body outline with measurement tape
+  waist-to-height-ratio → Height ruler with waist measurement
+  lean-body-mass → Muscle anatomy diagram colorful
+  body-surface-area → Human outline with surface area grid
+  one-rep-max → Barbell being lifted with weight plates
+  vo2-max → Lungs with oxygen molecules and runner
+  steps-to-calories → Footsteps path with calorie flame trail
+  running-pace → Runner with stopwatch and pace chart
+  cycling-calories → Cyclist with calorie burn meter
+  swimming-calories → Swimmer in water with calorie bubbles
+  yoga-calories → Yoga pose silhouette with calm waves
+  intermittent-fasting → Clock with eating/fasting window colors
+  keto-calculator → Ketone molecule with low-carb foods
+  alcohol-unit-calculator → Drinks with unit measurement guide
+  caffeine-calculator → Coffee cup with caffeine molecule
+  smoking-cost-calculator → Cigarette with dollar signs and lungs
+  stress-level-calculator → Brain with stress meter gauge
+  anxiety-score-calculator → Calm vs anxiety brain comparison
+  depression-screening → Sun breaking through clouds hopeful
+  sleep-debt-calculator → Tired person with sleep debt counter
+  life-expectancy-calculator → Timeline of life with milestones
+  biological-age-calculator → Young vs old DNA strand comparison
+  medication-dosage → Pill organizer with dosage chart
+  bac-calculator → Liver processing alcohol illustration
+
+BLOG PAGES — add Unsplash hero image to each post:
+Use this format for every blog post hero image:
+  <figure>
+    <img 
+      src="https://source.unsplash.com/1200x500/?[keyword1],[keyword2]"
+      alt="[Descriptive alt text] | VitalHealth Hub"
+      title="[Blog post title]"
+      width="1200"
+      height="500"
+      loading="lazy"
+    >
+    <figcaption>[Short caption related to article]</figcaption>
+  </figure>
+
+Use these specific keywords per blog post:
+  how-to-calculate-bmi → bmi,body,weight,health
+  what-is-a-healthy-bmi → healthy,body,fitness,weight
+  bmi-vs-body-fat → body,composition,fitness,measurement
+  how-many-calories → food,nutrition,calories,eating
+  calorie-deficit → diet,weight,loss,healthy,food
+  what-are-macronutrients → protein,carbs,fats,nutrition
+  high-protein-diet → protein,food,chicken,fitness,muscle
+  how-much-water → water,hydration,drinking,wellness
+  benefits-drinking-water → water,glass,hydration,health
+  how-much-sleep → sleep,bedroom,rest,night,wellness
+  sleep-deprivation → tired,sleep,exhausted,person
+  improve-sleep-quality → sleep,bedroom,night,calm,rest
+  normal-heart-rate → heart,pulse,rate,cardio,health
+  lower-heart-rate → meditation,calm,heart,yoga,breathing
+  blood-pressure → doctor,blood,pressure,stethoscope
+  lower-blood-pressure → healthy,food,exercise,meditation
+  what-is-tdee → exercise,calories,active,fitness,energy
+  bmr-explained → metabolism,body,energy,science,health
+  intermittent-fasting → fasting,clock,food,diet,health
+  16-8-fasting → meal,timing,diet,healthy,food
+  keto-diet → keto,avocado,eggs,bacon,lowcarb,diet
+  mediterranean-diet → mediterranean,olive,salad,fish,food
+  plant-based-diet → vegetables,vegan,plants,healthy,food
+  best-foods-weight-loss → salad,vegetables,healthy,food
+  foods-boost-metabolism → spicy,food,ginger,metabolism
+  how-to-lose-belly-fat → exercise,abs,fitness,workout
+  how-to-build-muscle → gym,muscle,workout,weights,fitness
+  protein-muscle-growth → protein,shake,gym,muscle,fitness
+  creatine-benefits → gym,supplement,workout,muscle,power
+  best-exercises-weight-loss → running,exercise,cardio,fitness
+  cardio-vs-strength → gym,workout,running,weights,fitness
+  hiit-workout → hiit,interval,training,fitness,sweat
+  yoga-benefits → yoga,meditation,pose,calm,wellness
+  walking-10000-steps → walking,park,steps,outdoor,health
+  running-beginners → running,jogging,outdoor,fitness,park
+  cycling-health → cycling,bike,outdoor,fitness,road
+  swimming-health → swimming,pool,water,fitness,sport
+  stretching-importance → stretch,flexibility,yoga,fitness
+  how-to-start-exercising → exercise,gym,beginner,fitness
+  workout-frequency → gym,schedule,workout,planning,fitness
+  rest-days → rest,recovery,relax,muscle,sleep
+  muscle-soreness → muscle,recovery,stretching,fitness
+  vo2-max → running,oxygen,cardio,fitness,lungs
+  one-rep-max → barbell,gym,strength,lifting,weights
+  ideal-weight-height → scale,weight,height,health,body
+  waist-hip-ratio → measurement,waist,health,body,fitness
+  body-fat-guide → fitness,body,composition,health,lean
+  lean-body-mass → muscle,anatomy,body,fitness,lean
+  cholesterol-explained → heart,cholesterol,blood,health
+  lower-cholesterol → healthy,food,heart,diet,wellness
+  diabetes-prevention → sugar,diabetes,healthy,food,diet
+  blood-sugar-levels → glucose,blood,diabetes,health,test
+  signs-of-diabetes → doctor,test,blood,glucose,health
+  heart-disease-risk → heart,cardio,health,risk,doctor
+  stroke-prevention → brain,health,prevention,doctor,care
+  cancer-prevention → healthy,lifestyle,prevention,wellness
+  immune-system-foods → citrus,vitamin,immune,food,health
+  vitamin-d-deficiency → sun,vitamin,d,sunlight,outdoor
+  vitamin-c-benefits → orange,citrus,vitamin,immune,food
+  magnesium-benefits → mineral,supplement,health,wellness
+  iron-deficiency → blood,iron,health,fatigue,diet
+  calcium-bone-health → dairy,calcium,bones,milk,health
+  omega-3-benefits → fish,omega,salmon,healthy,fats
+  probiotics-gut → gut,probiotics,yogurt,health,digestive
+  fiber-digestion → vegetables,fiber,digestion,health,food
+  anti-inflammatory → turmeric,food,inflammation,health
+  antioxidants → berries,antioxidants,colorful,food,health
+  superfoods → superfoods,berries,greens,nutrition,health
+  manage-stress → meditation,stress,calm,mind,wellness
+  anxiety-management → anxiety,calm,breathing,wellness,mind
+  depression-remedies → hope,sunshine,wellness,mental,health
+  mindfulness-meditation → meditation,mindful,calm,peace,mind
+  mental-health-selfcare → selfcare,wellness,mental,calm,peace
+  burnout-recovery → burnout,tired,rest,recovery,wellness
+  work-life-balance → balance,work,life,wellness,calm
+  sleep-mental-health → sleep,mental,health,rest,wellness
+  exercise-mental-health → exercise,happy,mental,wellness,mood
+  social-connections → friends,social,connection,wellness
+  quit-smoking → smoking,quit,freedom,lungs,health,clean
+  alcohol-health → alcohol,health,wellness,moderation
+  caffeine-effects → coffee,caffeine,energy,cup,morning
+  dehydration-signs → water,dehydration,health,drink,thirst
+  gut-health → gut,digestive,health,microbiome,wellness
+  liver-health → liver,health,detox,organ,wellness
+  kidney-health → kidney,health,water,organ,wellness
+  thyroid-health → thyroid,hormone,health,wellness,doctor
+  hormonal-balance → hormones,balance,health,wellness,women
+  menstrual-health → women,health,cycle,wellness,care
+  pregnancy-nutrition → pregnancy,nutrition,food,healthy,baby
+  postpartum-health → mother,baby,postpartum,wellness,care
+  menopause-guide → women,menopause,health,wellness,aging
+  mens-health → men,health,fitness,wellness,vitality
+  childrens-nutrition → children,food,nutrition,healthy,kids
+  elderly-health → elderly,senior,health,wellness,aging
+  healthy-aging → aging,senior,wellness,active,healthy
+  longevity-secrets → longevity,healthy,aging,wellness,life
+  biological-age → dna,aging,biology,health,science
+  life-expectancy → life,longevity,health,wellness,aging
+  preventive-checkups → doctor,checkup,prevention,health,care
+
+─────────────────────────────────────────
+UPDATE 4 — NEW PAGES TO CREATE
+─────────────────────────────────────────
+
+CREATE: about.html
+─────────────────
+Full detailed About Us page with:
+
+Hero section:
+  Headline: "About VitalHealth Hub"
+  Subtext: "Empowering millions to make smarter health decisions 
+  through free, science-backed tools and expert content."
+  Background: green gradient with leaf SVG pattern
+
+Our Story section:
+  "VitalHealth Hub was founded with a simple mission: make 
+  reliable health information and tools accessible to everyone, 
+  for free. We believe that understanding your body should not 
+  require a medical degree or an expensive consultation."
+  Include decorative inline SVG illustration of team/mission
+
+Meet the Creator section:
+  Name: Ali Haider
+  Title: SEO Consultant & Health Content Strategist
+  Bio: "Ali Haider is a digital health advocate and SEO consultant 
+  with a passion for making health information accessible online. 
+  With years of experience in content strategy and digital wellness, 
+  Ali built VitalHealth Hub to bridge the gap between complex medical 
+  information and everyday people seeking answers."
+  Avatar: SVG illustrated avatar (professional, green themed)
+  Social links: LinkedIn, Facebook, Instagram, Email
+  
+Our Mission section (3 cards with SVG icons):
+  Card 1: "Free Forever" — All tools always free, no paywalls
+  Card 2: "Evidence-Based" — Content reviewed against medical literature
+  Card 3: "Privacy First" — No personal data stored or sold
+
+Our Numbers section (animated counter on scroll):
+  50+ Free Health Calculators
+  100+ Expert Health Articles
+  1M+ Calculations Performed
+  0 Ads or Paywalls
+
+What We Cover section:
+  Grid of 6 health topic cards with SVG icons
+
+Medical Disclaimer notice box (prominent)
+
+CTA section: "Have questions? Get in touch"
+  Button → contact.html
+
+SEO meta:
+  Title: "About VitalHealth Hub — Free Health Tools by Ali Haider"
+  Description: "Learn about VitalHealth Hub, created by SEO consultant 
+  Ali Haider. Our mission is providing free, science-backed health 
+  calculators and wellness guides to everyone."
+
+─────────────────────────────────────────
+CREATE: contact.html
+─────────────────────
+Full contact page with:
+
+Hero: "Get In Touch" with envelope SVG illustration
+
+Two-column layout:
+LEFT — Contact Form (static HTML form, no backend):
+  Fields:
+    Full Name (required)
+    Email Address (required)  
+    Subject (dropdown: General Inquiry / Collaboration / 
+             Content Suggestion / Report an Issue / Other)
+    Message (textarea, required)
+    Checkbox: "I agree this is not a request for medical advice"
+  Submit button: "Send Message →"
+  Note below form: "We typically respond within 24-48 hours"
+  Form validation with JS (check required fields before submit)
+  On submit: show success message (no actual backend needed)
+
+RIGHT — Contact Details card:
+  📧 Email: ma7122671@gmail.com (mailto link)
+  
+  LinkedIn card:
+    Icon + "Connect on LinkedIn"
+    @ali-haider-seo-consultant
+    Link: https://www.linkedin.com/in/ali-haider-seo-consultant/
+    
+  Facebook card:
+    Icon + "Follow on Facebook"  
+    @AliHadi768
+    Link: https://www.facebook.com/AliHadi768
+    
+  Instagram card:
+    Icon + "Follow on Instagram"
+    @ali_haiderseo
+    Link: https://www.instagram.com/ali_haiderseo/
+
+Below the two columns:
+  FAQ teaser: "Looking for quick answers?"
+  3 common Q&As shown, link to faq.html
+
+Map placeholder: 
+  Decorative SVG world map with a pin marker
+
+SEO meta:
+  Title: "Contact VitalHealth Hub — Ali Haider | Health Tools"
+  Description: "Contact Ali Haider at VitalHealth Hub. 
+  Reach out for collaborations, content suggestions, 
+  or general inquiries about our free health tools."
+
+─────────────────────────────────────────
+CREATE: privacy.html
+─────────────────────
+Full Privacy Policy page:
+
+Header: "Privacy Policy" with last updated date: January 1, 2025
+
+Sections (full detailed text for each):
+1. Introduction & Who We Are
+   Operator: Ali Haider (ma7122671@gmail.com)
+   Website: VitalHealth Hub
+
+2. Information We Collect
+   - No personal health data stored on our servers
+   - Calculator inputs processed locally in your browser
+   - Standard web analytics (page views, traffic sources)
+   - Contact form submissions (email only, for reply purposes)
+
+3. How We Use Information
+4. Cookies & Tracking
+5. Third Party Services (Google Analytics, Unsplash images)
+6. Data Security
+7. Children's Privacy (site not intended for under 13)
+8. Your Rights (GDPR, CCPA mentions)
+9. Medical Information Disclaimer
+10. Changes to This Policy
+11. Contact Us
+    Ali Haider — ma7122671@gmail.com
+
+─────────────────────────────────────────
+CREATE: disclaimer.html
+────────────────────────
+Full Medical Disclaimer page:
+
+Header: "Medical Disclaimer"
+
+Sections:
+1. Not Medical Advice
+   Clear statement all content is informational only
+   
+2. No Doctor-Patient Relationship
+   Use of this site does not create any professional relationship
+
+3. Accuracy of Information
+   We strive for accuracy but medical knowledge evolves
+
+4. Calculator Results
+   Results are estimates based on population averages
+   Individual results may vary significantly
+   
+5. Emergency Situations
+   If experiencing medical emergency call 911 immediately
+   
+6. Professional Consultation
+   Always consult qualified healthcare professional
+   
+7. External Links Disclaimer
+8. Liability Limitation
+9. Contact for Concerns
+   Ali Haider — ma7122671@gmail.com
+
+─────────────────────────────────────────
+CREATE: terms.html
+───────────────────
+Full Terms of Use page covering:
+1. Acceptance of Terms
+2. Use of Site (permitted and prohibited)
+3. Intellectual Property
+4. User Content
+5. Disclaimers and Limitations
+6. Governing Law
+7. Changes to Terms
+8. Contact: Ali Haider — ma7122671@gmail.com
+
+─────────────────────────────────────────
+UPDATE 5 — HOMEPAGE REVIEWS SECTION
+─────────────────────────────────────────
+Add a Reviews / Testimonials section to index.html.
+Place it after the "Featured Blog Posts" section.
+
+Section heading: "What Our Users Are Saying"
+Subheading: "Trusted by over 1 million health-conscious people worldwide"
+
+Star rating display: ⭐⭐⭐⭐⭐ 4.9/5 based on 2,847 reviews
+
+5 review cards in a horizontal scrollable row (snap scroll on mobile):
+
+REVIEW 1:
+  Name: Sarah M.
+  Location: New York, USA
+  Avatar: SVG illustrated female avatar (green theme)
+  Stars: ⭐⭐⭐⭐⭐
+  Date: November 2024
+  Review: "I've been using VitalHealth Hub for 6 months now and it 
+  has completely changed how I approach my health. The calorie 
+  calculator helped me lose 18 pounds by finally understanding 
+  my actual daily needs. The blog articles are so well-written 
+  and easy to understand. Absolutely love this site!"
+
+REVIEW 2:
+  Name: James K.
+  Location: London, UK
+  Avatar: SVG illustrated male avatar (blue-green theme)
+  Stars: ⭐⭐⭐⭐⭐
+  Date: October 2024
+  Review: "As someone who was recently diagnosed with pre-diabetes, 
+  I found the diabetes risk calculator and the related articles 
+  incredibly helpful. The information is clearly presented and 
+  the suggestions are practical. My doctor was actually impressed 
+  that I came in so well-informed. Thank you VitalHealth Hub!"
+
+REVIEW 3:
+  Name: Priya R.
+  Location: Mumbai, India
+  Avatar: SVG illustrated female avatar (orange-green theme)
+  Stars: ⭐⭐⭐⭐⭐
+  Date: December 2024
+  Review: "The BMI and ideal weight calculators are fantastic. 
+  What I love most is that instead of just giving a number, 
+  the site explains what it means and gives practical tips. 
+  I also use the sleep calculator regularly and my energy 
+  levels have improved so much since following the guidance. 
+  Highly recommend to everyone!"
+
+REVIEW 4:
+  Name: Carlos D.
+  Location: Madrid, Spain
+  Avatar: SVG illustrated male avatar (warm theme)
+  Stars: ⭐⭐⭐⭐⭐
+  Date: September 2024
+  Review: "I'm a fitness trainer and I regularly send my clients 
+  to VitalHealth Hub to use the TDEE, macro, and protein 
+  calculators. It saves me so much time explaining these 
+  concepts and the results page gives them a clear starting 
+  point. The blog content is solid and evidence-based. 
+  A genuinely useful health resource — rare to find for free!"
+
+REVIEW 5:
+  Name: Emily T.
+  Location: Sydney, Australia
+  Avatar: SVG illustrated female avatar (teal theme)
+  Stars: ⭐⭐⭐⭐⭐
+  Date: January 2025
+  Review: "The women's health calculators are a game changer. 
+  The ovulation, menstrual cycle, and fertility calculators 
+  are the most accurate free tools I've found online. The 
+  explanations are sensitive and informative without being 
+  clinical or scary. As a woman trying to understand my 
+  own body better, this site has been absolutely invaluable. 
+  Five stars without hesitation!"
+
+Card styling:
+  White card with subtle green left border accent
+  Drop shadow on hover
+  Verified user badge (green checkmark SVG)
+  Quote mark SVG decoration (large, faded green)
+  
+Section background: 
+  Light green (#f0faf2) with subtle dot pattern
+
+─────────────────────────────────────────
+FINAL INSTRUCTIONS
+─────────────────────────────────────────
+- Update EVERY existing HTML file with new header and footer
+- Create all 5 new pages listed above
+- Add SVG illustrations to all calculator pages
+- Add Unsplash images to all blog pages
+- Make sure all social links use:
+    target="_blank" rel="noopener noreferrer"
+- Make sure all email links use: href="mailto:ma7122671@gmail.com"
+- Test that hamburger menu still works after header update
+- Ensure footer columns stack properly on mobile (single column)
+- Do not break any existing calculator JavaScript logic
+- Do not remove existing SEO meta tags, only improve them
+- Run through all files and confirm changes are applied
+- When done, list all files that were updated or created
