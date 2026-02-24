@@ -1,21 +1,37 @@
 module.exports = function (eleventyConfig) {
-  // Keep your existing static assets exactly as they are
+
+  // ==============================
+  // PASSTHROUGH STATIC ASSETS
+  // ==============================
+
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("svgs");
   eleventyConfig.addPassthroughCopy("attached_assets");
-  eleventyConfig.addPassthroughCopy("calculators"); // keep your existing calculator pages working
-  eleventyConfig.addPassthroughCopy("blog");        // keep old blog folder working for now
 
-  // Also keep these root files available (SEO essentials)
+  // Keep old static folders temporarily
+  eleventyConfig.addPassthroughCopy("blog");        
+  eleventyConfig.addPassthroughCopy("calculators");
+
+  // SEO Essentials
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
+
+  // IMPORTANT → Copy admin panel to output
+  eleventyConfig.addPassthroughCopy("admin");
+
+  // ==============================
+  // RETURN CONFIG
+  // ==============================
 
   return {
     dir: {
       input: "content",
       includes: "../src/_includes",
       output: "dist"
-    }
+    },
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    templateFormats: ["md", "njk", "html"]
   };
 };
