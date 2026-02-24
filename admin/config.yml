@@ -20,14 +20,13 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
+    preview_path: "blog/{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/blog/{{slug}}/" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   # ================= PAGES =================
@@ -38,12 +37,11 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
+    preview_path: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
       - { label: "Page Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
-      - { label: "Permalink", name: "permalink", widget: "string", default: "/{{slug}}/" }
       - { label: "Body Content", name: "body", widget: "markdown" }
 
   # ================= CALCULATORS =================
@@ -54,11 +52,11 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
+    preview_path: "calculators/{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
       - { label: "Calculator Name", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
       - { label: "Intro Text", name: "intro", widget: "markdown" }
       - { label: "FAQ Section", name: "faq", widget: "markdown" }
-      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/calculators/{{slug}}/" }
+      - { label: "Body Content", name: "body", widget: "markdown", required: false }
