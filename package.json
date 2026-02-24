@@ -1,16 +1,9 @@
 {
   "name": "health-wellness-hub",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "eleventy"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^5.2.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
