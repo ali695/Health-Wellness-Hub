@@ -2,6 +2,8 @@ backend:
   name: github
   repo: ali695/Health-Wellness-Hub
   branch: main
+  base_url: https://misty-heart-315e.ma7122671.workers.dev
+  auth_endpoint: auth
 
 media_folder: "attached_assets/uploads"
 public_folder: "/attached_assets/uploads"
