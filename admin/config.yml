@@ -1,17 +1,51 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ali695/Health-Wellness-Hub
+  branch: main
 
-media_folder: "attached_assets"
-public_folder: "/attached_assets"
+media_folder: "attached_assets/uploads"
+public_folder: "/attached_assets/uploads"
 
 collections:
+
+  # ================= BLOG =================
   - name: "blog"
     label: "Blog Posts"
-    folder: "blog"
+    folder: "content/blog"
     create: true
     slug: "{{slug}}"
+    format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  # ================= PAGES =================
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
+
+  # ================= CALCULATORS =================
+  - name: "calculators"
+    label: "Calculators"
+    folder: "content/calculators"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Calculator Name", name: "title", widget: "string" }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
+      - { label: "Intro Text", name: "intro", widget: "markdown" }
+      - { label: "FAQ Section", name: "faq", widget: "markdown" }
