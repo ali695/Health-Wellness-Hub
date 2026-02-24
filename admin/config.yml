@@ -8,11 +8,7 @@ backend:
 media_folder: "attached_assets/uploads"
 public_folder: "/attached_assets/uploads"
 
-publish_mode: editorial_workflow
-
 collections:
-
-  # ================= BLOG =================
   - name: "blog"
     label: "Blog Posts"
     folder: "content/blog"
@@ -29,7 +25,6 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # ================= PAGES =================
   - name: "pages"
     label: "Pages"
     folder: "content/pages"
@@ -44,7 +39,6 @@ collections:
       - { label: "Meta Description", name: "meta_description", widget: "text" }
       - { label: "Body Content", name: "body", widget: "markdown" }
 
-  # ================= CALCULATORS =================
   - name: "calculators"
     label: "Calculators"
     folder: "content/calculators"
