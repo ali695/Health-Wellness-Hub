@@ -1,37 +1,23 @@
 module.exports = function (eleventyConfig) {
 
-  // ==============================
-  // PASSTHROUGH STATIC ASSETS
-  // ==============================
-
+  // Static assets
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("svgs");
   eleventyConfig.addPassthroughCopy("attached_assets");
 
-  // Keep old static folders temporarily
-  eleventyConfig.addPassthroughCopy("blog");        
-  eleventyConfig.addPassthroughCopy("calculators");
-
-  // SEO Essentials
-  eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
-
-  // IMPORTANT → Copy admin panel to output
+  // VERY IMPORTANT — Add this
   eleventyConfig.addPassthroughCopy("admin");
 
-  // ==============================
-  // RETURN CONFIG
-  // ==============================
+  // SEO files
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
     dir: {
       input: "content",
       includes: "../src/_includes",
       output: "dist"
-    },
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    templateFormats: ["md", "njk", "html"]
+    }
   };
 };
