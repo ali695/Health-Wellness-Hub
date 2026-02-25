@@ -16,7 +16,6 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
-    preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
@@ -32,7 +31,6 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
-    preview_path: "{{slug}}"
     fields:
       - { label: "Page Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
@@ -46,7 +44,6 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
-    preview_path: "calculators/{{slug}}"
     fields:
       - { label: "Calculator Name", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
