@@ -8,7 +8,10 @@ backend:
 media_folder: "attached_assets/uploads"
 public_folder: "/attached_assets/uploads"
 
+publish_mode: editorial_workflow
+
 collections:
+
   - name: "blog"
     label: "Blog Posts"
     folder: "content/blog"
@@ -16,6 +19,7 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
+    preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
@@ -23,6 +27,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "pages"
     label: "Pages"
     folder: "content/pages"
@@ -30,11 +35,13 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
+    preview_path: "{{slug}}"
     fields:
       - { label: "Page Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
-      - { label: "Body Content", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "calculators"
     label: "Calculators"
     folder: "content/calculators"
@@ -42,10 +49,11 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
+    preview_path: "calculators/{{slug}}"
     fields:
       - { label: "Calculator Name", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
       - { label: "Intro Text", name: "intro", widget: "markdown" }
       - { label: "FAQ Section", name: "faq", widget: "markdown" }
-      - { label: "Body Content", name: "body", widget: "markdown", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
