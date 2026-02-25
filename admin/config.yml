@@ -11,14 +11,13 @@ public_folder: "/attached_assets/uploads"
 publish_mode: editorial_workflow
 
 collections:
-
   - name: "blog"
     label: "Blog Posts"
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
-    format: "frontmatter"
     extension: "md"
+    format: "frontmatter"
     preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -33,22 +32,22 @@ collections:
     folder: "content/pages"
     create: true
     slug: "{{slug}}"
-    format: "frontmatter"
     extension: "md"
+    format: "frontmatter"
     preview_path: "{{slug}}"
     fields:
       - { label: "Page Title", name: "title", widget: "string" }
       - { label: "Meta Title", name: "meta_title", widget: "string" }
       - { label: "Meta Description", name: "meta_description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
 
   - name: "calculators"
     label: "Calculators"
     folder: "content/calculators"
     create: true
     slug: "{{slug}}"
-    format: "frontmatter"
     extension: "md"
+    format: "frontmatter"
     preview_path: "calculators/{{slug}}"
     fields:
       - { label: "Calculator Name", name: "title", widget: "string" }
@@ -56,4 +55,4 @@ collections:
       - { label: "Meta Description", name: "meta_description", widget: "text" }
       - { label: "Intro Text", name: "intro", widget: "markdown" }
       - { label: "FAQ Section", name: "faq", widget: "markdown" }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Body Content", name: "body", widget: "markdown", required: false }
